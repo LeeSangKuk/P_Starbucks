@@ -48,6 +48,6 @@ public class HomeController {
 	}
 
 		
-		// commit 확인 - 이상국
+		// commit 다시 확인
 	
 }
