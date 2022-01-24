@@ -46,5 +46,8 @@ public class HomeController {
 	      return "index";
 	     
 	}
+
+		
+		// commit 확인 - 이상국
 	
 }
