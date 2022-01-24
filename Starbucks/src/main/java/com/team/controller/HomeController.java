@@ -46,8 +46,7 @@ public class HomeController {
 	      return "index";
 	     
 	}
-
 		
-		// commit 다시 확인
+		// 마지막 확인
 	
 }
