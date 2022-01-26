@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.team.domain.BoardDTO;
+import com.team.domain.Criteria;
 import com.team.mapper.BoardMapper;
 
 @Service
@@ -20,8 +21,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 	// 2.목록 구현
-	public ArrayList<BoardDTO> list(){
-		return bmapper.list();
+	public ArrayList<BoardDTO> list(Criteria cri){
+		return bmapper.list(cri);
 	}
 	
 	// 3.상세페이지 구현
@@ -42,5 +43,10 @@ public class BoardServiceImpl implements BoardService{
 	// 5.글 삭제 구현
 	public void remove(BoardDTO board) {
 		bmapper.remove(board);
+	}
+	
+	// 6.게시판 페이징에 쓰일 데이터 건수
+	public int getTotalCount(Criteria cri) {
+		return bmapper.getTotalCount(cri);
 	}
 }

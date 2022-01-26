@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.team.domain.BoardDTO;
+import com.team.domain.Criteria;
+import com.team.domain.PageDTO;
 import com.team.service.BoardService;
 
 @Controller
@@ -38,9 +40,12 @@ public class BoardController {
 	
 	// list.jsp(글 목록 화면) 띄우기
 	@GetMapping("list")
-	public void list(Model model) {
+	public void list(Criteria cri, Model model) {
 		
-		model.addAttribute("list", service.list());
+		model.addAttribute("list", service.list(cri));
+		
+		int total = service.getTotalCount(cri);
+		model.addAttribute("pageMaker", new PageDTO(cri, total));
 		
 		// 콘솔 테스트
 		System.out.println("목록 화면");

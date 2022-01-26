@@ -10,7 +10,44 @@
 		</insert>
 		
 		<select id="list" resultType="com.team.domain.BoardDTO">
-			SELECT * FROM sb_board
+			SELECT *
+			FROM(
+			SELECT @rownum:=@rownum+1 AS rownum, b.*
+			FROM (SELECT @rownum:=0) AS tmp,
+				board AS b
+			) AS boardList
+			
+			<choose>
+				<when test="search == null">
+					WHERE 1=1
+				</when>
+				
+				<when test="search == 'T'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'C'.toString()">
+					WHERE content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'W'.toString()">
+					WHERE writer LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'TC'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<otherwise>
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+					OR writer LIKE CONCAT('%' ,#{keyword}, '%')
+				</otherwise>
+			</choose>
+			<![CDATA[
+			AND rownum > (#{pageNum}-1)*#{amount} and rownum <= #{pageNum} * #{amount}
+			]]>
 		</select>
 		
 		<select id="detail" resultType="com.team.domain.BoardDTO">
@@ -21,7 +58,7 @@
 		<update id="cntupdate">
 			UPDATE sb_board
 			SET cnt = cnt + 1
-			WHERE bno=#{bno}
+			WHERE bno = #{bno}
 		</update>
 		
 		<update id="modify">
@@ -37,4 +74,37 @@
 			FROM sb_board
 			WHERE bno=#{bno}
 		</delete>
+		
+		<select id="getTotalCount" resultType="int">
+			SELECT COUNT(*) 
+			FROM sb_board
+			<choose>
+				<when test="search == null">
+					WHERE 1=1
+				</when>
+				
+				<when test="search == 'T'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'C'.toString()">
+					WHERE content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'W'.toString()">
+					WHERE writer LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'TC'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<otherwise>
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+					OR writer LIKE CONCAT('%' ,#{keyword}, '%')
+				</otherwise>
+			</choose>
+		</select>
 	</mapper>

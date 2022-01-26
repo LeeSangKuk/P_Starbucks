@@ -36,17 +36,17 @@
                         </table>
                     </div><!--l_b1-->
 					
-					<c:if test="${login!=null}">
-						<div><a href="/board/write" class="write_btn">글쓰기</a></div>
-					</c:if>
+					<div><a href="/board/write" class="write_btn">글쓰기</a></div>
 					
 
                     <!-- search -->
                     <div class="l_b2_search">
                         <form id="actionForm" action="/board/list" method="get">
                             <div>
-                                <input type="hidden" name="pageNum" placeholder="pageNum" value="${pageMaker.cri.pageNum}">
-                                <input type="hidden" name="amount" placeholder="amount" value="${pageMaker.cri.amount}">
+
+                                <input type="text" name="pageNum" placeholder="pageNum" value="${pageMaker.cri.pageNum}">
+                                <input type="text" name="amount" placeholder="amount" value="${pageMaker.cri.amount}">
+
                             </div>
                             <select name="search" id="">
                                 <option value="T">제목</option>
@@ -87,4 +87,5 @@
         </div><!--.container_in-->
     </div><!--#container-->
 
+	<script type="text/javascript" src="../resources/js/list.js"></script>
     <%@ include file="footer.jsp" %>

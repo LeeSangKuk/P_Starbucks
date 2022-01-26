@@ -10,11 +10,61 @@
 		</insert>
 		
 		<select id="list" resultType="com.team.domain.BoardDTO">
-			SELECT * FROM sb_board
+			SELECT * 
+			FROM sb_board
+			
+			<choose>
+				<when test="search == null">
+					WHERE 1=1
+				</when>
+				
+				<when test="search == 'T'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'C'.toString()">
+					WHERE content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'W'.toString()">
+					WHERE writer LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<when test="search == 'TC'.toString()">
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+				</when>
+				
+				<otherwise>
+					WHERE title LIKE CONCAT('%' ,#{keyword}, '%')
+					OR content LIKE CONCAT('%' ,#{keyword}, '%')
+				</otherwise>
+			</choose>
+			
 		</select>
 		
 		<select id="detail" resultType="com.team.domain.BoardDTO">
 			SELECT * FROM sb_board
 			WHERE bno = #{bno}
 		</select>
+		
+		<update id="cntupdate">
+			UPDATE sb_board
+			SET cnt = cnt + 1
+			WHERE bno = #{bno}
+		</update>
+		
+		<update id="modify">
+			UPDATE sb_board
+			SET title = #{title},
+				content = #{content},
+				regdate = now()
+			WHERE bno = #{bno}
+		</update>
+		
+		<delete id="remove">
+			DELETE
+			FROM sb_board
+			WHERE bno=#{bno}
+		</delete>
 	</mapper>

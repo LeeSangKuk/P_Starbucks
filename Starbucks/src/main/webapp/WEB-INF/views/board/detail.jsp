@@ -105,27 +105,6 @@
                         </table>
                     </div><!--.detail_view_wrap-->
 
-                    <div class="smap">
-                        <ul>
-                            <li class="smap_home">
-                                <a href="#">
-                                    HOME
-                                </a>
-                            </li>
-                            <li class="smap_arr">
-                                <img src="../resources/img/icon_arrow.png" alt="작은 맵 화살표">
-                            </li>
-                            <li class="smap_allmenu">
-                                <a href="#">전체 메뉴</a>
-                            </li>
-                            <li class="smap_arr">
-                                <img src="../resources/img/icon_arrow.png" alt="작은 맵 화살표">
-                            </li>
-                            <li class="smap_notice">
-                                <a href="#">공지사항</a>
-                            </li>
-                        </ul>
-                    </div><!--.smap-->
                     
                 </div><!--.d_box-->
             </div><!--.board_detail-->
