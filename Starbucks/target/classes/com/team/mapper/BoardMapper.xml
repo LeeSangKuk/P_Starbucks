@@ -5,8 +5,16 @@
  
 	<mapper namespace="com.team.mapper.BoardMapper">
 		<insert id="write">
-			INSERT INTO board(title, content)
+			INSERT INTO sb_board(title, content)
 			VALUES(#{title},#{content})
 		</insert>
-	
+		
+		<select id="list" resultType="com.team.domain.BoardDTO">
+			SELECT * FROM sb_board
+		</select>
+		
+		<select id="detail" resultType="com.team.domain.BoardDTO">
+			SELECT * FROM sb_board
+			WHERE bno = #{bno}
+		</select>
 	</mapper>
