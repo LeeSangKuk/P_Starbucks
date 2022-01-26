@@ -10,6 +10,7 @@ public class SampleController {
 	@GetMapping("main")
 	public void main() {
 		System.out.println("main 실행");
+		
 	}
 
 	@GetMapping("info")
