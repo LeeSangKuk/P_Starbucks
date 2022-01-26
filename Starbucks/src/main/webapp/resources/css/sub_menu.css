@@ -1,0 +1,644 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 20px;
+    color: #2C2A29;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+fieldset{
+    border: 0;
+}
+
+legend{
+    display: none;
+}
+
+input{
+    /* input = 인라인 요소 */
+    font-family: 'Noto Sans KR', sans-serif;
+    vertical-align: top;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+#wrap{
+    width: 100%;
+    min-width: 1240px;
+    position: relative;
+}
+
+/*----------------- 헤더 ---------------------*/
+
+#header{
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    margin-left: -1280px;
+    width: 2560px;
+    z-index: 100;
+    background-color:#F6F5EF;
+}
+
+.header_in{
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color : transparent;
+}
+
+.logo a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(/img/header/logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent: -99999999px;
+    object-fit: cover;
+}
+
+
+.pc-gnb ul{
+    display: flex;
+}
+
+.pc-gnb li{
+    margin-right: 40px;
+}
+
+.pc-gnb li:last-child{
+    margin-right: 0;
+}
+
+.pc-gnb li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+
+.pc-gnb li a:hover{
+    font-weight: 700;
+    color: #007042;
+}
+
+.pc-util{
+    margin-left: 100px;
+}
+
+
+.pc-util ul{
+    display: flex;
+}
+
+.pc-util li{
+    margin-right: 10px;
+}
+
+.pc-util li:last-child{
+    margin-right: 0;
+}
+
+.pc-util li a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+
+.pc-util li a:hover{
+    font-weight: 700;
+    color: #007042;
+}
+
+.icons ul{
+    display: flex;
+}
+
+.icons .icon_menu a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/menu_icon.png);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -9999999px;
+}
+
+.icons .icon_search a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/search.svg);
+    background-size: 25px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -999999999px;
+}
+
+/* ------------------헤더 끝------------------ */
+
+
+/* --------------------본문------------------- */
+
+
+/* 섹션 - 01 시작 */
+
+
+#container{
+    width: 100%;
+    margin-top: 140px;
+    /* background-color: gold; */
+}
+
+.section1{
+    width: 1200px;
+    margin: 0 auto 80px auto;
+    padding-top: 20px;
+    /* border-radius: 10px;
+    background-image: url(../img/뒷\ 배경\ 03.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto; */
+    /* background-color: royalblue; */
+}
+
+.event{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0;
+    /* border-radius: 20px; */
+    background-image: url(/img/sub_menu/bg_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    /* background-color: red; */
+}
+
+.ev_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.ev_menu img{
+    width: 100%;
+    height: 100%;
+}
+
+.ev_menu .img_txt{
+    width: 25%;
+    height: 40%
+}
+
+.ev_menu .img_coffee{
+    display: flex;
+    width: 70%;
+}
+
+.img_coffee .co01{
+    width: 30%;
+}
+
+.img_coffee .co02{
+    width: 45%;
+}
+
+.img_coffee .co03{
+    width: 25%;
+}
+
+.pager{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 125px;
+    width: 160px;
+    height: 30px;
+    /* background-color: aqua; */
+    z-index: 5;
+}
+
+.pager .active0 span{
+    background-color:#F6F5EF;
+}
+
+.pager span{
+    display: block;
+    width: 30px;
+    height: 10px;
+    text-align: center;
+    text-indent: -99999999px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.arrow_left, .arrow_right{
+    position: absolute;
+    top: 160px;
+}
+
+.arrow_left{
+    left: 20px;
+}
+
+.arrow_right{
+    right: 20px;
+}
+
+.arrow_left a{
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    text-indent: -99999px;
+    background-image: url(/img/sub_menu/arrow_left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.arrow_right a{
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    text-indent: -99999px;
+    background-image: url(/img/sub_menu/arrow_right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+
+/* 섹션 - 01 끝 */
+
+
+
+/* 섹션 - 02 시작 */
+
+
+.section2{
+    width: 1200px;
+    margin: 0 auto 100px auto;
+    /* background-color: deepskyblue; */
+}
+
+.menu_list .category{
+    width: 900px;
+    margin: 0 auto 30px auto;
+    border-bottom: 1px solid #F6F5EF;
+    /* background-color: lightblue; */
+}
+
+.menu_list .category ul{
+    display: flex;
+    justify-content: space-around;
+    /* border-bottom: 2px solid #7F7F7F; */
+    /* background-color: goldenrod; */
+}
+
+.category li{
+    width: 25%;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.category .active1{
+    border-bottom: 4px solid #007042;
+}
+
+.category .active1 a{
+    font-size: 28px;
+    font-weight: 600;
+    color: #007042;
+}
+
+.category li a{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 70px;
+    color: #3d3d3d;
+    /* background-color: greenyellow; */
+}
+
+.category li a:hover{
+    font-weight: 700;
+    color:#007042;
+}
+
+.m_box{
+    width: 900px;
+    margin: 0 auto 20px auto;
+    padding-top: 20px;
+    /* border-bottom: 1px solid #7F7F7F; */
+    /* background-color: mediumslateblue; */
+}
+
+.m_box ul{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: hotpink; */
+}
+
+.m_box li{
+    width: 20%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    /* background-color: orange; */
+}
+
+.m_box .b_line{
+    margin-bottom: 20px;
+}
+
+.m_box li a{
+    font-size: 16px;
+    line-height: 16px;
+    color: #7F7F7F;
+}
+
+.m_box input[type=radio]{
+    display: inline-block;
+    transform: scale(1.5);
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+/* 섹션 - 02 끝 */
+
+
+
+/* 섹션 - 03 시작 */
+
+.section3{
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: deeppink; */
+    /* background-image: url(../img/background_move.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center auto; */
+}
+
+.menu_name{
+    text-align: center;
+    height: 120px;
+    background-color: #F6F5EF;
+}
+
+.menu_name h2{
+    font-size: 20px;
+    line-height: 40px;
+    color: #3d3d3d;
+    /* background-color: darkorchid; */
+}
+
+.menu_name p{
+    font-size: 14px;
+    line-height: 40px;
+    color: #7F7F7F;
+    /* background-color: deeppink; */
+}
+
+
+.menu_name .decaf{
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background-image: url(/img/sub_menu/icon-logo-decaf.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    text-indent: -99999px;
+    /* background-color: darkorange; */
+}
+
+.menu_name .alert{
+    height: 40px;
+    margin: 0 auto;
+    /* background-color: darksalmon; */
+}
+
+
+.menu_name .alert .pay{
+    display:inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-image: url(/img/sub_menu/icon-won.png);
+    background-size: 100% auto;
+    background-position: center auto;
+    /* background-color: deepskyblue; */
+    text-indent: -999999px;
+}
+
+.menu_name>.alert>.point{
+    font-size: 20px;
+    font-weight: 700;
+    color:#007042;
+}
+
+.small_bar{
+    display:flex;
+    align-items: center;
+    height: 50px;
+    /* background-color: cornflowerblue; */
+}
+
+
+.small_bar p{
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+    /* background-color: darkorange; */
+}
+
+.small_bar p a{
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #3d3d3d;
+}
+
+.small_bar p a:hover{
+    font-weight: 700;
+    color: #007042;
+}
+
+.small_bar .home span{
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    margin-top: 14px;
+    margin-right: 10px;
+    text-indent: -999999px;
+    background-image: url(/img/sub_menu/icon-home-btn.png);
+    background-size: 100% auto;
+}
+
+
+.small_bar .bar_down span, .bar_down span{
+    display: inline-block;
+    vertical-align: top;
+    width: 12px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-indent: -999999px;
+    background-image: url(/img/sub_menu/menu-lang-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /* background-color: darkorange; */
+
+}
+
+.drink ul li{
+    display: flex;
+    border-top: 1px solid #0e0505;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding-top: 40px;
+}
+
+.drink ul li a:hover{
+    background-image: url(/img/sub_menu/bg_menu.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.drink ul li a:hover .dn_ko{
+    /* display: none; */
+    color: white;
+}
+
+.drink ul li a:hover .dn_en{
+    display: none;
+}
+
+.drink ul li a:hover .price{
+    display: none;
+}
+
+/* .drink ul li a:hover .price span{
+    background-color: white;
+} */
+
+.drink ul li div{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 0 auto;
+    height: 270px;
+    overflow: hidden;
+    text-align: center;
+    /* background-color: gold; */
+}
+
+.drink ul li .d01, .d03, .d04{
+    position: relative;
+}
+
+.sticker01, .sticker03, .sticker04{
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+
+.d01 .sticker01{
+    width: 45px;
+    height: 45px;
+}
+
+.drink li .dn_ko, .dn_en{
+    width: 250px;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.drink li .dn_ko{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #007042;
+
+}
+
+.drink li .dn_en{
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    color: #7F7F7F;
+}
+
+.drink li .price{
+    font-size: 16px;
+    font-weight: 700;
+    color: #007042;
+}
+
+.drink li .price span{
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    margin-top: 3.5px;
+    margin-right: 2px;
+    box-sizing: border-box;
+    background-image: url(/img/sub_menu/icon-won-big-black.png);
+    background-size: 100%;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    /* background-color: gold; */
+}
+
+.drink li .ccino{
+    background-image: url(/img/sub_menu/bg_menu2.gif);
+    width: 100;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+/* -------------------본문 끝----------------- */
+
