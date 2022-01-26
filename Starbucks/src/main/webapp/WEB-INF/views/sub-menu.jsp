@@ -1,4 +1,4 @@
-
+      <%@ include file="./includes/header.jsp" %> 
         <div id="container"><!----------------------------#container start-------------------------------->
             <div class="section1"><!--.section1-->
                 <div class="event">
@@ -175,3 +175,4 @@
                 </div><!--drink-->
             </v><!--section3-->
         </div><!------------------------------#container-------------------------------->
+      <%@ include file="./includes/footer.jsp" %> 

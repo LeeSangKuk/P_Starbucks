@@ -1,3 +1,4 @@
+		<%@ include file="./includes/header.jsp" %>
             <div class="section1">
                 <div class="sectionIn">
                     <div class="himdleda"> 
@@ -119,4 +120,5 @@
                         </li>
                     </ul> 
                 </div> <!--box4-->
-            </div><!--section1-->   
+            </div><!--section1-->
+		<%@ include file="./includes/footer.jsp" %>   
