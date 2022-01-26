@@ -1,14 +1,16 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
       <%@ include file="./includes/header.jsp" %> 
         <div id="container"><!----------------------------#container start-------------------------------->
             <div class="section1"><!--.section1-->
                 <div class="event">
                     <a href="#">
                         <div class="ev_menu">
-                            <p class="img_txt"><img src="./img/sub_menu/menu-event-text.png" alt="menu-event-text"></p>
+                            <p class="img_txt"><img src="resources/img/sub_menu/menu-event-text.png" alt="menu-event-text"></p>
                             <div class="img_coffee">
-                                <p class="co01"><img src="./img/sub_menu/menu-event-01.png" alt="event-menu"></p>
-                                <p class="co02"><img src="./img/sub_menu/menu-event-02.png" alt="event-menu"></p>
-                                <p class="co03"><img src="./img/sub_menu/menu-event-03.png" alt="event-menu"></p>
+                                <p class="co01"><img src="resources/img/sub_menu/menu-event-01.png" alt="event-menu"></p>
+                                <p class="co02"><img src="resources/img/sub_menu/menu-event-02.png" alt="event-menu"></p>
+                                <p class="co03"><img src="resources/img/sub_menu/menu-event-03.png" alt="event-menu"></p>
                             </div><!--img_coffee-->
                         </div><!--ev_menu-->
                     </a>
@@ -70,16 +72,16 @@
                                     <p class="dn_ko">토피 넛 프라푸치노</p>
                                     <p class="dn_en">Toffee Nut Frappuccino</p>
                                     <p class="price"><span>원</span>6,300</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-01.png" alt="토피 넛 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-01.png" alt="토피 넛 프라푸치노"></p>
                                 </a>
-                                <p class="sticker01"><img src="./img/sub_menu/icon-new.png" alt="new-icon"></p>
+                                <p class="sticker01"><img src="resources/img/sub_menu/icon-new.png" alt="new-icon"></p>
                             </div>
                             <div class="d02">
                                 <a href="#">
                                     <p class="dn_ko">모카 프라푸치노</p>
                                     <p class="dn_en">Mocha Frappuccino</p>
                                     <p class="price"><span>원</span>5,600</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-02.png" alt="모카 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-02.png" alt="모카 프라푸치노"></p>
                                 </a>
                             </div>
                             <div class="d03">
@@ -87,18 +89,18 @@
                                     <p class="dn_ko">제주 까망 크림 프라푸치노</p>
                                     <p class="dn_en">Jeju Black Sesame Cream Frappuccino</p>
                                     <p class="price"><span>원</span>7,500</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-08.png" alt="제주 까망 크림 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-08.png" alt="제주 까망 크림 프라푸치노"></p>
                                 </a>
-                                <p class="sticker03"><img src="./img/sub_menu/icon-only-jeju.png" alt="jeju-only"></p>
+                                <p class="sticker03"><img src="resources/img/sub_menu/icon-only-jeju.png" alt="jeju-only"></p>
                             </div>
                             <div class="d04">
                                 <a href="#">
                                     <p class="dn_ko">제주 쑥떡 크림 프라푸치노</p>
                                     <p class="dn_en">Jeju Mugwort Cream Frappuccino</p>
                                     <p class="price"><span>원</span>7,500</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-09.png" alt="제주 쑥떡 크림 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-09.png" alt="제주 쑥떡 크림 프라푸치노"></p>
                                 </a>
-                                <p class="sticker04"><img src="./img/sub_menu/icon-only-jeju.png" alt="jeju-only"></p>
+                                <p class="sticker04"><img src="resources/img/sub_menu/icon-only-jeju.png" alt="jeju-only"></p>
                             </div>
                         </li><!-- 1번 영역 끝 -->
 
@@ -108,7 +110,7 @@
                                     <p class="dn_ko">바닐라 크림 프라푸치노</p>
                                     <p class="dn_en">Vanilla Cream Frappuccino</p>
                                     <p class="price"><span>원</span>4,800</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-07.png" alt="바닐라 크림 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-07.png" alt="바닐라 크림 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -116,7 +118,7 @@
                                     <p class="dn_ko">더블 에스프레소 칩 프라푸치노</p>
                                     <p class="dn_en">Double Espresso Chip Frappuccino</p>
                                     <p class="price"><span>원</span>6,100</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-02.png" alt="더블 에스프레소 칩 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-02.png" alt="더블 에스프레소 칩 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -124,7 +126,7 @@
                                     <p class="dn_ko">자바 칩 프라푸치노</p>
                                     <p class="dn_en">Java Chip Frappuccino</p>
                                     <p class="price"><span>원</span>6,100</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-04.png" alt="자바 칩 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-04.png" alt="자바 칩 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -132,7 +134,7 @@
                                     <p class="dn_ko">카라멜 프라푸치노</p>
                                     <p class="dn_en">Caramel Frappuccino</p>
                                     <p class="price"><span>원</span>5,600</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-05.png" alt="카라멜 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-05.png" alt="카라멜 프라푸치노"></p>
                                 </a>
                             </div>
                         </li><!-- 2번 영역 끝 -->
@@ -143,7 +145,7 @@
                                     <p class="dn_ko">제주 유기농 말차 크림 프라푸치노</p>
                                     <p class="dn_en">Malcha Cream Frappuccino from Jeju Organic Farm</p>
                                     <p class="price"><span>원</span>6,300</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-10.png" alt="제주 유기농 말차로 만든 크림 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-10.png" alt="제주 유기농 말차로 만든 크림 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -151,7 +153,7 @@
                                     <p class="dn_ko">초콜릿 크림 칩 프라푸치노</p>
                                     <p class="dn_en">Chocolate Cream Chip Frappuccino</p>
                                     <p class="price"><span>원</span>5,700</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-11.png" alt="초콜릿 크림 칩 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-11.png" alt="초콜릿 크림 칩 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -159,7 +161,7 @@
                                     <p class="dn_ko">화이트 초콜릿 모카 프라푸치노</p>
                                     <p class="dn_en">White Chocolate Mocha Frappuccino</p>
                                     <p class="price"><span>원</span>5,700</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-06.png" alt="화이트 초콜릿 모카 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-06.png" alt="화이트 초콜릿 모카 프라푸치노"></p>
                                 </a>
                             </div>
                             <div>
@@ -167,7 +169,7 @@
                                     <p class="dn_ko">화이트 타이거 프라푸치노</p>
                                     <p class="dn_en">White Tiger Frappuccino</p>
                                     <p class="price"><span>원</span>6,500</p>
-                                    <p class="ccino"><img src="./img/sub_menu/menu-12.png" alt="화이트 타이거 프라푸치노"></p>
+                                    <p class="ccino"><img src="resources/img/sub_menu/menu-12.png" alt="화이트 타이거 프라푸치노"></p>
                                 </a>
                             </div>
                         </li><!-- 3번 영역 끝 -->

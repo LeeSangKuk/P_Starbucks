@@ -75,7 +75,7 @@ img{
     display: block;
     width: 60px;
     height: 60px;
-    background-image: url(/img/header/logo.png);
+    background-image: url(../img/header/logo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -99999999px;
@@ -142,7 +142,7 @@ img{
     display: block;
     width: 50px;
     height: 50px;
-    background-image: url(../img/menu_icon.png);
+    background-image: url(..../img/menu_icon.png);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -153,7 +153,7 @@ img{
     display: block;
     width: 50px;
     height: 50px;
-    background-image: url(../img/search.svg);
+    background-image: url(..../img/search.svg);
     background-size: 25px auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -180,7 +180,7 @@ img{
     margin: 0 auto 80px auto;
     padding-top: 20px;
     /* border-radius: 10px;
-    background-image: url(../img/뒷\ 배경\ 03.jpg);
+    background-image: url(..../img/뒷\ 배경\ 03.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto; */
@@ -193,7 +193,7 @@ img{
     margin: 0 auto;
     padding: 30px 0;
     /* border-radius: 20px; */
-    background-image: url(/img/sub_menu/bg_banner.jpg);
+    background-image: url(../img/sub_menu/bg_banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -281,7 +281,7 @@ img{
     width: 50px;
     height: 50px;
     text-indent: -99999px;
-    background-image: url(/img/sub_menu/arrow_left.png);
+    background-image: url(../img/sub_menu/arrow_left.png);
     background-position: center;
     background-repeat: no-repeat;
     z-index: 5;
@@ -293,7 +293,7 @@ img{
     width: 50px;
     height: 50px;
     text-indent: -99999px;
-    background-image: url(/img/sub_menu/arrow_right.png);
+    background-image: url(../img/sub_menu/arrow_right.png);
     background-position: center;
     background-repeat: no-repeat;
     z-index: 5;
@@ -407,7 +407,7 @@ img{
     width: 1200px;
     margin: 0 auto;
     /* background-color: deeppink; */
-    /* background-image: url(../img/background_move.gif);
+    /* background-image: url(..../img/background_move.gif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center auto; */
@@ -440,7 +440,7 @@ img{
     width: 40px;
     height: 40px;
     margin-right: 5px;
-    background-image: url(/img/sub_menu/icon-logo-decaf.png);
+    background-image: url(../img/sub_menu/icon-logo-decaf.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0 center;
@@ -463,7 +463,7 @@ img{
     margin-top: 9px;
     margin-right: 10px;
     background-repeat: no-repeat;
-    background-image: url(/img/sub_menu/icon-won.png);
+    background-image: url(../img/sub_menu/icon-won.png);
     background-size: 100% auto;
     background-position: center auto;
     /* background-color: deepskyblue; */
@@ -511,7 +511,7 @@ img{
     margin-top: 14px;
     margin-right: 10px;
     text-indent: -999999px;
-    background-image: url(/img/sub_menu/icon-home-btn.png);
+    background-image: url(../img/sub_menu/icon-home-btn.png);
     background-size: 100% auto;
 }
 
@@ -524,7 +524,7 @@ img{
     margin-top: 20px;
     margin-left: 10px;
     text-indent: -999999px;
-    background-image: url(/img/sub_menu/menu-lang-arrow.svg);
+    background-image: url(../img/sub_menu/menu-lang-arrow.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     /* background-color: darkorange; */
@@ -539,7 +539,7 @@ img{
 }
 
 .drink ul li a:hover{
-    background-image: url(/img/sub_menu/bg_menu.gif);
+    background-image: url(../img/sub_menu/bg_menu.gif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -625,7 +625,7 @@ img{
     margin-top: 3.5px;
     margin-right: 2px;
     box-sizing: border-box;
-    background-image: url(/img/sub_menu/icon-won-big-black.png);
+    background-image: url(../img/sub_menu/icon-won-big-black.png);
     background-size: 100%;
     background-position: 0 center;
     background-repeat: no-repeat;
@@ -634,7 +634,7 @@ img{
 }
 
 .drink li .ccino{
-    background-image: url(/img/sub_menu/bg_menu2.gif);
+    background-image: url(../img/sub_menu/bg_menu2.gif);
     width: 100;
     height: auto;
     background-size: cover;

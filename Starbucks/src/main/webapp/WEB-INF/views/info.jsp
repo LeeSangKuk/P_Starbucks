@@ -1,3 +1,5 @@
+		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 		<%@ include file="./includes/header.jsp" %>
             <div class="section1">
                 <div class="sectionIn">
@@ -69,26 +71,26 @@
                 <div class="box4">
                     <ul class="box4_a1">
                         <li><a href="#">
-                                <p><img src="./img/sub_info/icon_discomfort.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_discomfort.png" alt=""></p>
                                 <p>방문 매장 불편사항</p> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_tip.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_tip.png" alt=""></p>
                                 <p>고객 의견 문의하기</p>
                                 <!-- 향후를 위해서 만들어 놓음 이용팁 관련 세분화 하기 위해서 들어가서 나오는것들을 -->
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_survey.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_survey.png" alt=""></p>
                                 <p>고객 경험 설문조사</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_question.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_question.png" alt=""></p>
                                 <p>자주 하는 질문</p>
                             </a>
                         </li>
@@ -96,25 +98,25 @@
                     <ul class="box4_b1">
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_homepage.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_homepage.png" alt=""></p>
                                 <p>홈페이지 이용 팁</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_application.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_application.png" alt=""></p>
                                 <p class="width2">애플리케이션 이용 팁</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_card.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_card.png" alt=""></p>
                                 <p>제휴카드 안내</p>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <p><img src="./img/sub_info/icon_receipt.png" alt=""></p>
+                                <p><img src="resources/img/sub_info/icon_receipt.png" alt=""></p>
                                 <p class="width">비회원 전자영수증 조회</p>
                             </a>
                         </li>

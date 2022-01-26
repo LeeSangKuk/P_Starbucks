@@ -73,7 +73,7 @@ img{
     display: block;
     width: 60px;
     height: 60px;
-    background-image: url(/img/header/logo.png);
+    background-image: url(../img/header/logo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -99999999px;
@@ -138,7 +138,7 @@ img{
     display: block;
     width: 50px;
     height: 50px;
-    background-image: url(/img/header/icon-menu.png);
+    background-image: url(../img/header/icon-menu.png);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ img{
     display: block;
     width: 50px;
     height: 50px;
-    background-image: url(/img/header/icon-gnb-sc.png);
+    background-image: url(../img/header/icon-gnb-sc.png);
     background-size: 25px auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -174,7 +174,7 @@ img{
 .f_logo{
     width: 55px;
     height: 65px;
-    background-image: url(/img/footer/f_logo.png);
+    background-image: url(../img/footer/f_logo.png);
     background-size: 55px auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -280,13 +280,13 @@ img{
 }
 
 .f_ins a{
-    background-image: url(/img/footer/f_ins.png);
+    background-image: url(../img/footer/f_ins.png);
 }
 
 .f_fb a{
-    background-image: url(/img/footer/f_fb.png);
+    background-image: url(../img/footer/f_fb.png);
 }
 
 .f_yt a{
-    background-image: url(/img/footer/f_yt.png);  
+    background-image: url(../img/footer/f_yt.png);  
 }

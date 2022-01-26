@@ -1,7 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="./includes/header.jsp" %>
 	<div id="main" class="scroll-container">
 		<section class="section1">
 			<div class="s1d">
-				<p class="main1_photo"><img src="./img/main/main_banner.jpg" alt=""></p>
+				<p class="main1_photo"><img src="resources/img/main/main_banner.jpg" alt=""></p>
                     
 				<ul class="main1_text">
 					<li class="m1t1"><span>Merry christmas</span> <br>With Starbucks korea.</li>
@@ -16,7 +19,7 @@
 
 		<section class="section2">
 			<div class="s2d">
-				<p class="main2_photo"><img src="./img/main/main_banner2.png" alt=""></p>
+				<p class="main2_photo"><img src="resources/img/main/main_banner2.png" alt=""></p>
                     
 				<ul class="main2_text">
 					<li class="m2t1">FIND YOUR TASTE</li> 
@@ -31,7 +34,7 @@
 
 		<section class="section3">
 			<div class="s3d1">
-				<p class="r2L"><a href="#"><img src="./img/main/main_banner3.jpg" alt=""></a></p>
+				<p class="r2L"><a href="#"><img src="resources/img/main/main_banner3.jpg" alt=""></a></p>
 
 				<ul class="r2R">
 					<li class="r2t1">REWARDS</li>
@@ -48,3 +51,4 @@
 			</div><!--.s3d1-->
 		</section><!--.section3-->
 	</div><!--.#main-->
+<%@ include file="./includes/footer.jsp" %>
