@@ -72,12 +72,12 @@
                     	<ul>
                     	
                     		<li class="d_del_btn">
-	                            <a href="/board/remove?bno=${detail.bno}">삭제</a>
+	                            <a href="/board/remove">삭제</a>
 	                        </li><!--.d_del_btn-->
 	                        
 	                        
 	                        <li class="d_write_btn">
-	                            <a href="/board/modify?bno=${detail.bno}">수정</a>
+	                            <a href="/board/modify">수정</a>
 	                        </li><!--.d_write_btn-->
     
 

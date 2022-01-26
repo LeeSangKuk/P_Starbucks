@@ -46,5 +46,12 @@ public class BoardController {
 		model.addAttribute("detail",service.detail(board));
 	}
 	
+	// 2022-01-26 PM 02:14
+	// detail.jsp(상세페이지)에서 글 수정 버튼을 누르면 수정 화면으로 이동
+	@GetMapping("modify")
+	public void modify() {
+		
+	}
+	
 	
 }
