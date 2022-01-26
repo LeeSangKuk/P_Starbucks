@@ -19,7 +19,7 @@ public class SampleController {
 			
 	@GetMapping("menu")
 	public void menu() {
-		System.out.println("menu 실행");		
+		System.out.println("menu 실행");
 	}
 	
 }
