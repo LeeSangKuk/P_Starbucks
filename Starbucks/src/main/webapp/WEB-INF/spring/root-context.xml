@@ -26,8 +26,8 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
-	<mybatis-spring:scan base-package="org.team.mapper"/>
-		<mybatis-spring:scan base-package="org.team.service"/>
-			<mybatis-spring:scan base-package="org.team.domain"/>
+	<mybatis-spring:scan base-package="com.team.mapper"/>
+		<mybatis-spring:scan base-package="com.team.service"/>
+			<mybatis-spring:scan base-package="com.team.domain"/>
 	
 </beans>
