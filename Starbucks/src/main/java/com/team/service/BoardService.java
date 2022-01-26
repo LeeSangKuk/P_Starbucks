@@ -13,4 +13,10 @@ public interface BoardService {
 	
 	// 3.상세페이지 설계
 	public BoardDTO detail(BoardDTO board);
+	
+	// 4.글 수정 설계
+	public void modify(BoardDTO board);
+	
+	// 5.글 삭제 설계
+	public void remove(BoardDTO board);
 }

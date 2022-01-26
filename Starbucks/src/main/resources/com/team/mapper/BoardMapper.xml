@@ -17,4 +17,24 @@
 			SELECT * FROM sb_board
 			WHERE bno = #{bno}
 		</select>
+		
+		<update id="cntupdate">
+			UPDATE sb_board
+			SET cnt = cnt + 1
+			WHERE bno=#{bno}
+		</update>
+		
+		<update id="modify">
+			UPDATE sb_board
+			SET title = #{title},
+				content = #{content},
+				regdate = now()
+			WHERE bno = #{bno}
+		</update>
+		
+		<delete id="remove">
+			DELETE
+			FROM sb_board
+			WHERE bno=#{bno}
+		</delete>
 	</mapper>
