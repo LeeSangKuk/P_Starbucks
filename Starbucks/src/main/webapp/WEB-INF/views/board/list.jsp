@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
-<%@ include file="header.jsp" %>
+<%@ include file="../includes/header.jsp" %>
 
     <div id="container">
         <div class="container_in">
@@ -17,7 +16,7 @@
                                     <th class="list_num">NO</th>
                                     <th class="list_title">제목</th>
                                     <th class="list_writer">작성자</th>
-                                    <th class="list_date">작성일</th>
+                                    <th class="	">작성일</th>
                                     <th class="list_hits">조회수</th>
                                 </tr>
                             </thead>
@@ -87,4 +86,4 @@
         </div><!--.container_in-->
     </div><!--#container-->
 
-    <%@ include file="footer.jsp" %>
+<%@ include file="../includes/footer.jsp" %>

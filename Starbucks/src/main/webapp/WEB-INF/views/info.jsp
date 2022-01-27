@@ -5,7 +5,7 @@
                 <div class="sectionIn">
                     <div class="himdleda"> 
                         <p class="box6a1"><h1>
-                            <a href="#" class="box6_a1">고객센터</a>
+                            <a href="/info" class="box6_a1">고객센터</a>
                         </h1>
                             <!-- p태그도연습 -->
                             <a href="" class="box6_b1">
@@ -19,9 +19,9 @@
                     <div class="box3">
                         
                         <div class="menu">
-                            <h2>고객센터</h2>
+                            <h2><a href="/info">고객센터</a></h2>
                             <ul>                
-                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="/board/list">고객의 소리</a></li>
                                 <li><a href="#">스토어케어</a></li>
                                 <li><a href="#">전화 문의</a></li>
                              </ul>

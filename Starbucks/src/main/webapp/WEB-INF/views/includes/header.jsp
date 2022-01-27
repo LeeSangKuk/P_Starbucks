@@ -11,17 +11,19 @@
     <link rel="stylesheet" href="../resources/css/sub_info.css">
     <link rel="stylesheet" href="../resources/css/main.css">
     <link rel="stylesheet" href="../resources/css/header&footer.css">
+    <link rel="stylesheet" href="../resources/css/BoardStyle.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div id="wrap">
         <header id="header">
             <div class="header_in">
                 <h1 class="logo">
-                    <a href="#">스타벅스 </a>
+                    <a href="/main">스타벅스 </a>
                 </h1>
                 
                 <nav class="pc-gnb">
@@ -30,7 +32,7 @@
                             <a href="#">브랜드 소개</a>
                         </li>
                         <li>
-                            <a href="#">모든 메뉴</a>
+                            <a href="/menu">모든 메뉴</a>
                         </li>
                         <li>
                             <a href="#">리워드</a>
@@ -53,7 +55,7 @@
                             <a href="#">나의 스타벅스</a>
                         </li>
                         <li>
-                            <a href="">고객센터</a>
+                            <a href="/info">고객센터</a>
                         </li>
                     </ul>
                 </div><!--.pc-util-->
@@ -61,10 +63,10 @@
                 <div class="icons">
                     <ul>
                         <li class="icon_search">
-                            <a href="">통합검색</a>
+                            <a href="#">통합검색</a>
                         </li>
                         <li class="icon_menu">
-                            <a href=""> 전체메뉴 </a>
+                            <a href="#"> 전체메뉴 </a>
                         </li>
                     </ul>
                 </div><!--.icons-->
