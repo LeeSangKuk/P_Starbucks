@@ -41,121 +41,7 @@ input{
     background-color:#F6F5EF;
 } */
 
-/*---------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------*/
-#header{
-    position: fixed;
-    top: 0%;
-    left: 50%;
-    margin-left: -1280px;
-    width: 2560px;
-    z-index: 100;
-    background-color:#F6F5EF;
-    border-bottom: 1px solid #e4e3e1;
-}
 
-.header_in{
-    position: relative;
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color : transparent;
-}
-
-.logo a{
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-image: url(/resources/img/logo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    text-indent: -99999999px;
-    object-fit: cover;
-}
-
-
-.pc-gnb ul{
-    display: flex;
-}
-
-.pc-gnb li{
-    margin-right: 40px;
-}
-
-.pc-gnb li:last-child{
-    margin-right: 0;
-}
-
-.pc-gnb li a{
-    font-size: 18px;
-    font-weight: 500;
-    color: #222;
-}
-
-.pc-util{
-    margin-left: 100px;
-}
-
-
-.pc-util ul{
-    display: flex;
-}
-
-
-
-.pc-util li{
-    margin-right: 10px;
-}
-
-.pc-util li:last-child{
-    margin-right: 0;
-}
-
-.pc-gnb li a:hover{
-    font-weight: 700;
-    color: #007042;
-}
-
-.pc-util li a{
-    font-size: 15px;
-    font-weight: 500;
-    color: #222;
-}
-
-.pc-util li a:hover{
-    font-weight: 700;
-    color: #007042;
-}
-
-.icons ul{
-    display: flex;
-}
-
-.icons .icon_menu a{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-image: url(/resources/img/menu_icon.png);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-indent: -9999999px;
-}
-
-.icons .icon_search a{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-image: url(/resources/img/search.svg);
-    background-size: 25px auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -999999999px;
-}
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -490,6 +376,25 @@ th{
 
 
 /* board - reply */
+
+
+.field{
+    display: flex;
+}
+
+.field input{
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 202px;
+    padding: 10px;
+}
+
+.field_writer{
+    border-left: none;
+}
+
+
 .d_reply{
     padding-bottom: 60px;
     border-bottom: 1px solid #ccc;
@@ -545,150 +450,51 @@ th{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* detail - replyList */
 
-
-
-
-
-
-/*---------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------*/
-/* footer */
-
-#footer{
-
-    width: 100%;
-    background-color: #3d3d3d;
-    padding-top: 30px;
-    padding-bottom: 80px;
+.r_btns ul{
+	display: flex;
+	justify-content: left;
 }
 
-.footer_in{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
+.r_btns ul li{
+	border: none;
+	padding: 0;
 }
 
-.f_logo{
-    display: inline-block;
-    width: 55px;
-    height: 65px;
-    background-image: url(/resources/img/eunha_f_logo_round_wh.png);
-    background-size: 55px auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 30px;
-    text-indent: -99999px;
+.r_delete_btn{
+	margin-right: 5px;
 }
 
-.f_navi{
-    position: absolute;
-    top: 10px;
-    right: 0;
-}
 
-.f_navi ul{
-    display: flex;
-}
-
-.f_navi li{
-    margin-left: 30px;
-}
-
-.f_navi li a{
-    color: #fff;
-    font-weight: 500;
-}
-
-.f_menu{
-    margin-bottom: 30px;
-}
-
-.f_menu p a{
-    color: #aaa;
-}
-
-.f_menu .point a{
-    color: #fff;
-}
-
-.f_menu p span::after{
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    background-color: #aaa;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    margin: 9px 5px 0 5px;
-}
-
-.f_menu p span:last-child::after{
-    display: none;
-}
-
-.f_info{
-    margin-bottom: 20px;
-}
-
-.f_info ul{
-    display: flex;
-}
-
-.f_info li{
-    color: #aaa;
-}
-
-.f_info li::after{
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    width: 1px;
-    height: 10px;
-    background-color: #aaa;
-    margin: 5px 7px 0 7px;
-}
-
-.f_info li:last-child::after{
-    display: none;
-}
-
-.f_copyright{
-    color: #aaa;
-    font-size: 12px;
-}
-
-.f_icons{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-
-}
-.f_icons p{
-    margin-left: 10px;
-}
-
-.f_icons p a{
+.r_modify_btn, .r_delete_btn, .r_submit_btn{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 13px;
+	text-align: center;
+    box-sizing: border-box;
+    background-color: #555;
+    border-radius: 3px;
     display: block;
-    width: 25px;
-    height: 25px;
-    background-size: 25px auto;
-    text-indent: -99999px;
+    line-height: 30px;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    border: none;
+} 
+
+.detail_rno{
+	font-family: 'Noto Sans KR', sans-serif;
+	border: none;
 }
 
-.f_ins a{
-    background-image: url(/resources/img/eunha_icon_ins.png);
+#content{
+	resize: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	border: none;
+	/*border: 1px solid #ccc;*/ 
 }
 
-.f_fb a{
-    background-image: url(/resources/img/eunha_icon_fb.png);
-}
 
-.f_yt a{
-    background-image: url(/resources/img/eunha_icon_yt2.png);  
-}
+
+
+

@@ -15,7 +15,7 @@
 								${detail.title}
                             </li><!--.cs_title_nam-->
                         
-                            <li class="d_title_bno" id="bno">${detail.bno}</li><!--.d_title_nam-->
+                            <li class="d_title_bno"><input type="hidden" id="bno" value="${detail.bno}"></li><!--.d_title_nam-->
                             <!-- <input type="text" name="bno" value="${detail.bno}"> -->
                             
 
@@ -55,14 +55,17 @@
 
 
                         <div class="d_reply_form">
-                        	<input type="hidden" name="rno">
+                        	<div class="field">
+                                <input type="hidden" name="rno" class="field_rno" readonly>
+                                <input type="text" name="replyer" value="" class="field_replyer">
+                            </div>
 
 
                             <textarea name="reply" id="" cols="4" placeholder="댓글을 입력해주세요."></textarea>
 
 							
                             <div class="d_reply_submit">
-                                <input type="submit" id="registerBtn" class="submit_btn" value="등록">
+                                <input type="submit" id="d_reply_regBtn" class="submit_btn" value="등록">
                             </div>
                         </div><!--.re_write-->
                     </div><!--.d_reply-->
@@ -112,5 +115,5 @@
     </div><!--#container-->
     
     
-    
+    <script type="text/javascript" src="../resources/js/detail.js"></script>
     <%@ include file="footer.jsp" %>

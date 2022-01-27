@@ -45,6 +45,7 @@ public class BoardController {
 		model.addAttribute("list", service.list(cri));
 		
 		int total = service.getTotalCount(cri);
+		System.out.println("total = " + total);
 		model.addAttribute("pageMaker", new PageDTO(cri, total));
 		
 		// 콘솔 테스트

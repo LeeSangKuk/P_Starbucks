@@ -12,10 +12,10 @@
 		<select id="list" resultType="com.team.domain.BoardDTO">
 			SELECT *
 			FROM(
-			SELECT @rownum:=@rownum+1 AS rownum, b.*
+			SELECT @rownum:=@rownum+1 AS rownum, sb_b.*
 			FROM (SELECT @rownum:=0) AS tmp,
-				board AS b
-			) AS boardList
+				sb_board AS sb_b
+			) AS sb_boardList
 			
 			<choose>
 				<when test="search == null">
