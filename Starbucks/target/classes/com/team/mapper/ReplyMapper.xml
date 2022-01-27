@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+	<mapper namespace="com.team.mapper.ReplyMapper">
+		<insert id="write">
+			INSERT INTO sb_reply(bno,reply,replyer)
+			VALUES(#{bno},#{reply},#{replyer})
+		</insert>
+		
+		<select id="list" resultType="com.team.domain.ReplyDTO">
+			SELECT * FROM sb_reply WHERE bno=#{bno}
+		</select>
+		
+		<select id="detail" resultType="com.team.domain.ReplyDTO">
+			SELECT * FROM sb_reply WHERE rno=#{rno}
+		</select>
+		
+		<update id="update">
+			UPDATE sb_reply
+			SET reply=#{reply},
+				replydate=now()
+			WHERE rno=#{rno}
+		</update>
+		
+		<delete id="remove">
+			DELETE FROM sb_reply
+			WHERE rno=#{rno}
+		</delete>
+		
+	</mapper>

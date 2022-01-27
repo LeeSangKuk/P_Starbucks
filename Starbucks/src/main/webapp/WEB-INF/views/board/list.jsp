@@ -44,8 +44,8 @@
                         <form id="actionForm" action="/board/list" method="get">
                             <div>
 
-                                <input type="text" name="pageNum" placeholder="pageNum" value="${pageMaker.cri.pageNum}">
-                                <input type="text" name="amount" placeholder="amount" value="${pageMaker.cri.amount}">
+                                <input type="hidden" name="pageNum" placeholder="pageNum" value="${pageMaker.cri.pageNum}">
+                                <input type="hidden" name="amount" placeholder="amount" value="${pageMaker.cri.amount}">
 
                             </div>
                             <select name="search" id="">

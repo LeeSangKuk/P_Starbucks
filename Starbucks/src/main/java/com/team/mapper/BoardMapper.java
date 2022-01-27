@@ -23,4 +23,7 @@ public interface BoardMapper {
 	
 	// 5.글 삭제 DB 설계
 	public void remove(BoardDTO board);
+	
+	// 6. 페이징에 쓰일 전체 건수
+	public int getTotalCount(Criteria cri);
 }
