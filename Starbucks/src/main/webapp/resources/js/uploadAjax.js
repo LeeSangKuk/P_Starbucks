@@ -70,4 +70,27 @@ $(document).ready(function(){
 		
 		
 	})
-})
+})// $(document).ready 밖에 선언
+// showUploadFile
+// 사용자가 선택한 파일을 원하는 경로에 성공적으로 업로드 한 후 웹 브라우저에 파일을 띄워라에 대한 함수 선언
+function showUploadedFile(uploadresultArr){
+	var str="";
+	
+	$(uploadresultArr).each(function(i,obj){
+		console.log(obj);
+
+
+		if(!obj.image){// 사용자가 업로드 한 파일의 타입이 이미지가 아니면
+			str += "<li>" + "이미지 파일 아님" + "</li>"
+		}else{// 사용자가 업로드한 파일의 타입이 이미지이면
+			// 원화표시(\) -> / 로 바꿔서 경로가 제대로 뜨게하기(uuid도)
+			var fileCallPath = encodeURIComponent(obj.uploadPath + "/s_" + obj.uuid + "_" + obj.fileName)
+			console.log(fileCallPath);
+			
+			// img 태그를 사용해서 웹브라우저에 이미지 출력
+			str += "<li><img src='/display?fileName=" + fileCallPath + "'></li>"
+		}
+	})
+	
+	$("#uploadResult ul").html(str);
+}
