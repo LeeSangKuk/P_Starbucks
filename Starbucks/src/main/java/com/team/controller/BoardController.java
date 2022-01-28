@@ -31,7 +31,9 @@ public class BoardController {
 	public void write() {
 		// 콘솔 테스트
 		System.out.println("글쓰기 화면");
+		
 	}
+	
 	
 	// 글쓰기 버튼을 누르면 글 목록 화면으로 이동
 	@PostMapping("write")
