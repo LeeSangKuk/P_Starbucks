@@ -30,6 +30,7 @@
                     <div class="d_content">
 						${detail.content}
 						<div id="uploadResult">
+						<!-- 업로드한 파일이 들어갈 공간 -->
 							<ul></ul>
 						</div>
                     </div><!--.n_content-->
@@ -89,25 +90,6 @@
 	                        </li><!--.d_list_btn-->
                         </ul>
                     </div>
-
-
-                    <div class="detail_view_wrap">
-                        <table class="dvw_table">
-                            <tr class="dvw_up">
-                                <th>윗글</th>
-                                <td>
-                                    <a href="#">스타벅스커피 코리아 원산지 오표시 관련 고객설명문</a>
-                                </td>
-                            </tr><!--.dvw_up-->
-                            <tr class="dvw_down">
-                                <th>아랫글</th>
-                                <td>
-                                    <a href="#">2021 플래너 쿠폰 3종 유효 기간 연장 안내</a>
-                                </td>
-                            </tr><!--.dvw_down-->
-                        </table>
-                    </div><!--.detail_view_wrap-->
-
                     
                 </div><!--.d_box-->
             </div><!--.board_detail-->

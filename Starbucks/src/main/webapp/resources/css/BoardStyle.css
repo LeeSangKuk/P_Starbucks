@@ -235,6 +235,8 @@ input{
     width: 300px;
     height: 28px;
     margin: 0 10px;
+    padding-left: 7px;
+    box-sizing: border-box;
     border: 1px solid #bbb;
 }
 
@@ -262,7 +264,7 @@ input{
 }
 
 
-/* notice_detail */
+/* board_detail */
 
 .board_detail .d_box{
     position: relative;
@@ -354,24 +356,10 @@ th{
     padding-left: 20px;
 }
 
-.smap{
-    position: absolute;
-    top: -40px;
-    right: 0;
-}
-
-.smap ul{
-    display: flex;
-}
-
-.smap a{
-    color: #555;
-}
-
-.smap_arr{
-    padding-top: 5px;
-    margin-left: 7px;
-    margin-right: 7px;
+/* detail - 업로드된 이미지 파일 크기 조정 */
+.board_detail #uploadResult ul img{
+	width: 500px;
+	height: auto;
 }
 
 

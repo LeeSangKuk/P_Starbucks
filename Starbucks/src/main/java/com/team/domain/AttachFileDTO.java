@@ -7,6 +7,7 @@ public class AttachFileDTO {
 	private boolean image;
 	private int bno;
 	
+	
 	public String getFileName() {
 		return fileName;
 	}

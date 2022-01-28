@@ -40,4 +40,6 @@
 			</div><!--.write-->
         </div><!--.container_in-->
     </div><!--#container-->
+    
+    <script type="text/javascript" src="../resources/js/uploadAjax.js"></script>
 <%@ include file="footer.jsp" %>

@@ -7,7 +7,7 @@ import com.team.domain.Criteria;
 
 public interface BoardMapper {
 	// 1.글쓰기 DB 설계
-	public void write(BoardDTO board);
+	public void insertSelectKey(BoardDTO board);
 	
 	// 2.목록 DB 설계
 	public ArrayList<BoardDTO> list(Criteria cri);

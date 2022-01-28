@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -250,7 +252,29 @@ public class UploadController {
 		return result;
 	}
 	
-	
+	// 업로드한 파일의 타입이 이미지가 아닐 때 웹 브라우저를 통해서 download 할 수 있게
+	// 웹 브라우저가 이 파일은 download 해야하는 파일입니다. 하는 것을 인지할 수 있도록 반환이 되어야 함
+	// 그러기 위해서는 APPLICATION_OCTET_STREAM_VALUE 타입으로 반환데이터 타입 선언(produces = 반환 타입)
+	@GetMapping(value="download", produces=MediaType.APPLICATION_OCTET_STREAM_VALUE)
+	public ResponseEntity<Resource> downloadFile(String fileName){
+		System.out.println("download fileName" + fileName);
+		
+		Resource resource = new FileSystemResource("C:\\Users\\GreenArt\\git\\upload\\" + fileName);
+		System.out.println("download resource" + resource);
+		
+		String resourceName = resource.getFilename();
+		
+		HttpHeaders header = new HttpHeaders();
+		
+		try {
+			header.add("content-Disposition", "attachment ; fileName = " + new String(resourceName.getBytes("UTF-8"), "ISO-8859-1"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return new ResponseEntity<Resource>(resource, header, HttpStatus.OK);
+	}
 	
 	
 }

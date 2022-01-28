@@ -55,7 +55,7 @@
                                 <option value="TC">제목+내용</option>
                                 <option value="TCW">제목+내용+작성자</option>
                             </select><!--.search-->
-                            <input type="text" name="keyword" class="s_sc">
+                            <input type="text" value="${pageMaker.cri.keyword}" name="keyword" class="s_sc">
                             <input type="submit" value="검색" class="s_btn">
                         </form>
                     </div><!--l_b2_search-->

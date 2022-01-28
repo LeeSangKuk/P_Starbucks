@@ -9,6 +9,16 @@
 			VALUES(#{title},#{content})
 		</insert>
 		
+		<!-- 파일 첨부 -->
+		<insert id="insertSelectKey">
+			<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+				<!-- 제일 큰 bno 값에 +1을 해주어 새로운 new max bno -->
+				SELECT MAX(bno)+1 bno FROM sb_board
+			</selectKey>
+			INSERT INTO sb_board(bno,title,content,writer)
+			VALUES (#{bno},#{title},#{content},#{writer})
+		</insert>
+		
 		<select id="list" resultType="com.team.domain.BoardDTO">
 			SELECT *
 			FROM(
