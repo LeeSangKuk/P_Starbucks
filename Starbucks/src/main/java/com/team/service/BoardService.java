@@ -2,6 +2,7 @@ package com.team.service;
 
 import java.util.ArrayList;
 
+import com.team.domain.AttachFileDTO;
 import com.team.domain.BoardDTO;
 import com.team.domain.Criteria;
 
@@ -23,4 +24,7 @@ public interface BoardService {
 	
 	// 6. 페이징에 쓰일 전체 건수
 	public int getTotalCount(Criteria cri);
+	
+	// 7. 게시판 상세페이지에 업로드 된 이미지를 화면에 보여주기 위한 데이터 list
+	public ArrayList<AttachFileDTO> fileList(int bno);
 }

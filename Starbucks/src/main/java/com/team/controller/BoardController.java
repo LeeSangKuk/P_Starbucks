@@ -1,13 +1,20 @@
 package com.team.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.team.domain.AttachFileDTO;
 import com.team.domain.BoardDTO;
 import com.team.domain.Criteria;
 import com.team.domain.PageDTO;
@@ -58,6 +65,16 @@ public class BoardController {
 		model.addAttribute("detail",service.detail(board));
 		
 	}
+	//---------------------------------------------
+	// * 파일 업로드 관련 *
+	// 게시판 상세페이지에서 이미지를 클릭하기 위한 select된 결과를 javascript로...
+	@GetMapping(value="fileList/{bno}", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<ArrayList<AttachFileDTO>> fileList(@PathVariable int bno){
+		// 통신 상태가 정상적이면 select된 결과를 보내라
+		System.out.println("fileList");
+		return new ResponseEntity<>(service.fileList(bno), HttpStatus.OK);
+	}
+	//---------------------------------------------
 	
 	// detail.jsp(상세페이지)에서 글 수정 버튼을 누르면 수정 화면으로 이동
 	@GetMapping("modify")
@@ -93,6 +110,7 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+
 	
 	
 }

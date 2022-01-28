@@ -35,7 +35,29 @@ $(document).ready(function(){
 	}// function checkExtension 끝
 	//---------------------------------------------------
 	
-	$("input[type='submit']").on("click", function(){
+	var formObj = $("form[role='form']");
+	
+	// [글쓰기] 버튼을 클릭하면
+	$("input[type='submit']").on("click", function(e){
+		 e.preventDefault();
+		 var str = "";
+		 
+		 // li 태그에 있는
+		 $("#uploadResult ul li").each(function(i, obj){
+			 console.log(obj);
+			 
+			 // data 선택자를 이용하여 input 태그로 value 값으로 세팅
+			 str += "<input type='hidden' name ='attachList[" + i + "].fileName' value='" + $(obj).data("name") + "'>"
+			 str += "<input type='hidden' name ='attachList[" + i + "].uuid' value='" + $(obj).data("uuid") + "'>"
+			 str += "<input type='hidden' name ='attachList[" + i + "].uploadPath' value='" + $(obj).data("path") + "'>"
+			 str += "<input type='hidden' name ='attachList[" + i + "].image' value='" + $(obj).data("type") + "'>"
+		 })
+		 formObj.append(str).submit();
+	})
+	
+	//---------------------------------------------------
+	// 파일 선택의 내용이 변경되면
+	$("input[type='file']").on("change", function(){
 		//alert("aaa");
 		
 		// 가상의 form 태그
@@ -70,4 +92,34 @@ $(document).ready(function(){
 		
 		
 	})
-})
+})// $(document).ready 밖에 선언
+// showUploadFile
+// 사용자가 선택한 파일을 원하는 경로에 성공적으로 업로드 한 후 웹 브라우저에 파일을 띄워라에 대한 함수 선언
+function showUploadedFile(uploadresultArr){
+	var str="";
+	
+	$(uploadresultArr).each(function(i,obj){
+		console.log(obj);
+
+
+		if(!obj.image){// 사용자가 업로드 한 파일의 타입이 이미지가 아니면
+			fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName)
+			
+			str += "<li data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid
+			str += "' data-name='" + obj.fileName + "' data-type='" + obj.image + "'>"
+			str += "<a href='/download?fileName=" + fileCallPath + "'>" + obj.fileName + "</a></li>"
+			
+		}else{// 사용자가 업로드한 파일의 타입이 이미지이면
+			// 원화표시(\) -> / 로 바꿔서 경로가 제대로 뜨게하기(uuid도)
+			var fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName)
+			console.log(fileCallPath);
+			
+			// img 태그를 사용해서 웹브라우저에 이미지 출력
+			str += "<li data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid
+			str += "' data-name='" + obj.fileName + "' data-type='" + obj.image + "'>"
+			str += "<img src='/display?fileName=" + fileCallPath + "'></li>"
+		}
+	})
+	
+	$("#uploadResult ul").html(str);
+}

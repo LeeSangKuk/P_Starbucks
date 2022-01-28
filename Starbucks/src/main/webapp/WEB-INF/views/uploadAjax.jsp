@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>uploadAjax</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="../resources/js/uploadAjax.js"></script>
 </head>
@@ -13,5 +13,9 @@
 		<input type="file" name="uploadFile" multiple>
 	</div>
 	<input type="submit" value="전송">
+	
+	<div id="uploadResult">
+		<ul></ul>
+	</div>
 </body>
 </html>
