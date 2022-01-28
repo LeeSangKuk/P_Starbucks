@@ -81,11 +81,11 @@
                         </ul>
                     </div><!--.l_b3_pager-->
 
-                    
                 </div><!--.l_box-->
             </section><!--.notice-->
         </div><!--.container_in-->
     </div><!--#container-->
+
 
 	<script type="text/javascript" src="../resources/js/list.js"></script>
     <%@ include file="footer.jsp" %>
