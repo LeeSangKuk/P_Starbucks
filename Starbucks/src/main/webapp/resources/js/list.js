@@ -32,4 +32,13 @@ $(document).ready(function(){
 			$("input[type='submit']").click()
 		}
 	})
+	
+	
+	
+//	var pageBtn = $("ul");
+//	pageBtn.find("li").click(function(){
+//		// pageBtn.removeClass("active");
+//		$(this).parent().addClass("active");
+//	})
+	
 })

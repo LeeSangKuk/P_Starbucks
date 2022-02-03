@@ -263,6 +263,11 @@ input{
     font-size: 15px;
 }
 
+/* list - paging */
+.active{
+	font-weight: bold;
+}
+
 
 /* board_detail */
 
