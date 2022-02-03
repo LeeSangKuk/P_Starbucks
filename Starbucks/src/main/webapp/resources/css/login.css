@@ -4,9 +4,9 @@
 *{
     margin: 0;
     padding: 0;
-    line-height: 2em;
+    line-height: 1.8em;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     color: #333;
 }
 
@@ -15,6 +15,11 @@ a{
     vertical-align: top;
     text-decoration: none;
     color: #333;
+    cursor: pointer;
+}
+
+button{
+	cursor: pointer;
 }
 
 ul{
@@ -55,18 +60,19 @@ h1{
 }
 
 fieldset{
-    border: 0;
+    border: 1px solid #ddd;
     padding: 30px;
     margin-top: 100px;
 }
-
 .loginInput{
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+	border: 1px solid #ddd;
+    border-radius: 3px;
     box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom:10px;
 }
 .loginFormTxt{
     background: #fff;
@@ -77,10 +83,42 @@ fieldset{
     padding: 30px 20px 30px;
     margin-bottom: 20px;
 }
-.btn_mem_login{
+.checkWrap {
+    display: block;
     margin-bottom: 20px;
 }
-.btn_login{
+input.mem2[type=checkbox]:not(old) {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 0 none;
+    background: #fff;
+    cursor: pointer;
+}
+input.mem2[type=checkbox]:checked + label, input.mem[type=checkbox]:active + label {
+    background: #fff url(//image.istarbucks.co.kr/common/img/util/mem/mem_check_on.png) no-repeat 0 0;
+    background-size: 26px;
+}
+input.mem2[type=checkbox]:not(old) + label {
+    position: relative;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 35px;
+    background: #fff url(//image.istarbucks.co.kr/common/img/util/mem/mem_check_off.png) 0 0 no-repeat;
+    font-size: 16px;
+    color: #3f4141;
+    cursor: pointer;
+    vertical-align: top;
+    background-size: 26px;
+    cursor: pointer;
+    z-index: 4;
+}
+.btnMemLogin{
+    margin-bottom: 20px;
+}
+.btnLogin{
     color: white;
     font-size: 16px;
     background-color: #006633;
@@ -91,17 +129,16 @@ fieldset{
     box-sizing: border-box;
     text-align: center;
 }
-.btn_login:hover{background-color: #00a151;}
+.btnLogin:hover{background-color: #00a151;}
 
 
-.input_warn_text{font-size: 15px;}
-.input_warn_text{margin-bottom: 20px;}
+.inputWarnText{font-size: 14px; margin-bottom: 20px;}
 
 
-.login_btn_wrap ul{display: flex; justify-content: space-around;}
-.login_btn_wrap ul li{position: relative;}
-.login_btn_wrap ul li a:hover{text-decoration: underline;}
-.login_btn_wrap ul li:after {
+.loginBtnWrap ul{display: flex; justify-content: space-around;}
+.loginBtnWrap ul li{position: relative;}
+.loginBtnWrap ul li a:hover{text-decoration: underline;}
+.loginBtnWrap ul li:after {
     border-right: 1px solid #ddd;
     color: #666;
     content: "";
@@ -111,4 +148,4 @@ fieldset{
     right: -30px;
     top: 50%;
 }
-.login_btn_wrap ul li.last:after {border-right: 0;}
+.loginBtnWrap ul li.last:after {border-right: 0;}

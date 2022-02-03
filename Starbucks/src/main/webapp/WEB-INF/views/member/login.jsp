@@ -34,15 +34,15 @@
                                     <label for="idRemb">아이디 저장</label>
                                 </span>
                                 
-                                <p class="btn_mem_login">
-                                    <a class="btn_login" href="javascript:void(0);" role="submit">로그인</a>
+                                <p class="btnMemLogin">
+                                    <button type="submit" class="btnLogin">로그인</button>
                                 </p>
-                                <p class="input_warn_text typeGreen">
+                                <p class="inputWarnText typeGreen">
                                     * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.<br>
                                     * 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
                                 </p>
                             </div>
-                            <div class="login_btn_wrap">
+                            <div class="loginBtnWrap">
                                 <ul>
                                     <li><a href="/member/join">회원가입</a></li>
                                     <li><a href="#">아이디 찾기</a></li>
