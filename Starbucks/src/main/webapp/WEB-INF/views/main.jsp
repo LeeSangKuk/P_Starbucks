@@ -1,8 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./includes/header.jsp" %>
+<link ref="stylesheet" href="../resources/css/main.css"></link>
 	<div id="main" class="scroll-container">
-		<section class="section1">
+		<section class="mainSection1">
 			<div class="s1d">
 				<p class="main1_photo"><img src="resources/img/main/main_banner.jpg" alt=""></p>
                     
@@ -17,7 +18,7 @@
 			</div>
 		</section><!--.section1-->
 
-		<section class="section2">
+		<section class="mainSection2">
 			<div class="s2d">
 				<p class="main2_photo"><img src="resources/img/main/main_banner2.png" alt=""></p>
                     

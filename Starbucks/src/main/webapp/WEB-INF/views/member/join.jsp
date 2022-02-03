@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="../resources/css/Join.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../resources/js/join.js"></script>
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
@@ -18,20 +20,19 @@
             <p class="infoText">회원정보를 입력해주세요.</p>
         </div>
 
-        <form action="#">
-			<section class="section1">
+        <form action="login" method="post" name="joinForm">
+			<section class="memberSection1">
 				<div>
                     <p><label for="userId"><strong>아이디</strong></label></p>
-                    <input type="text" name="userId" id="userId" placeholder="사용하실 아이디를 입력해주세요">
-                    <!-- <button type="button" onclick="userIdCheck();">중복확인</button> -->
+                    <input type="text" name="userId" id="userId" onclick="" value="" placeholder="사용하실 아이디를 입력해주세요">
                 </div>
 				<div>
 					<p><label for="userPw"><strong>비밀번호</strong></label></p>
-                    <input type="password" name="userPw" id="userPw" placeholder="영문자+숫자+특수문자 조합하여 8~16자리로 입력해주세요">
+                    <input type="password" name="userPw" id="userPw" value="" placeholder="영문자+숫자+특수문자 조합하여 8~16자리로 입력해주세요">
 				</div>
 				<div>
 					<p><label for="userPwCheck"><strong>비밀번호 재확인</strong></label></p>
-                    <input type="password" name="userPwCheck" id="userPwCheck" placeholder="비밀번호 확인">
+                    <input type="password" name="userPwCheck" id="userPwCheck" value="" placeholder="비밀번호 재확인">
 				</div>
 			</section>
 			<!--.section1-->
@@ -39,23 +40,28 @@
 
             
 	
-			<section class="section2">
+			<section class="memberSection2">
 				<div>
-					<p><strong>이름<span class="typeGreen">(필수)</span></strong></p>
+					<p><label><strong>이름<span class="typeGreen">(필수)</span></strong></label></p>
 					<input type="text" id="userName" name="userName" value="" required="required">
 				</div>
 
-                <div class="userGender">
-                    <p><strong>성별<span class="typeGreen">(필수)</span></strong></p>
-                    <a name="male" id="male" class="male" href="javascript:void(0);">남</a>
-                    <a name="female" id="female" class="female" href="javascript:void(0);">여</a>
+                <div class="">
+                    <p><label><strong>성별<span class="typeGreen">(필수)</span></strong></label></p>
+					<div>
+						<select name="userGender" id="userGender" value="">
+							<option>선택</option>
+							<option value="male">남</option>
+							<option value="female">여</option>
+						</select>
+					</div>
                 </div>
 
 				<div>
-					<p><strong>생년월일<span class="typeGreen">(필수)</span></strong></p>
+					<p><label><strong>생년월일<span class="typeGreen">(필수)</span></strong></label></p>
 					<div>
-						<select name="userYear" id="userYear">
-							<option value>선택</option>
+						<select name="userBirthYear" id="userBirthYear" value="">
+							<option>선택</option>
 							<option value="1990">1990</option>
 							<option value="1991">1991</option>
 							<option value="1992">1992</option>
@@ -89,8 +95,8 @@
 							<option value="2021">2021</option>
 							<option value="2022">2022</option>
 						</select>
-						<select name="userMonth" id="userMonth">
-							<option value>선택</option>
+						<select name="userBirthMonth" id="userBirthMonth" value="">
+							<option>선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -104,8 +110,8 @@
 							<option value="11">11</option>
 							<option value="12">12</option>
 						</select>
-						<select name="userDay" id="userDay">
-							<option value>선택</option>
+						<select name="userBirthDay" id="userBirthDay" value="">
+							<option>선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -138,8 +144,8 @@
 							<option value="30">30</option>
 							<option value="31">31</option>
 						</select> 
-						<select name="birthFlag" id="birthFlag">
-							<option value>선택</option>
+						<select name="userBirthFlag" id="userBirthFlag" value="">
+							<option>선택</option>
 							<option value="s">양력</option>
 							<option value="m">음력</option>
 						</select>
@@ -147,17 +153,17 @@
 				</div>
 
 				<div>
-					<p><Strong>휴대폰<span class="typeGreen">(필수)</span></Strong></p>
+					<p><label><Strong>휴대폰<span class="typeGreen">(필수)</span></Strong></label></p>
 					<input type="text" name="userPhone" value="">
 				</div>
 
 				<div>
-					<p><Strong>이메일<span class="typeGreen">(필수)</span></Strong></p>
-					<input type="email" name="userEmail" placeholder="E-mail을 입력하세요.">
+					<p><label><Strong>이메일<span class="typeGreen">(필수)</span></Strong></label></p>
+					<input type="email" name="userEmail" placeholder="E-mail을 입력하세요." value="">
 				</div>
 			</section>
 			<!--.section2-->
-            <button type="submit" class="submit">완료하기</button>
+            <button type="submit" class="submit" onclick="joinFormCheck();">완료하기</button>
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
