@@ -97,6 +97,7 @@ form div{
     border: 0px;
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .submit:hover{

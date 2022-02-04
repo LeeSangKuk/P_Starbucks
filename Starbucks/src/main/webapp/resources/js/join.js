@@ -1,14 +1,23 @@
-function joinFormCheck() {//joinFormCheck 함수로 유효성 검사
+function joinFormCheck(event) {//joinFormCheck 함수로 유효성 검사
   //변수에 담아주기
   var userId = document.getElementById("userId");
   var userPw = document.getElementById("userPw");
   var userPwCheck = document.getElementById("userPwCheck");
   var userName = document.getElementById("userName");
-  var female = document.getElementById("female");
-  var male = document.getElementById("male");
+  var userGender = document.getElementById("userGender");
+  var userBirthYear = document.getElementById("userBirthYear");
+  var userBirthMonth = document.getElementById("userBirthMonth");
+  var userBirthDay = document.getElementById("userBirthDay");
+  var userBirthFlag = document.getElementById("userBirthFlag");
   var userPhone = document.getElementById("userPhone");
   var userEmail = document.getElementById("userEmail");
+  var joinForm = document.getElementById("joinForm");
 //  var agree = document.getElementById("agree");
+  
+  if (userBirthYear.value == "" || userBirthMonth.value == "" || userBirthDay.value == "" || userBirthFlag.value == "") {
+    alert("생년월일을 선택하세요.");
+    return false;
+  };
 
   if (userId.value == "") { //해당 입력값이 없을 경우 같은말: if(!userId.value)
     alert("아이디를 입력하세요.");
@@ -42,17 +51,6 @@ function joinFormCheck() {//joinFormCheck 함수로 유효성 검사
     userName.focus();
     return false;
   };
-  
-  if (!userBirthYear.checked || !userBirthMonth.checked || !userBirthDay.checked) {
-    alert("생년월일을 선택하세요.");
-    return false;
-  };
-  
-  if (!female.checked && !male.checked) { //둘다 미체크시
-    alert("성별을 선택해 주세요.");
-    female.focus();
-    return false;
-  };
 
   var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
 
@@ -60,6 +58,11 @@ function joinFormCheck() {//joinFormCheck 함수로 유효성 검사
     alert("전화번호는 숫자만 입력할 수 있습니다.");
     userPhone.focus();
     return false;
+  };
+  
+  if (userGender.value == "") { //둘다 미체크시
+	  alert("성별을 선택해 주세요.");
+	  return false;
   };
 
   if (userEmail.value == "") {
@@ -75,6 +78,6 @@ function joinFormCheck() {//joinFormCheck 함수로 유효성 검사
 //  }
 
   //입력 값 전송
-  document.joinForm.submit(); //유효성 검사의 포인트   
+  //document.joinForm.submit(); //유효성 검사의 포인트   
   
 };

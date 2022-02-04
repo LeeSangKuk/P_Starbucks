@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/login.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
  <div id="Container">
         <div id="loginWrap">
             <div id="loginWrapInner">
-                <form id="loginForm" action="#" method="post">
+                <form id="loginForm" action="../main" method="post">
                     <fieldset>
                         <legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
                         <h1 class="loginTitle">로그인</h1>
@@ -44,7 +45,7 @@
                             </div>
                             <div class="loginBtnWrap">
                                 <ul>
-                                    <li><a href="/member/join">회원가입</a></li>
+                                    <li><a href="./join">회원가입</a></li>
                                     <li><a href="#">아이디 찾기</a></li>
                                     <li class="last"><a href="#">비밀번호 찾기</a></li>
                                 </ul>
