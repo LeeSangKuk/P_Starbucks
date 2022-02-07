@@ -15,7 +15,9 @@ public class MemberServiceImpl implements MemberService{
 	// 회원가입 하기 구현
 	@Override
 	public void postJoin(MemberDTO mdto) {
+		System.out.println("서비스1");
 		mmapper.postJoin(mdto);
+		System.out.println("서비스2");
 	}
 
 	// 로그인하기 구현

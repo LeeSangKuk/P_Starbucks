@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/Join.css">
-<script src="../resources/js/join.js"></script>
+
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
@@ -18,20 +18,23 @@
             <p class="infoImg"></p>
             <p class="infoText">회원정보를 입력해주세요.</p>
         </div>
-
-        <form action="login" method="post" id="joinForm" name="joinForm" onsubmit="return joinFormCheck();">
+		<!-- action: (form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시-->
+        <form action="join" method="post" id="joinForm" name="joinForm" onsubmit="return joinFormCheck();">
 			<section class="memberSection1">
 				<div>
                     <p><label for="userId"><strong>아이디</strong></label></p>
-                    <input type="text" name="userId" id="userId" value="" required="required" placeholder="사용하실 아이디를 입력해주세요">
-                </div>
+                    <input type="text" name="userId" id="userId" value="" placeholder="사용하실 아이디를 입력해주세요">
+                	<p id="idError"  style="font-size: 14px;"></p>
+               </div>
 				<div>
 					<p><label for="userPw"><strong>비밀번호</strong></label></p>
-                    <input type="password" name="userPw" id="userPw" value="" required="required" placeholder="영문자+숫자+특수문자 조합하여 8~16자리로 입력해주세요">
+                    <input type="password" name="userPw" id="userPw" value="" placeholder="영문자+숫자+특수문자 조합하여 8~16자리로 입력해주세요">
+					<p id="pwError"  style="font-size: 14px;"></p>
 				</div>
 				<div>
 					<p><label for="userPwCheck"><strong>비밀번호 재확인</strong></label></p>
-                    <input type="password" name="userPwCheck" id="userPwCheck" value="" required="required" placeholder="비밀번호 재확인">
+                    <input type="password" name="userPwCheck" id="userPwCheck" value="" placeholder="비밀번호 재확인">
+					<p id="pwCkError"  style="font-size: 14px;"></p>
 				</div>
 			</section>
 			<!--.section1-->
@@ -42,7 +45,7 @@
 			<section class="memberSection2">
 				<div>
 					<p><label><strong>이름<span class="typeGreen">(필수)</span></strong></label></p>
-					<input type="text" id="userName" name="userName" value="" required="required">
+					<input type="text" id="userName" name="userName" value="">
 				</div>
 
                 <div class="">
@@ -94,7 +97,7 @@
 							<option value="2021">2021</option>
 							<option value="2022">2022</option>
 						</select>
-						<select name="userBirthMonth" id="userBirthMonth" value="" required="required">
+						<select name="userBirthMonth" id="userBirthMonth" value="">
 							<option value="">선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -109,7 +112,7 @@
 							<option value="11">11</option>
 							<option value="12">12</option>
 						</select>
-						<select name="userBirthDay" id="userBirthDay" value="" required="required">
+						<select name="userBirthDay" id="userBirthDay" value="">
 							<option value="">선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -143,7 +146,7 @@
 							<option value="30">30</option>
 							<option value="31">31</option>
 						</select> 
-						<select name="userBirthFlag" id="userBirthFlag" value="" required="required">
+						<select name="userBirthFlag" id="userBirthFlag" value="">
 							<option value="">선택</option>
 							<option value="s">양력</option>
 							<option value="m">음력</option>
@@ -153,12 +156,12 @@
 
 				<div>
 					<p><label><Strong>휴대폰<span class="typeGreen">(필수)</span></Strong></label></p>
-					<input type="text" id="userPhone" name="userPhone" value="" required="required">
+					<input type="text" id="userPhone" name="userPhone" value="">
 				</div>
 
 				<div>
 					<p><label><Strong>이메일<span class="typeGreen">(필수)</span></Strong></label></p>
-					<input type="email" id="userEmail" name="userEmail" value="" required="required" placeholder="E-mail을 입력하세요.">
+					<input type="email" id="userEmail" name="userEmail" value="" placeholder="E-mail을 입력하세요.">
 				</div>
 			</section>
 			<!--.section2-->
@@ -167,5 +170,6 @@
       </div><!--#containerIn-->
     </div><!--#container-->
 <%@ include file="../includes/footer.jsp" %>
+<script src="../resources/js/join.js"></script>
 </body>
 </html>

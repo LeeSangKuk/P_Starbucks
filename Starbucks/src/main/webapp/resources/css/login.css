@@ -87,7 +87,7 @@ fieldset{
     display: block;
     margin-bottom: 20px;
 }
-input.mem2[type=checkbox]:not(old) {
+input.save_id[type=checkbox]:not(old) {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -96,11 +96,11 @@ input.mem2[type=checkbox]:not(old) {
     background: #fff;
     cursor: pointer;
 }
-input.mem2[type=checkbox]:checked + label, input.mem[type=checkbox]:active + label {
+input.save_id[type=checkbox]:checked + label, input.mem[type=checkbox]:active + label {
     background: #fff url(//image.istarbucks.co.kr/common/img/util/mem/mem_check_on.png) no-repeat 0 0;
     background-size: 26px;
 }
-input.mem2[type=checkbox]:not(old) + label {
+input.save_id[type=checkbox]:not(old) + label {
     position: relative;
     display: inline-block;
     height: 26px;

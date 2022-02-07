@@ -26,9 +26,11 @@ public class MemberController {
 	
 	// 회원가입 화면을 통해 얻어진 데이터 insert
 	@PostMapping("join")
-	public void postJoin(MemberDTO mdto) {
+	public String postJoin(MemberDTO mdto) {
 		System.out.println("PostJoin"+mdto);
 		mservice.postJoin(mdto);
+		
+		return "login";
 	}
 	
 	// 로그인 화면 띄우기

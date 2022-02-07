@@ -7,13 +7,14 @@
 <title>Insert title here</title>
 <%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/login.css">
+<script src="../resources/js/login.js"></script>
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
  <div id="Container">
         <div id="loginWrap">
             <div id="loginWrapInner">
-                <form id="loginForm" action="../main" method="post">
+                <form id="loginForm" action="../main" method="post" onsubmit="login();">
                     <fieldset>
                         <legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
                         <h1 class="loginTitle">로그인</h1>
@@ -31,8 +32,8 @@
                                 <input id="userPw" name="userPw" class="loginInput" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
 
                                 <span class="checkWrap">
-                                    <input type="checkbox" name="idRemb" id="idRemb" class="mem2">
-                                    <label for="idRemb">아이디 저장</label>
+                                    <input type="checkbox" class="save_id" name="checkId" id="saveId">
+                                    <label for="saveId">아이디 저장</label>
                                 </span>
                                 
                                 <p class="btnMemLogin">
