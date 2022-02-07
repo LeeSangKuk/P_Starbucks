@@ -17,19 +17,28 @@ a{
 }
 
 input{
-    width: 100%;
-    padding: 5px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+	border: 1px solid #ddd;
+    border-radius: 3px;
     box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom:3px;
+    font-size:15px;
+    cursor: pointer;
 }
 
 select{
     width: 24%;
     padding: 5px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+	border: 1px solid #ddd;
+    border-radius: 3px;
     box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    font-size:15px;
+    cursor: pointer;
 }
 
 h1{
@@ -93,10 +102,6 @@ form div{
     color: white;
     font-size: 16px;
     background-color: #006633;
-    width: 100%;
-    border: 0px;
-    border-radius: 5px;
-    padding: 5px;
     cursor: pointer;
 }
 

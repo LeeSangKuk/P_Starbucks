@@ -21,17 +21,17 @@
 		<!-- action: (form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시-->
         <form action="join" method="post" id="joinForm" name="joinForm" onsubmit="return joinFormCheck();">
 			<section class="memberSection1">
-				<div>
+				<div class="idBox">
                     <p><label for="userId"><strong>아이디</strong></label></p>
                     <input type="text" name="userId" id="userId" value="" placeholder="사용하실 아이디를 입력해주세요">
                 	<p id="idError"  style="font-size: 14px;"></p>
                </div>
-				<div>
+				<div class="pwBox">
 					<p><label for="userPw"><strong>비밀번호</strong></label></p>
                     <input type="password" name="userPw" id="userPw" value="" placeholder="영문자+숫자+특수문자 조합하여 8~16자리로 입력해주세요">
 					<p id="pwError"  style="font-size: 14px;"></p>
 				</div>
-				<div>
+				<div class="pwCkBox">
 					<p><label for="userPwCheck"><strong>비밀번호 재확인</strong></label></p>
                     <input type="password" name="userPwCheck" id="userPwCheck" value="" placeholder="비밀번호 재확인">
 					<p id="pwCkError"  style="font-size: 14px;"></p>
@@ -43,26 +43,28 @@
             
 	
 			<section class="memberSection2">
-				<div>
+				<div class="nameBox">
 					<p><label><strong>이름<span class="typeGreen">(필수)</span></strong></label></p>
-					<input type="text" id="userName" name="userName" value="">
+					<input type="text" id="userName" name="userName" placeholder="이름을 입력하세요.">
+					<p id="nameError"  style="font-size: 14px;"></p>
 				</div>
 
-                <div class="">
+                <div class="genderBox">
                     <p><label><strong>성별<span class="typeGreen">(필수)</span></strong></label></p>
 					<div>
-						<select name="userGender" id="userGender" value="" >
+						<select name="userGender" id="userGender">
 							<option value="">선택</option>
 							<option value="male">남</option>
 							<option value="female">여</option>
 						</select>
 					</div>
+					<p id="genderError"  style="font-size: 14px;"></p>
                 </div>
 
-				<div>
+				<div class="birthBox">
 					<p><label><strong>생년월일<span class="typeGreen">(필수)</span></strong></label></p>
 					<div>
-						<select name="userBirthYear" id="userBirthYear" value="" >
+						<select name="userBirthYear" id="userBirthYear">
 							<option value="">선택</option>
 							<option value="1990">1990</option>
 							<option value="1991">1991</option>
@@ -97,7 +99,7 @@
 							<option value="2021">2021</option>
 							<option value="2022">2022</option>
 						</select>
-						<select name="userBirthMonth" id="userBirthMonth" value="">
+						<select name="userBirthMonth" id="userBirthMonth">
 							<option value="">선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -112,7 +114,7 @@
 							<option value="11">11</option>
 							<option value="12">12</option>
 						</select>
-						<select name="userBirthDay" id="userBirthDay" value="">
+						<select name="userBirthDay" id="userBirthDay">
 							<option value="">선택</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -146,26 +148,29 @@
 							<option value="30">30</option>
 							<option value="31">31</option>
 						</select> 
-						<select name="userBirthFlag" id="userBirthFlag" value="">
+						<select name="userBirthFlag" id="userBirthFlag">
 							<option value="">선택</option>
 							<option value="s">양력</option>
 							<option value="m">음력</option>
 						</select>
 					</div>
+					<p id="birthError"  style="font-size: 14px;"></p>
 				</div>
 
-				<div>
+				<div class="phoneBox">
 					<p><label><Strong>휴대폰<span class="typeGreen">(필수)</span></Strong></label></p>
-					<input type="text" id="userPhone" name="userPhone" value="">
+					<input type="text" id="userPhone" name="userPhone" value="" placeholder="휴대폰 번호를 입력하세요.">
+					<p id="phoneError"  style="font-size: 14px;"></p>
 				</div>
 
-				<div>
+				<div class="emailBox">
 					<p><label><Strong>이메일<span class="typeGreen">(필수)</span></Strong></label></p>
 					<input type="email" id="userEmail" name="userEmail" value="" placeholder="E-mail을 입력하세요.">
+					<p id="emailError"  style="font-size: 14px;"></p>
 				</div>
 			</section>
 			<!--.section2-->
-            <button type="submit" id="submit" class="submit">완료하기</button>
+            <input type="button" id="submit" class="submit" value="완료하기">
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
