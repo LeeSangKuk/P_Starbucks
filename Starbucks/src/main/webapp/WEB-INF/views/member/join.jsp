@@ -1,15 +1,7 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/Join.css">
-
-</head>
-<body>
 <%@ include file="../includes/header.jsp" %>
 	<div id="container">
       <h1>회원가입</h1>
@@ -174,7 +166,5 @@
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
+	<script src="../resources/js/join.js"></script>
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/join.js"></script>
-</body>
-</html>

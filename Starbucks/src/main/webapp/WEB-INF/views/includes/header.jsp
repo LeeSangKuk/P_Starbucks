@@ -1,10 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	<link rel="stylesheet" href="../resources/css/header&footer.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
     <div id="wrap">
         <header id="header">
             <div class="header_in">
                 <h1 class="logo">
-                    <a href="#">스타벅스 </a>
+                    <a href="/main">스타벅스 </a>
                 </h1>
                 
                 <nav class="pc-gnb">
@@ -13,7 +18,7 @@
                             <a href="#">브랜드 소개</a>
                         </li>
                         <li>
-                            <a href="#">모든 메뉴</a>
+                            <a href="/menu">모든 메뉴</a>
                         </li>
                         <li>
                             <a href="#">리워드</a>
@@ -30,13 +35,13 @@
                 <div class="pc-util">
                     <ul>
                         <li>
-                            <a href="#">로그인</a>
+                            <a href="/member/login">로그인</a>
                         </li>
                         <li>
-                            <a href="#">나의 스타벅스</a>
+                            <a href="/member/login">나의 스타벅스</a>
                         </li>
                         <li>
-                            <a href="">고객센터</a>
+                            <a href="/info">고객센터</a>
                         </li>
                     </ul>
                 </div><!--.pc-util-->

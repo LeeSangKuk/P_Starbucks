@@ -1,10 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
-<%@ include file="header.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../includes/mainSource.jsp" %>
+<%@ include file="../includes/header.jsp" %>
     <div id="container">
         <div class="container_in">
             <div class="write">
@@ -43,4 +40,4 @@
 			</div><!--.write-->
         </div><!--.container_in-->
     </div><!--#container-->
-<%@ include file="footer.jsp" %>
+    <%@ include file="../includes/footer.jsp" %>

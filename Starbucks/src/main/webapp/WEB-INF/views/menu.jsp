@@ -1,6 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-      <%@ include file="./includes/header.jsp" %> 
+<%@ include file="./includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/sub_menu.css">
+<%@ include file="./includes/header.jsp" %>
         <div id="container"><!----------------------------#container start-------------------------------->
             <div class="section1"><!--.section1-->
                 <div class="event">
@@ -60,7 +62,7 @@
                     <p class="alert"><span class="pay">원</span><span class="point">Tall</span> 기준입니다.</p>
                 </div><!--ㅡmenu_name-->
                 <div class="small_bar">
-                    <p class="home"><a href="#"><span>집 그림</span>HOME</a></p>
+                    <p class="home"><a href="/main"><span>집 그림</span>HOME</a></p>
                     <p class="bar_down"><a href="#">MENU<span>아래</span></a></p>
                     <p class="bar_down"><a href="#">프라푸치노<span>아래</span></a></p>
                 </div><!--small_bar-->

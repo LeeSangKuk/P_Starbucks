@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
-<%@ include file="header.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/BoardStyle.css">
+<%@ include file="../includes/header.jsp" %>
     <div id="container">
         <div class="container_in">
             <section class="notice">
@@ -85,7 +83,5 @@
             </section><!--.notice-->
         </div><!--.container_in-->
     </div><!--#container-->
-
-
-	<script type="text/javascript" src="../resources/js/list.js"></script>
-    <%@ include file="footer.jsp" %>
+    <script type="text/javascript" src="../resources/js/list.js"></script>
+    <%@ include file="../includes/footer.jsp" %>

@@ -1,14 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/login.css">
-</head>
-<body>
 <%@ include file="../includes/header.jsp" %>
  <div id="Container">
         <div id="loginWrap">
@@ -58,7 +51,5 @@
         </div><!--#loginWrap-->
         <!-- 내용 end -->
     </div><!--#Container-->
+	<script src="../resources/js/login.js"></script>
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/login2.js"></script>
-</body>
-</html>

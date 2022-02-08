@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-    <%@ include file="header.jsp" %>
-
-        <div id="container">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/BoardStyle.css">
+<%@ include file="../includes/header.jsp" %>
+       <div id="container">
         <div class="container_in">
             <div class="board_detail">
                 <h1>고객의 소리</h1>
@@ -95,7 +95,5 @@
             </div><!--.board_detail-->
         </div><!--.container_in-->
     </div><!--#container-->
-    
-    
     <script type="text/javascript" src="../resources/js/detail.js"></script>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="../includes/footer.jsp" %>

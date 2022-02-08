@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
-<%@ include file="header.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/BoardStyle.css">
+<%@ include file="../includes/header.jsp" %>
     <div id="container">
         <div class="container_in">
             <div class="write">
@@ -42,4 +40,4 @@
     </div><!--#container-->
     
     <script type="text/javascript" src="../resources/js/uploadAjax.js"></script>
-<%@ include file="footer.jsp" %>
+<%@ include file="../includes/footer.jsp" %>

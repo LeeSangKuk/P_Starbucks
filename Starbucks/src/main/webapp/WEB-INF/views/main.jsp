@@ -1,7 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="./includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/main.css">
 <%@ include file="./includes/header.jsp" %>
-<link ref="stylesheet" href="../resources/css/main.css"></link>
 	<div id="main" class="scroll-container">
 		<section class="mainSection1">
 			<div class="s1d">
