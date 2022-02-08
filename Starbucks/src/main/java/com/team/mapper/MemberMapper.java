@@ -11,5 +11,5 @@ public interface MemberMapper {
 	public MemberDTO postLogin(MemberDTO mdto);
 	
 	// 중복된 아이디 표시 설계
-	public int findId(MemberDTO mdto);
+	public int checkId(String id);
 }

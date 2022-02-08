@@ -18,9 +18,9 @@
 		and userPw=#{userPw}
 	</select>
 	
-	<select id="findId" resultType="int">
-		select no 
-		from member 
-		where userId=#{userId};
+	<select id="checkId" parameterType="String" resultType="int">
+		SELECT COUNT(userId) 
+		FROM member 
+		WHERE userId=#{userId};
 	</select>
 </mapper>

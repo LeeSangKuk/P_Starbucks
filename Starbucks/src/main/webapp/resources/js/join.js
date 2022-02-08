@@ -1,6 +1,6 @@
 //input id값을 변수에 담아주기
 var userId = document.getElementById("userId");
-var userIdV = document.getElementById("userId").value;
+var id = document.getElementById("userId").value; //id값이 "id"인 입력란의 값을 저장
 var userPw = document.getElementById("userPw");
 var userPwCheck = document.getElementById("userPwCheck");
 var userName = document.getElementById("userName");
@@ -41,39 +41,46 @@ var emailToken = false
 
 window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 
-	// ajax를 이용해서 전송
-	// formData를 데이터로 전송할 때에는 processData와 contentType은 반드시 false
-	$.ajax({
-		url: "findId",
-		type: "post",
-		data: {userIdV : userIdV},
-		dataType:'json',
-//		processData: false,
-//		contentType: false,
-		success: userId.onblur = (data) => {
-			 if(!idReg.test(userIdV)){
-				  idError.innerText = "아이디는 영 소문자, 숫자 4~20자리로 입력해주세요."
-				  idError.style.color = 'red'
-				  idToken = false;
-				  console.log('id 실패')
-			  }
-			 else if(data != 0){
-				  idError.innerText = "중복된 아이디입니다."
+	// 아이디 유효성검사
+	 userId.onblur = () => {
+		$.ajax({
+		    url:'checkId', //Controller에서 인식할 주소
+		    type:'post', //POST 방식으로 전달
+		    data:{id:id},
+		    success:function(cnt){ //컨트롤러에서 넘어온 cnt값을 받는다 
+		    	
+		        if(cnt == 0){ //cnt가 0이 아니면 -> 사용 가능한 아이디 
+					  idError.innerText = '사용가능한 아이디입니다.'
+				      idError.style.color = 'green'
+				      idToken = true;
+				      console.log('id 성공')
+		        } 
+		        else if(cnt != 0){
+				      const idE = idError
+				      idE.innerText = '이미 존재하는 아이디입니다.'
 					  idError.style.color = 'red'
 					  idToken = false;
-					  console.log('id 중복으로 인한 실패')
-			 }
-			  else{
-			      const idE = idError
-			      idE.innerText = '올바른 아이디입니다.'
-			      idE.style.color = 'green'
-			      idToken = true;
-			      console.log('id 성공')
-			  }
-		}, error : function(error){
-			alert('error : ' + error)
-		}
-	})
+					  console.log('id 실패')
+		        } 
+		        else if(!idReg.test(userId.value)){
+					  idError.innerText = "아이디는 영 소문자, 숫자 4~20자리로 입력해주세요."
+					  idError.style.color = 'red'
+					  idToken = false;
+					  console.log('id 실패')
+		        }
+		        else{
+		        	
+		        }
+		        console.log('cnt : '+cnt);
+		    },
+		    error:function(){
+		        alert("에러입니다");
+		    }
+		})
+	}
+	
+
+
 	
 	//비밀번호 유효성검사
 	userPw.onblur = () => {

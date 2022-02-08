@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.team.domain.MemberDTO;
@@ -60,10 +61,21 @@ public class MemberController {
 		
 	}
 	
-	@ResponseBody
-	@PostMapping("findId")
-	public int findId(MemberDTO mdto) {
-		System.out.println(mdto);
-		return mservice.findId(mdto);
+	// 아이디 중복 체크
+	@PostMapping("checkId")
+	public @ResponseBody int checkId(String id) {
+		System.out.println("Controller id : "+id);
+		System.out.println("Controller id2 : "+mservice.checkId(id));
+		int cnt = mservice.checkId(id);
+		return cnt;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
