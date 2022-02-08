@@ -30,7 +30,7 @@ public class MemberController {
 		System.out.println("PostJoin"+mdto);
 		mservice.postJoin(mdto);
 		
-		return "login";
+		return "redirect:/member/login";
 	}
 	
 	// 로그인 화면 띄우기

@@ -7,14 +7,13 @@
 <title>Insert title here</title>
 <%@ include file="../includes/mainSource.jsp" %>
 <link rel="stylesheet" href="../resources/css/login.css">
-<script src="../resources/js/login.js"></script>
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
  <div id="Container">
         <div id="loginWrap">
             <div id="loginWrapInner">
-                <form id="loginForm" action="../main" method="post" onsubmit="login();">
+                <form id="loginForm" action="../main" method="post" onsubmit="return Welcome();">
                     <fieldset>
                         <legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
                         <h1 class="loginTitle">로그인</h1>
@@ -26,11 +25,12 @@
                             
                             <div class="loginFormBox">
                                 <label for="userId" class="hid">아이디</label>
-                                <input id="userId" name="userId" class="loginInput" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
+                                <input id="userId" name="userId" class="loginInput" type="text" maxlength="20" placeholder="아이디를 입력해 주세요.">
                                 <br>
                                 <label for="userPw" class="hid">비밀번호</label>
-                                <input id="userPw" name="userPw" class="loginInput" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
-
+                                <input id="userPw" name="userPw" class="loginInput" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." autocomplete="off">
+								<div id="loginError"  style="font-size: 14px;"></div>
+								
                                 <span class="checkWrap">
                                     <input type="checkbox" class="save_id" name="checkId" id="saveId">
                                     <label for="saveId">아이디 저장</label>
@@ -59,5 +59,6 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
+<script src="../resources/js/login2.js"></script>
 </body>
 </html>

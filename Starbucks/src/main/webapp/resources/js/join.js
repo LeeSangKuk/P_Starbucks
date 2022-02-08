@@ -1,49 +1,47 @@
+//input id값을 변수에 담아주기
+var userId = document.getElementById("userId");
+var userPw = document.getElementById("userPw");
+var userPwCheck = document.getElementById("userPwCheck");
+var userName = document.getElementById("userName");
+var userGender = document.getElementById("userGender");
+var userBirthYear = document.getElementById("userBirthYear");
+var userBirthMonth = document.getElementById("userBirthMonth");
+var userBirthDay = document.getElementById("userBirthDay");
+var userBirthFlag = document.getElementById("userBirthFlag");
+var userPhone = document.getElementById("userPhone");
+var userEmail = document.getElementById("userEmail");
+var joinForm = document.getElementById("joinForm");
+
+//에러메시지 변수
+var idError = document.getElementById("idError");
+var pwError = document.getElementById("pwError");
+var nameError = document.getElementById("nameError");
+var genderError = document.getElementById("genderError");
+var	birthError = document.getElementById("birthError");
+var phoneError = document.getElementById("phoneError");
+var emailError = document.getElementById("emailError");
+
+//정규식
+const idReg = /^[a-z0-9]{4,20}$/;
+const pwReg = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+const nameReg = /^[가-힣a-zA-Z]+$/;
+const phoneReg = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const emailReg2 = /[ㄱ-ㅎ가-힣]/g;
+
+//토큰
+var idToken = false
+var pwToken = false
+var nameToken = false
+var genderToken = false
+var birthToken = false
+var phoneToken = false
+var emailToken = false
+
 window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
-
-	//input id값을 변수에 담아주기
-	var userId = document.getElementById("userId");
-	var userPw = document.getElementById("userPw");
-	var userPwCheck = document.getElementById("userPwCheck");
-	var userName = document.getElementById("userName");
-	var userGender = document.getElementById("userGender");
-	var userBirthYear = document.getElementById("userBirthYear");
-	var userBirthMonth = document.getElementById("userBirthMonth");
-	var userBirthDay = document.getElementById("userBirthDay");
-	var userBirthFlag = document.getElementById("userBirthFlag");
-	var userPhone = document.getElementById("userPhone");
-	var userEmail = document.getElementById("userEmail");
-	var joinForm = document.getElementById("joinForm");
-	
-	//에러메시지 변수
-	var idError = document.getElementById("idError");
-	var pwError = document.getElementById("pwError");
-	var nameError = document.getElementById("nameError");
-	var genderError = document.getElementById("genderError");
-	var	birthError = document.getElementById("birthError");
-	var phoneError = document.getElementById("phoneError");
-	var emailError = document.getElementById("emailError");
-	
-	//정규식
-	const idReg = /^[a-z0-9]{4,20}$/;
-	const pwReg = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
-	const nameReg = /^[가-힣a-zA-Z]+$/;
-	const phoneReg = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
-	const emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	const emailReg2 = /[ㄱ-ㅎ가-힣]/g;
-	
-	//토큰
-	var idToken = false
-	var pwToken = false
-	var nameToken = false
-	var genderToken = false
-	var birthToken = false
-	var phoneToken = false
-	var emailToken = false
-
 	
 	//아이디 유효성검사
 	userId.onblur = () => {
-		  console.log("실행");
 		  if(!idReg.test(userId.value)){
 			  idError.innerText = "아이디는 영 소문자, 숫자 4~20자리로 입력해주세요."
 			  idError.style.color = 'red'
@@ -228,42 +226,45 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 			emailToken = true;
 			console.log('email 성공')
 		}
-	}
-
-	//최종 전체 유효성 검사 후 회원가입 완료 안내
-	function Welcome(){
-	    if(!idToken) {
-	        alert("아이디 형식을 확인하세요.");
-	        return;
-	    }
-	    if(!pwToken) {
-	  	  alert("비밀번호 형식을 확인하세요.");
-	  	  return;
-	    }
-	    if(!pwCkToken) {
-	  	  alert("비밀번호가 일치한지 확인하세요.");
-	  	  return;
-	    }
-	    if(!nameToken) {
-	    	alert("이름 형식을 확인하세요.");
-	    	return;
-	    }
-	    if(!genderToken) {
-	    	alert("성별을 선택했는지 확인하세요.");
-	    	return;
-	    }
-	    if(!birthToken) {
-	    	alert("생년월일을 올바르게 선택했는지 확인하세요.");
-	    	return;
-	    }
-		if(!emailToken){
-		    alert("이메일 형식을 확인하세요.");
-		    return;
-		}
-		if(!phoneToken){
-		    alert("휴대폰 형식을 확인하세요.");
-		    return;
-		}
-	    alert("가입을 환영합니다!");
-	}
+	}	
 }
+
+//최종 전체 유효성 검사 후 회원가입 완료 안내
+function Welcome(){
+    if(!idToken) {
+        alert("아이디 형식을 확인하세요.");
+        return false;
+    }
+    else if(!pwToken) {
+  	  alert("비밀번호 형식을 확인하세요.");
+  	  	return false;
+    }
+    else if(!pwCkToken) {
+  	  alert("비밀번호가 일치한지 확인하세요.");
+  	  	return false;
+    }
+    else if(!nameToken) {
+    	alert("이름 형식을 확인하세요.");
+    	return false;
+    }
+    else if(!genderToken) {
+    	alert("성별을 선택했는지 확인하세요.");
+    	return false;
+    }
+    else if(!birthToken) {
+    	alert("생년월일을 올바르게 선택했는지 확인하세요.");
+    	return false;
+    }
+    else if(!emailToken){
+	    alert("이메일 형식을 확인하세요.");
+	    return false;
+	}
+    else if(!phoneToken){
+	    alert("휴대폰 형식을 확인하세요.");
+	    return false;
+	}else{
+		return true;
+	}
+	
+}
+

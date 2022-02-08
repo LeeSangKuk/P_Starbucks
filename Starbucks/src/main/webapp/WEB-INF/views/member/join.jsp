@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@
             <p class="infoText">회원정보를 입력해주세요.</p>
         </div>
 		<!-- action: (form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시-->
-        <form action="join" method="post" id="joinForm" name="joinForm" onsubmit="return joinFormCheck();">
+        <form action="/starbucks/member/join" method="post" id="joinForm" name="joinForm" onsubmit="return Welcome();">
 			<section class="memberSection1">
 				<div class="idBox">
                     <p><label for="userId"><strong>아이디</strong></label></p>
@@ -170,7 +170,7 @@
 				</div>
 			</section>
 			<!--.section2-->
-            <input type="button" id="submit" class="submit" value="완료하기">
+            <input type="submit" id="submit" class="submit" value="완료하기">
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
