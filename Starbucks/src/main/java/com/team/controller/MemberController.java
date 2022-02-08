@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.team.domain.MemberDTO;
 import com.team.service.MemberService;
@@ -57,5 +58,12 @@ public class MemberController {
 			return "redirect:/member/login";
 		}
 		
+	}
+	
+	@ResponseBody
+	@PostMapping("findId")
+	public int findId(MemberDTO mdto) {
+		System.out.println(mdto);
+		return mservice.findId(mdto);
 	}
 }

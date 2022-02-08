@@ -26,4 +26,11 @@ public class MemberServiceImpl implements MemberService{
 		return mmapper.postLogin(mdto);
 	}
 
+	// 중복된 아이디 표시 구현
+	@Override
+	public int findId(MemberDTO mdto) {
+		// TODO Auto-generated method stub
+		return mmapper.findId(mdto);
+	}
+
 }
