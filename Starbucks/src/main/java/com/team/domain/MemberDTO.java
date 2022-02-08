@@ -29,6 +29,7 @@ public class MemberDTO {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public String getUserGender() {
 		return userGender;
 	}
@@ -78,5 +79,5 @@ public class MemberDTO {
 				+ ", userBirthDay=" + userBirthDay + ", userBirthFlag=" + userBirthFlag + ", userPhone=" + userPhone
 				+ ", userEmail=" + userEmail + "]";
 	}
-	
+
 }

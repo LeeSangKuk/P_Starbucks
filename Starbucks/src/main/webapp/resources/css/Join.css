@@ -17,19 +17,28 @@ a{
 }
 
 input{
-    width: 100%;
-    padding: 5px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+	border: 1px solid #ddd;
+    border-radius: 3px;
     box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom:3px;
+    font-size:15px;
+    cursor: pointer;
 }
 
 select{
     width: 24%;
     padding: 5px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
+	border: 1px solid #ddd;
+    border-radius: 3px;
     box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    font-size:15px;
+    cursor: pointer;
 }
 
 h1{
@@ -37,14 +46,14 @@ h1{
     text-align: center;
 }
 
+form section{ /*2022-02-03 section -> form section margin-bottom: 50px로 변경 수진*/
+    text-align: left;
+    margin-bottom: 50px;
+}
+
 form div{
     margin-bottom: 10px;
 }
-
-section{
-    text-align: left;
-}
-
 /*브라우저 리셋 end*/
 
 
@@ -56,7 +65,7 @@ section{
 
 #container{
 	width: 100%;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #containerIn{
@@ -64,10 +73,9 @@ section{
     width: 500px;
     margin: 0 auto;
     padding: 10px;
-    text-align: center;
 }
 
-#containerIn section{
+.containerIn section{
 	width: 100%
 }
 
@@ -87,30 +95,14 @@ section{
 
 .infoText{
     font-size: 20px;
-}
-
-.userGender a {
-    background-color: rgb(187, 187, 187);
-    width: 30px;
-    padding: 5px;
     text-align: center;
-    border-radius: 15%;
-}
-
-.userGender a:hover{
-    background-color : rgb(250, 235, 169);
-    color : rgb(0, 0, 0);
-    transition : 0.5s;
 }
 
 .submit{
     color: white;
     font-size: 16px;
     background-color: #006633;
-    width: 100%;
-    border: 0px;
-    border-radius: 5px;
-    padding: 5px;
+    cursor: pointer;
 }
 
 .submit:hover{
