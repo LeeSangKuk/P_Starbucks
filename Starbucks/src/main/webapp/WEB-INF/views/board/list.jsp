@@ -34,7 +34,10 @@
                         </table>
                     </div><!--l_b1-->
 					
-					<div><a href="/board/write" class="write_btn">글쓰기</a></div>
+					<c:if test="${login!=null}">
+						<div><a href="/board/write" class="write_btn">글쓰기</a></div>
+					</c:if>
+					<!-- <div><a href="/board/write" class="write_btn">글쓰기</a></div> -->
 					
 
                     <!-- search -->

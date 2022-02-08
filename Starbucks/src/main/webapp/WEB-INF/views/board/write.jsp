@@ -9,6 +9,8 @@
                 <h1>고객의 소리</h1>
 				<form role="form" action="/board/write" method="post">
 	                <div class="w_box">
+	                
+	                	<input type="text" name="writer" value="${login.userName}">
 	                    <div class="w_title">
 	                        <input type="text" name="title" placeholder="제목">
 	                    </div><!--.w_title--> 

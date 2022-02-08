@@ -5,8 +5,8 @@
  
 	<mapper namespace="com.team.mapper.BoardMapper">
 		<insert id="write">
-			INSERT INTO sb_board(title, content)
-			VALUES(#{title},#{content})
+			INSERT INTO sb_board(title, content, writer)
+			VALUES(#{title},#{content},#{writer})
 		</insert>
 		
 		<!-- 파일 첨부 -->

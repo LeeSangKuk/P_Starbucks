@@ -51,7 +51,7 @@ public class MemberController {
 		// session.invalidate(); 로그아웃
 		// session영역에 login이라는 변수에 값이 있으면 로그인 된 채로
 		if(session.getAttribute("login")!=null) {
-			return "redirect:/";
+			return "redirect:../main";
 		}else {// session영역에 login이라는 변수에 값이 없으면 (null)
 			// 다시 로그인 할 수 있게 로그인 페이지로 이동
 			return "redirect:/member/login";

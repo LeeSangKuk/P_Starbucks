@@ -35,7 +35,9 @@
                 <div class="pc-util">
                     <ul>
                         <li>
-                            <a href="/member/login">로그인</a>
+		                    <c:if test="${login!=null}">
+								<div><a href="/member/login">로그아웃</a></div>
+							</c:if>
                         </li>
                         <li>
                             <a href="/member/login">나의 스타벅스</a>
