@@ -1,10 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./includes/mainSource.jsp" %>
-<link rel="stylesheet" href="../resources/css/main.css">
+	<link rel="stylesheet" href="../resources/css/main.css">
 <%@ include file="./includes/header.jsp" %>
 	<div id="main" class="scroll-container">
-		<section class="mainSection1">
+		<section class="mainSection">
 			<div class="s1d">
 				<p class="main1_photo"><img src="resources/img/main/main_banner.jpg" alt=""></p>
                     
@@ -19,7 +19,7 @@
 			</div>
 		</section><!--.section1-->
 
-		<section class="mainSection2">
+		<section class="mainSection">
 			<div class="s2d">
 				<p class="main2_photo"><img src="resources/img/main/main_banner2.png" alt=""></p>
                     
@@ -34,7 +34,7 @@
 			</div>
 		</section><!--.section2-->
 
-		<section class="section3">
+		<section class="mainSection">
 			<div class="s3d1">
 				<p class="r2L"><a href="#"><img src="resources/img/main/main_banner3.jpg" alt=""></a></p>
 

@@ -1,7 +1,7 @@
 /*section1*/
 
-mainSection{
-    margin-bottom: 120px;
+.mainSection{
+    margin-bottom: 150px;
 }
 
 .main1_photo{
@@ -28,6 +28,7 @@ mainSection{
     line-height: 1em;
     color: #0b3416;
     font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
