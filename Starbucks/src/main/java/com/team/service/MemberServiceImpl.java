@@ -2,6 +2,7 @@ package com.team.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.team.domain.MemberDTO;
 import com.team.mapper.MemberMapper;
@@ -28,8 +29,8 @@ public class MemberServiceImpl implements MemberService{
 
 	// 중복된 아이디 표시 구현
 	@Override
-	public int checkId(String id) {
-		int cnt = mmapper.checkId(id);
+	public int checkId(MemberDTO mdto) {
+		int cnt = mmapper.checkId(mdto);
 		return cnt;
 	}
 

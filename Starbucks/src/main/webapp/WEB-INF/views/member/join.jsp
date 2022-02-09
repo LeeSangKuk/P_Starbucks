@@ -22,7 +22,7 @@
         <form action="/starbucks/member/join" method="post" id="joinForm" name="joinForm" onsubmit="return Welcome();">
 			<section class="memberSection1">
 				<div class="idBox">
-                    <p><label for="userId"><strong>아이디</strong></label></p>
+                    <p><label for="userId"><strong>아이디</strong></label></p>	
                     <input type="text" name="userId" id="userId" value="" placeholder="사용하실 아이디를 입력해주세요">
                 	<p id="idError"  style="font-size: 14px;"></p>
                </div>

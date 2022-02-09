@@ -1,6 +1,5 @@
 //input id값을 변수에 담아주기
 var userId = document.getElementById("userId");
-var id = document.getElementById("userId").value; //id값이 "id"인 입력란의 값을 저장
 var userPw = document.getElementById("userPw");
 var userPwCheck = document.getElementById("userPwCheck");
 var userName = document.getElementById("userName");
@@ -33,6 +32,7 @@ const emailReg2 = /[ㄱ-ㅎ가-힣]/g;
 //토큰
 var idToken = false
 var pwToken = false
+var pwCkToken = false
 var nameToken = false
 var genderToken = false
 var birthToken = false
@@ -40,15 +40,16 @@ var phoneToken = false
 var emailToken = false
 
 window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
-
 	// 아이디 유효성검사
 	 userId.onblur = () => {
+		 var id = document.getElementById("userId").value; //id값이 "id"인 입력란의 값을 저장
+		 console.log(id);
 		$.ajax({
 		    url:'checkId', //Controller에서 인식할 주소
 		    type:'post', //POST 방식으로 전달
-		    data:{id:id},
+		    data: {'userId':id},
+		    dataType:"json",
 		    success:function(cnt){ //컨트롤러에서 넘어온 cnt값을 받는다 
-		    	
 		        if(cnt == 0){ //cnt가 0이 아니면 -> 사용 가능한 아이디 
 					  idError.innerText = '사용가능한 아이디입니다.'
 				      idError.style.color = 'green'
@@ -104,14 +105,14 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 		  if(userPwCheck.value !== userPw.value){
 			  pwCkError.innerText = "입력하신 비밀번호와 맞지 않습니다."
 			  pwCkError.style.color = 'red'
-			  pwToken = false;
+			  pwCkToken = false;
 			  console.log('pwCk 실패')
 		  }
 		  else{
 		      const pwCkE = pwCkError
 			  pwCkE.innerText = '입력하신 비밀번호와 일치합니다.'
 			  pwCkE.style.color = 'green'
-			  pwToken = true;
+			  pwCkToken = true;
 		      console.log('pwCk 성공')
 		  }
 	}
@@ -143,7 +144,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 		}
 		else{
 			genderError.innerText = ''
-			gederToken = true;
+			genderToken = true;
 			console.log('gender 성공')
 		}
 	}
@@ -151,7 +152,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 	//생년월일 유효성검사
 	//년
 	userBirthYear.onchange = () => {
-		if(userBirthYear.value == ''){
+		if(userBirthYear.value == '' || userBirthMonth.value == '' || userBirthDay.value == '' || userBirthFlag.value == ''){
 			birthError.innerText = '필수 정보입니다.'
 			birthError.style.color = 'red'
 			birthToken = false;
@@ -174,7 +175,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 		}
 		else{
 			birthError.innerText = ''
-				birthToken = true;
+			birthToken = true;
 			console.log('month 성공')
 		}
 	}
@@ -254,8 +255,8 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 	}	
 }
 
-//최종 전체 유효성 검사 후 회원가입 완료 안내
-function Welcome(){
+//최종 전체 유효성 검사 후 회원가입 완료 안내 (즉시실행함수)
+(Welcome = function (){
     if(!idToken) {
         alert("아이디 형식을 확인하세요.");
         return false;
@@ -288,8 +289,9 @@ function Welcome(){
 	    alert("휴대폰 형식을 확인하세요.");
 	    return false;
 	}else{
+		alert("안녕하세요 "+userId+"님 가입을 환영합니다. :)");
 		return true;
 	}
 	
-}
+})();
 

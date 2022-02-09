@@ -18,7 +18,7 @@
 		and userPw=#{userPw}
 	</select>
 	
-	<select id="checkId" parameterType="String" resultType="int">
+	<select id="checkId" resultType="int">
 		SELECT COUNT(userId) 
 		FROM member 
 		WHERE userId=#{userId};

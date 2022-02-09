@@ -1,13 +1,16 @@
 package com.team.controller;
 
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.team.domain.MemberDTO;
@@ -62,13 +65,29 @@ public class MemberController {
 	}
 	
 	// 아이디 중복 체크
+	@ResponseBody
 	@PostMapping("checkId")
-	public @ResponseBody int checkId(String id) {
-		System.out.println("Controller id : "+id);
-		System.out.println("Controller id2 : "+mservice.checkId(id));
-		int cnt = mservice.checkId(id);
-		return cnt;
+	public int checkId(MemberDTO mdto) {
+		System.out.println("Controller id : "+mdto);
+		System.out.println("Controller id2 : "+mservice.checkId(mdto));
+		int cnt2 = mservice.checkId(mdto);
+		return cnt2;
 	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

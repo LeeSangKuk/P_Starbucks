@@ -1,5 +1,7 @@
 package com.team.mapper;
 
+import org.springframework.ui.Model;
+
 import com.team.domain.MemberDTO;
 
 public interface MemberMapper {
@@ -11,5 +13,5 @@ public interface MemberMapper {
 	public MemberDTO postLogin(MemberDTO mdto);
 	
 	// 중복된 아이디 표시 설계
-	public int checkId(String id);
+	public int checkId(MemberDTO mdto);
 }

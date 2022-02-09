@@ -1,5 +1,7 @@
 package com.team.service;
 
+import org.springframework.ui.Model;
+
 import com.team.domain.MemberDTO;
 
 public interface MemberService {
@@ -11,6 +13,6 @@ public interface MemberService {
 	public MemberDTO postLogin(MemberDTO mdto);
 	
 	// 중복된 아이디 표시 설계
-	public int checkId(String id);
+	public int checkId(MemberDTO mdto);
 
 }
