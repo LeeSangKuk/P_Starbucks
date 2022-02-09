@@ -9,30 +9,20 @@
                 <h1>고객의 소리</h1>
                 <div class="d_box">
                     <div class="d_title">
-                        <ul>
+                    	<input type="hidden" id="bno" name="bno" value="${detail.bno}" readonly>
 
-                            <li class="d_title_bno"><input type="text" id="bno" value="${detail.bno}"></li><!--.d_title_nam-->
-                            <!-- <input type="text" name="bno" value="${detail.bno}"> -->
-                            
-                        	<li class="d_title_name">
-								${detail.title}
-                            </li><!--.d_title_name-->
-                        	
-                        	
-                        	<li class="d_title_writer">
-								${detail.writer}
-                            </li><!--.d_title_writer-->
-                            
-                            <li class="d_title_regdate">
-								${detail.regdate}
-                            </li><!--.d_title_regdate-->
-                            
-                            
-
-                            <li class="d_title_hits">
+                        <div class="d_title_name">
+                        	${detail.title}
+                        </div>
+                        
+                       	<ul>
+                       		<li>${detail.writer}</li>
+                       		<li>${detail.regdate}</li>
+                       		<li class="d_title_hits">
                                 	조회 : <span class="count">${detail.cnt}</span>
                             </li><!--.d_title_hits-->
-                        </ul>
+                       	</ul>
+
                     </div><!--.d_title-->
 
 
@@ -68,7 +58,7 @@
                         <div class="d_reply_form">
                         	<div class="field">
                                 <input type="hidden" name="rno" class="field_rno" readonly>
-                                <input type="text" name="replyer" value="${login.userName}" class="field_replyer">
+                                <input type="hidden" name="replyer" value="${login.userName}" class="field_replyer" readonly>
                             </div>
 
 
@@ -86,12 +76,12 @@
                     	<ul>
                     	
                     		<li class="d_del_btn">
-	                            <a href="/board/remove">삭제</a>
+	                            <a href="/board/remove?bno=${detail.bno}">삭제</a>
 	                        </li><!--.d_del_btn-->
 	                        
 	                        
 	                        <li class="d_write_btn">
-	                            <a href="/board/modify">수정</a>
+	                            <a href="/board/modify?bno=${detail.bno}">수정</a>
 	                        </li><!--.d_write_btn-->
     
 
