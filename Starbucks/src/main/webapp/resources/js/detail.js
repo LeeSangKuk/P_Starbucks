@@ -55,6 +55,7 @@ $(document).ready(function(){
 				str += "<li><div><input type='hidden' class='detail_rno' name='rno' value='"+ list[i].rno + "' readonly></div>" +"<div><b>" + list[i].replyer + "</b></div>"
 				str += "<div><textarea data-rno='" + list[i].rno + "' name='content' id='content' rows='2" +
 						"' cols='50' readonly>" + list[i].reply+ "</textarea></div>"
+				str += "<div><input type='text' data-rno='" + list[i].rno + "' name='replydate' value='" + list[i].replydate +"'></div>"
 				str += "<div class='r_btns'><ul><li><input type='submit' name='r_delete_btn' class='r_delete_btn' value='삭제'></li>"
 				str += "<li><input id='r_modify" + list[i].rno + "' data-rno='" + list[i].rno + "' type='submit' class='r_modify_btn' value='수정'></li>"
 				str += "<li><input id='r_submit" + list[i].rno + "' data-rno='" + list[i].rno + "' type='submit' name='modBtn' class='r_submit_btn' value='등록'></li>"

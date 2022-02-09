@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 	<link rel="stylesheet" href="../resources/css/header&footer.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../resources/js/header.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -35,12 +36,26 @@
                 <div class="pc-util">
                     <ul>
                         <li>
-		                    <c:if test="${login!=null}">
-								<div><a href="/member/login">로그아웃</a></div>
-							</c:if>
+                        
+                        	<c:choose>
+                        		<c:when test="${login!=null}">
+                        			<div><a href="/member/logout" id="logout" >로그아웃</a></div>
+                        		</c:when>
+                        		<c:otherwise>
+                        			<div><a href="/member/login">로그인</a></div>
+                        		</c:otherwise>                   	
+                        	</c:choose>
+
                         </li>
-                        <li>
-                            <a href="/member/login">나의 스타벅스</a>
+                        <li> 
+                            <c:choose>
+                        		<c:when test="${login!=null}">
+                        			<a href="#">나의 스타벅스</a>
+                        		</c:when>
+                        		<c:otherwise>
+                        			<a href="/member/login">나의 스타벅스</a>
+                        		</c:otherwise>                   	
+                        	</c:choose>
                         </li>
                         <li>
                             <a href="/info">고객센터</a>
@@ -51,12 +66,67 @@
                 <div class="icons">
                     <ul>
                         <li class="icon_search">
-                            <a href="">통합검색</a>
+                            <a href="#">통합검색</a>
                         </li>
                         <li class="icon_menu">
-                            <a href=""> 전체메뉴 </a>
+                            <a href="#"> 전체메뉴 </a>
                         </li>
                     </ul>
                 </div><!--.icons-->
             </div><!--.header_in-->
+            
+            
+            
+            <!-- 전체 메뉴 버튼-->
+            <div class="menu_bg"></div>
+            <div class="sidebar_menu">
+                <div class="close_btn"><a href="#">       
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
+                    </a>
+                </div>
+                <div class="menu_wrap">
+                    <ul>
+                        <li class="menu_title"><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">스타벅스 코리아</a></li>
+                        <li><a href="#">스타벅스 이야기</a></li>
+                        <li><a href="#">국내 뉴스룸</a></li>
+                        <li><a href="#">세계의 스타벅스</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu_title"><a href="#">모든 메뉴</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">상품</a></li>
+                        <li><a href="#">카드</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu_title"><a href="#">리워드</a></li>
+                        <li><a href="#">스타벅스 리워드</a></li>
+                        <li><a href="#">스타벅스 카드</a></li>
+                        <li><a href="#">스타벅스 e-Gift Card</a></li>
+                    </ul>
+
+                    <ul>
+                        <li class="menu_title"><a href="#">이벤트</a></li>
+                        <li><a href="#">스타벅스 카드</a></li>
+                        <li><a href="#">스타벅스 리워드</a></li>
+                        <li><a href="#">매장별 이벤트</a></li>
+                    </ul>
+
+                    <ul class="menu_titles">
+                        <li class="menu_title"><a href="#">매장 찾기</a></li>
+                        <li class="menu_title"><a href="#">공지사항</a></li>
+                        <li class="menu_title"><a href="#">월페이퍼</a></li>
+                    </ul>
+
+
+
+                </div><!--.menu_wrap-->
+            </div><!--sidebar_menu-->
+            
+            
+            
+            
         </header><!--#header-->

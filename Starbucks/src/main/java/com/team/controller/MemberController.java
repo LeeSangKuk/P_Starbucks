@@ -58,4 +58,12 @@ public class MemberController {
 		}
 		
 	}
+	
+	@GetMapping("logout")
+	public String postLogout(MemberDTO mdto,HttpSession session) {
+		session.invalidate();
+		System.out.println("logout");
+		
+		return "redirect:../main";
+	}
 }
