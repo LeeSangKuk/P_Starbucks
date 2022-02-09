@@ -18,9 +18,9 @@
                     </a>
                     <div class="pager">
                         <p class="active0"><a href="#"><span>1</span></a></p>
-                        <p><a href=""><span>2</span></a></p>
-                        <p><a href=""><span>3</span></a></p>
-                        <p><a href=""><span>4</span></a></p>
+                        <p><a href="#"><span>2</span></a></p>
+                        <p><a href="#"><span>3</span></a></p>
+                        <p><a href="#"><span>4</span></a></p>
                     </div><!--pager-->
                     <p class="arrow_left"><a href="#">왼쪽</a></p>
                     <p class="arrow_right"><a href="#">오른쪽</a></p>

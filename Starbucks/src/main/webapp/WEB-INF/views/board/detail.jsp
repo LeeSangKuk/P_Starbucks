@@ -10,13 +10,23 @@
                 <div class="d_box">
                     <div class="d_title">
                         <ul>
-                        
+
+                            <li class="d_title_bno"><input type="text" id="bno" value="${detail.bno}"></li><!--.d_title_nam-->
+                            <!-- <input type="text" name="bno" value="${detail.bno}"> -->
+                            
                         	<li class="d_title_name">
 								${detail.title}
-                            </li><!--.cs_title_nam-->
-                        
-                            <li class="d_title_bno"><input type="hidden" id="bno" value="${detail.bno}"></li><!--.d_title_nam-->
-                            <!-- <input type="text" name="bno" value="${detail.bno}"> -->
+                            </li><!--.d_title_name-->
+                        	
+                        	
+                        	<li class="d_title_writer">
+								${detail.writer}
+                            </li><!--.d_title_writer-->
+                            
+                            <li class="d_title_regdate">
+								${detail.regdate}
+                            </li><!--.d_title_regdate-->
+                            
                             
 
                             <li class="d_title_hits">
@@ -58,7 +68,7 @@
                         <div class="d_reply_form">
                         	<div class="field">
                                 <input type="hidden" name="rno" class="field_rno" readonly>
-                                <input type="text" name="replyer" value="" class="field_replyer">
+                                <input type="text" name="replyer" value="${login.userName}" class="field_replyer">
                             </div>
 
 

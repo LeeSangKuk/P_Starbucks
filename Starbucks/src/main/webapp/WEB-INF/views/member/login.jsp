@@ -6,7 +6,7 @@
  <div id="Container">
         <div id="loginWrap">
             <div id="loginWrapInner">
-                <form id="loginForm" action="../main" method="post" onsubmit="return Welcome();">
+                <form id="loginForm" action="./login" method="post" onsubmit="return Welcome();">
                     <fieldset>
                         <legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
                         <h1 class="loginTitle">로그인</h1>

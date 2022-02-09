@@ -23,16 +23,22 @@ public class BoardServiceImpl implements BoardService{
 	// 1.글쓰기 구현
 	@Transactional
 	public void write(BoardDTO board) {
-		// 제목과 내용을 board 테이블에 insert
-		bmapper.insertSelectKey(board);
 		
-		// 파일명,파일경로,파일타입, uuid 값을 attach 테이블에 insert
-		// BoardDTO에 있는 attachList를 가져와서 반복문으로 실행하여 attach 변수에 저장
-		board.getAttachList().forEach(attach->{
-			attach.setBno(board.getBno());
-			System.out.println("attach 테이블의 bno = " + board.getBno());
-			amapper.insert(attach);
-		});
+		if(board.getAttachList() != null) {
+			// 제목과 내용을 board 테이블에 insert
+			bmapper.insertSelectKey(board);
+			
+			// 파일명,파일경로,파일타입, uuid 값을 attach 테이블에 insert
+			// BoardDTO에 있는 attachList를 가져와서 반복문으로 실행하여 attach 변수에 저장
+			board.getAttachList().forEach(attach->{
+				attach.setBno(board.getBno());
+				System.out.println("attach 테이블의 bno = " + board.getBno());
+				amapper.insert(attach);
+			});
+		}else {
+			bmapper.write(board);
+		}
+
 	}
 	
 	// 2.목록 구현
