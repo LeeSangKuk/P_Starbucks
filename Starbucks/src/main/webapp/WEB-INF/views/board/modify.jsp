@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../includes/mainSource.jsp" %>
 <%@ include file="../includes/header.jsp" %>
+<link rel="stylesheet" href="../resources/css/BoardStyle.css">
     <div id="container">
         <div class="container_in">
             <div class="write">
