@@ -3,11 +3,12 @@
 	<link rel="stylesheet" href="../resources/css/header&footer.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="../resources/js/header.js"></script>
+		<script src="../resources/js/search.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div id="wrap">
-    	<div id=header_wrap>
+    	<div class=header_wrap>
 	        <header id="header">
 	            <div class="header_in">
 	                <h1 class="logo">
@@ -79,6 +80,7 @@
 	            
 	            <!-- 전체 메뉴 버튼-->
 	            <div class="menu_bg"></div>
+        		<div class="search_bg"></div>
 	            <div class="sidebar_menu">
 	                <div class="close_btn"><a href="#">       
 	                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
