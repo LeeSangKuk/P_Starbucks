@@ -25,14 +25,14 @@
                             
                             <div class="loginFormBox">
                                 <label for="userId" class="hid">아이디</label>
-                                <input id="userId" name="userId" class="loginInput" type="text" maxlength="20" placeholder="아이디를 입력해 주세요.">
+                                <input id="userId" name="userId" class="loginInput" type="text"  placeholder="아이디를 입력해 주세요.">
                                 <br>
                                 <label for="userPw" class="hid">비밀번호</label>
-                                <input id="userPw" name="userPw" class="loginInput" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." autocomplete="off">
-								<div id="loginError"  style="font-size: 14px;"></div>
+                                <input id="userPw" name="userPw" class="loginInput" type="password" placeholder="비밀번호를 입력해 주세요." autocomplete="off">
+								<p id="loginError"  style="font-size: 14px;"></p>
 								
                                 <span class="checkWrap">
-                                    <input type="checkbox" class="save_id" name="checkId" id="saveId">
+                                    <input type="checkbox" class="saveId" name="saveId" id="saveId" value="y">
                                     <label for="saveId">아이디 저장</label>
                                 </span>
                                 

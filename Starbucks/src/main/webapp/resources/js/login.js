@@ -1,72 +1,52 @@
-$(function() { // 4.페이지를 실행할 때 실행하도록 기본실행함수 실행
-         
-    fnInit();
-  
-});
-
-function login(){ // 1.saveid 함수 실행
-  saveid();
-}
-
-function fnInit(){ 
- var cookieid = getCookie("saveid");
- console.log(cookieid);//getCookie(name)함수에 'saveid'를 넣어
- if(cookieid !=""){ //getCookie(name)값이 비어있지않다면
-     $("input:checkbox[id='saveId']").prop("checked", true); // 아이디값의 이름이 saveid 체크박스에 체크하고
-     $('#logId').val(cookieid); //logId의 아이디 값에 getCookie(name)값 넣어준다
- }
- 
-}  
-
-//3. saveid함수에서 넘겨준 시간이 현재시간과 비교해서 쿠키를 생성하고 지워주는 함수
-function setCookie(name, value, expiredays) {
- var todayDate = new Date();
- todayDate.setTime(todayDate.getTime() + 0);
- if(todayDate > expiredays){ // 현재시간보다 크다면 한달치 시간을 넣어 쿠키를 생성
-     document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiredays + ";";
- }else if(todayDate < expiredays){ // 현재시간보다 작다면 마이너스 값을 넣어 쿠키 삭제
-     todayDate.setDate(todayDate.getDate() + expiredays);
-     document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
- }
- 
- 
- console.log(document.cookie);
-}
-
-function getCookie(Name) {
- var search = Name + "=";
- console.log("search : " + search);
- 
- if (document.cookie.length > 0) { // 쿠키가 설정되어 있다면 
-     offset = document.cookie.indexOf(search);
-     console.log("offset : " + offset);
-     if (offset != -1) { // 쿠키가 존재하면 
-         offset += search.length;
-         // set index of beginning of value
-         end = document.cookie.indexOf(";", offset);
-         console.log("end : " + end);
-         // 쿠키 값의 마지막 위치 인덱스 번호 설정 
-         if (end == -1)
-             end = document.cookie.length;
-         console.log("end위치  : " + end);
-         
-         return unescape(document.cookie.substring(offset, end));
-     }
- }
- return "";
-}
-
-// 2.체크박스에 체크값에 대하여 조건에 따라 시간을 구해주는 함수
-function saveid() { 
- var expdate = new Date();
- if ($("#saveId").is(":checked")){
-     expdate.setTime(expdate.getTime() + 1000 * 3600 * 24 * 30); // 현재시간에 한달 +
-     setCookie("saveid", $("#logId").val(), expdate);
-     }else{
-    expdate.setTime(expdate.getTime() - 1000 * 3600 * 24 * 30); // 현재시간에 한달 - (마이너스 하게되면 쿠키값 존재 x)
-     setCookie("saveid", $("#logId").val(), expdate);
-      
- }
-}
-
+//
+////1. 쿠키 저장하기 함수---------------------------------------------------------------------------------------------------
+//function setCookie(cookie_name, value, days) {
+//  var exdate = new Date(); //생성자 호출
+//  exdate.setDate(exdate.getDate() + days); //현지시간기준(현지시간의 일+days)
+//  
+////설정 일수만큼 현재시간에 만료값으로 지정
+//  var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+//   //value값을 16진수 이스케이프 시퀀스로 대체 + 현지시간의 일 == null 이면 공백 ,아니면 '; expires=현재날짜를 협정세계시로 출력
+//  /* escape [함수] 특정 문자가 16진수 이스케이프 시퀀스로 대체된 새 문자열을 계산 */
+//  document.cookie = cookie_name + '=' + cookie_value; // 쿠키이름 = 쿠키 값
+//  
+//}
+// 
+///*
+// * split [함수] String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눔
+// * substring() [메서드] string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환
+// * indexOf() [메서드] 호출한 String 객체에서 주어진 값과 일치하는 첫 번째 인덱스를 반환, 일치하는 값이 없으면 -1을 반환
+// * replace() [메서드] 어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환. 
+// * 				그 패턴은 문자열이나 정규식(RegExp)이 될 수 있으며, 교체 문자열은 문자열이나 모든 매치에 대해서 호출된 함수일 수 있음.
+// * */
+//
+////2. 쿠키 얻어오기 함수---------------------------------------------------------------------------------------------------
+//function getCookie(cookie_name) {
+//  var x, y; // 변수 선언
+//  var val = document.cookie.split(';'); // 쿠키를 문자열로 출력
+// 
+//  for (var i = 0; i < val.length; i++) { // 쿠키의 문자열길이보다 작으면 반복해라
+//    x = val[i].substr(0, val[i].indexOf('='));
+//    y = val[i].substr(val[i].indexOf('=') + 1);
+//    x = x.replace(/^\s+|\s+$/g, ''); // 앞과 뒤의 공백 제거하기
+//    
+//    if (x == cookie_name) {
+//      return unescape(y); // unescape로 디코딩 후 값 리턴
+//    }
+//    
+//  }
+//  
+//}
+//
+//function chk() {
+//    if (document.getElementById("saveId").checked == true) {
+//        setCookie('c_userid', document.getElementById("userId").value, '100');        
+//        alert (document.getElementById("userId").value + "저장");
+//    } else {
+//        setCookie('c_userid', '', '100');
+//        alert("아이디 저장해제");
+//    }
+//}
+//
+//
 

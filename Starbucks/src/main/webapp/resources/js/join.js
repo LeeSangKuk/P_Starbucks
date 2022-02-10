@@ -22,7 +22,7 @@ var phoneError = document.getElementById("phoneError");
 var emailError = document.getElementById("emailError");
 
 //정규식
-const idReg = /^[a-z0-9]{4,20}$/;
+const idReg =  /^[a-z]+[a-z0-9]{5,19}$/g;
 const pwReg = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
 const nameReg = /^[가-힣a-zA-Z]+$/;
 const phoneReg = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
@@ -64,7 +64,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 					  console.log('id 실패')
 		        } 
 		        else if(!idReg.test(userId.value)){
-					  idError.innerText = "아이디는 영 소문자, 숫자 4~20자리로 입력해주세요."
+					  idError.innerText = "아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다."
 					  idError.style.color = 'red'
 					  idToken = false;
 					  console.log('id 실패')
@@ -167,7 +167,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 	
 	//월
 	userBirthMonth.onchange = () => {
-		if(userBirthMonth.value == ''){
+		if(userBirthYear.value == '' || userBirthMonth.value == '' || userBirthDay.value == '' || userBirthFlag.value == ''){
 			birthError.innerText = '필수 정보입니다.'
 			birthError.style.color = 'red'
 			birthToken = false;
@@ -182,7 +182,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 	
 	//일
 	userBirthDay.onchange = () => {
-		if(userBirthDay.value == ''){
+		if(userBirthYear.value == '' || userBirthMonth.value == '' || userBirthDay.value == '' || userBirthFlag.value == ''){
 			birthError.innerText = '필수 정보입니다.'
 			birthError.style.color = 'red'
 			birthToken = false;
@@ -197,7 +197,7 @@ window.onload = function(){ //페이지가 열린 즉시 실행되는 함수
 	
 	//양/음력
 	userBirthFlag.onchange = () => {
-		if(userBirthFlag.value == ''){
+		if(userBirthYear.value == '' || userBirthMonth.value == '' || userBirthDay.value == '' || userBirthFlag.value == ''){
 			birthError.innerText = '필수 정보입니다.'
 			birthError.style.color = 'red'
 			birthToken = false;
