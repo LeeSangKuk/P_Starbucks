@@ -90,49 +90,53 @@
                     </div>
                 </div>
              </div>
-                        	            <!-- 전체 메뉴 버튼-->
-	            <div class="menu_bg"></div>
-        		<div class="search_bg"></div>
-	            <div class="sidebar_menu">
-	                <div class="close_btn"><a href="#">       
-	                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
-	                    </a>
-	                </div>
-	                <div class="menu_wrap">
-	                    <ul>
-	                        <li class="menu_title"><a href="#">브랜드 소개</a></li>
-	                        <li><a href="#">스타벅스 코리아</a></li>
-	                        <li><a href="#">스타벅스 이야기</a></li>
-	                        <li><a href="#">국내 뉴스룸</a></li>
-	                        <li><a href="#">세계의 스타벅스</a></li>
-	                    </ul>
-	
-	                    <ul>
-	                        <li class="menu_title"><a href="#">모든 메뉴</a></li>
-	                        <li><a href="#">음료</a></li>
-	                        <li><a href="#">푸드</a></li>
-	                        <li><a href="#">상품</a></li>
-	                        <li><a href="#">카드</a></li>
-	                    </ul>
-	
-	                    <ul>
-	                        <li class="menu_title"><a href="#">리워드</a></li>
-	                        <li><a href="#">스타벅스 리워드</a></li>
-	                        <li><a href="#">스타벅스 카드</a></li>
-	                        <li><a href="#">스타벅스 e-Gift Card</a></li>
-	                    </ul>
-	
-	                    <ul>
-	                        <li class="menu_title"><a href="#">이벤트</a></li>
-	                        <li><a href="#">스타벅스 카드</a></li>
-	                        <li><a href="#">스타벅스 리워드</a></li>
-	                        <li><a href="#">매장별 이벤트</a></li>
-	                    </ul>
-	
-	                    <ul class="menu_titles">
-	                        <li class="menu_title"><a href="#">매장 찾기</a></li>
-	                        <li class="menu_title"><a href="#">공지사항</a></li>
-	                        <li class="menu_title"><a href="#">월페이퍼</a></li>
-	                    </ul>
-	                </div><!--.menu_wrap-->
-	            </div><!--sidebar_menu-->
+             
+             
+            
+            <!-- 전체 메뉴 버튼-->
+           	<div class="search_bg"></div>
+			<div class="menu_bg"></div>
+			
+			<div class="sidebar_menu">
+			    <div class="close_btn"><a href="#">       
+			        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
+			        </a>
+			    </div>
+			    <div class="menu_wrap">
+			        <ul>
+			            <li class="menu_title"><a href="#">브랜드 소개</a></li>
+			            <li><a href="#">스타벅스 코리아</a></li>
+			            <li><a href="#">스타벅스 이야기</a></li>
+			            <li><a href="#">국내 뉴스룸</a></li>
+			            <li><a href="#">세계의 스타벅스</a></li>
+			        </ul>
+			
+			        <ul>
+			            <li class="menu_title"><a href="#">모든 메뉴</a></li>
+			            <li><a href="#">음료</a></li>
+			            <li><a href="#">푸드</a></li>
+			            <li><a href="#">상품</a></li>
+			            <li><a href="#">카드</a></li>
+			        </ul>
+			
+			        <ul>
+			            <li class="menu_title"><a href="#">리워드</a></li>
+			            <li><a href="#">스타벅스 리워드</a></li>
+			            <li><a href="#">스타벅스 카드</a></li>
+			            <li><a href="#">스타벅스 e-Gift Card</a></li>
+			        </ul>
+			
+			        <ul>
+			            <li class="menu_title"><a href="#">이벤트</a></li>
+			            <li><a href="#">스타벅스 카드</a></li>
+			            <li><a href="#">스타벅스 리워드</a></li>
+			            <li><a href="#">매장별 이벤트</a></li>
+			        </ul>
+			
+			        <ul class="menu_titles">
+			            <li class="menu_title"><a href="#">매장 찾기</a></li>
+			            <li class="menu_title"><a href="#">공지사항</a></li>
+			            <li class="menu_title"><a href="#">월페이퍼</a></li>
+			        </ul>
+			    </div><!--.menu_wrap-->
+			</div><!--sidebar_menu-->
