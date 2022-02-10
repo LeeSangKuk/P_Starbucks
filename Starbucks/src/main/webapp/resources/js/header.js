@@ -5,6 +5,7 @@ $(document).ready(function(){
     // icon_menu을 클릭하면
     $('.icon_menu>a').on('click', function(e){
     	e.preventDefault();
+    	$('.bx-controls-direction').hide();
         $('.search_bg').hide();
         $('.header_search').hide();
         $('.menu_bg').show();
@@ -15,6 +16,7 @@ $(document).ready(function(){
 
     // colse_btn을 클릭하면
     $('.close_btn>a').on('click', function(){
+    	$('.bx-controls-direction').show();
         $('.menu_bg').hide(); 
         $('.sidebar_menu').animate({
             right: '-' + 50 + '%'
@@ -25,6 +27,7 @@ $(document).ready(function(){
     
     // close_btn이 아닌 menu_bg를 클릭해도 닫히게
     $('.menu_bg').on('click', function(){
+    	$('.bx-controls-direction').show();
         $('.menu_bg').hide(); 
         $('.sidebar_menu').animate({
             right: '-' + 50 + '%'
