@@ -5,6 +5,8 @@ $(document).ready(function(){
     // icon_menu을 클릭하면
     $('.icon_menu>a').on('click', function(e){
     	e.preventDefault();
+        $('.search_bg').hide();
+        $('.header_search').hide();
         $('.menu_bg').show();
         $('.sidebar_menu').show().animate({
             right:0

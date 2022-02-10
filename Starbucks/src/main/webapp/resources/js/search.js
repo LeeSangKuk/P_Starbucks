@@ -5,13 +5,15 @@ $(document).ready(function(){
 
     // icon_menu을 클릭하면
     $('.icon_search>a').on('click', function(){
-        $('.menu_bg').show();
+        $('.menu_bg').hide();
+        $('.sidebar_menu').hide(); 
+        $('.search_bg').show();
         $('.header_search').show();
     });
 
      // colse_btn을 클릭하면
      $('.h_search_close>a').on('click', function(){
-         $('.menu_bg').hide();
+         $('.search_bg').hide();
          $('.header_search').hide();
      });
 

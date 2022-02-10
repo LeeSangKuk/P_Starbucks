@@ -75,10 +75,19 @@
 	                    </ul>
 	                </div><!--.icons-->
 	            </div><!--.header_in-->
-	            
-	            
-	            
-	            <!-- 전체 메뉴 버튼-->
+
+	        	</header><!--#header-->
+	       	 </div><!-- .header_wrap -->
+             <div class="header_search">
+                <div class="header_search_in">
+                    <div class="h_search_top">
+                        <input type="text" placeholder="찾고 싶은 내용을 입력해주세요.">
+                        <p class="h_search_btn"><a href="#">검색</a></p>
+                        <p class="h_search_close"><a href="#">닫기</a></p>
+                    </div>
+                </div>
+             </div>
+                        	            <!-- 전체 메뉴 버튼-->
 	            <div class="menu_bg"></div>
         		<div class="search_bg"></div>
 	            <div class="sidebar_menu">
@@ -122,23 +131,5 @@
 	                        <li class="menu_title"><a href="#">공지사항</a></li>
 	                        <li class="menu_title"><a href="#">월페이퍼</a></li>
 	                    </ul>
-	
-	
-	
 	                </div><!--.menu_wrap-->
 	            </div><!--sidebar_menu-->
-	            
-	            
-	            
-	            
-	        	</header><!--#header-->
-             <div class="header_search">
-                <div class="header_search_in">
-                    <div class="h_search_top">
-                        <input type="text" placeholder="찾고 싶은 내용을 입력해주세요.">
-                        <p class="h_search_btn"><a href="#">검색</a></p>
-                        <p class="h_search_close"><a href="#">닫기</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
