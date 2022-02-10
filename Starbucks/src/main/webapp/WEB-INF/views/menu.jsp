@@ -6,24 +6,12 @@
         <div id="container"><!----------------------------#container start-------------------------------->
             <div class="section1"><!--.section1-->
                 <div class="event">
-                    <a href="#">
-                        <div class="ev_menu">
-                            <p class="img_txt"><img src="resources/img/sub_menu/menu-event-text.png" alt="menu-event-text"></p>
-                            <div class="img_coffee">
-                                <p class="co01"><img src="resources/img/sub_menu/menu-event-01.png" alt="event-menu"></p>
-                                <p class="co02"><img src="resources/img/sub_menu/menu-event-02.png" alt="event-menu"></p>
-                                <p class="co03"><img src="resources/img/sub_menu/menu-event-03.png" alt="event-menu"></p>
-                            </div><!--img_coffee-->
-                        </div><!--ev_menu-->
-                    </a>
-                    <div class="pager">
-                        <p class="active0"><a href="#"><span>1</span></a></p>
-                        <p><a href="#"><span>2</span></a></p>
-                        <p><a href="#"><span>3</span></a></p>
-                        <p><a href="#"><span>4</span></a></p>
-                    </div><!--pager-->
-                    <p class="arrow_left"><a href="#">왼쪽</a></p>
-                    <p class="arrow_right"><a href="#">오른쪽</a></p>
+                	<ul class="bxslider">
+                		<li><img src="resources/img/sub_menu/test/11.png" alt="테스트1"></li>
+                		<li><img src="resources/img/sub_menu/test/22.png" alt="테스트2"></li>
+                		<li><img src="resources/img/sub_menu/test/33.png" alt="테스트3"></li>
+                		<li><img src="resources/img/sub_menu/test/44.png" alt="테스트4"></li>
+                	</ul>
                 </div><!--event-->
             </div><!--section1-->
             <div class="section2">
