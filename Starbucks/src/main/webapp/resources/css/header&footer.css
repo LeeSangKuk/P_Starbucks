@@ -274,12 +274,15 @@ img{
 }
 .menu_wrap{
     list-style: none;
-    padding: 30px 100px;  
+    padding: 15px 100px 0 130px;  
 }
+
+
 
 .menu_wrap ul{
     margin-bottom: 50px;
 }
+
 
 .menu_wrap li{
     margin-left: 25px;
@@ -287,7 +290,7 @@ img{
 }
 
 .menu_wrap li a{
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     text-decoration: none;
 
@@ -303,7 +306,7 @@ img{
 }
 
 .menu_wrap .menu_title a{
-    font-size: 25px;
+    font-size: 21px;
     color: #333;
     font-weight: bold;
 }
@@ -313,7 +316,6 @@ img{
 }
 
 .menu_titles li{
-    margin-top: 30px;
     margin-right: 30px;
 }
 
