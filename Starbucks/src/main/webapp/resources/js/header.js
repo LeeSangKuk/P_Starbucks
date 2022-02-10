@@ -22,6 +22,16 @@ $(document).ready(function(){
         $('.sidebar_menu').hide(); 
         }); 
     });
+    
+    // close_btn이 아닌 menu_bg를 클릭해도 닫히게
+    $('.menu_bg').on('click', function(){
+        $('.menu_bg').hide(); 
+        $('.sidebar_menu').animate({
+            right: '-' + 50 + '%'
+                   },function(){
+        $('.sidebar_menu').hide(); 
+        }); 
+    });
 
     // $('.menu_wrap>ul>li>a').on('mouseover', function(){
     //     $('.menu_title>a').css('color','#007042');
