@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    line-height: 1.8em;
+
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     color: #333;
@@ -49,6 +49,7 @@ h1{
 #container{
 	width: 100%;
 	background-color: blue;
+    line-height: 1.8em;
 }
 
 #loginWrapInner{
@@ -116,6 +117,7 @@ input.save_id[type=checkbox]:not(old) + label {
     margin-bottom: 20px;
 }
 .btnLogin{
+	line-height: 1.8em;
     color: white;
     font-size: 16px;
     background-color: #006633;
@@ -129,7 +131,7 @@ input.save_id[type=checkbox]:not(old) + label {
 .btnLogin:hover{background-color: #00a151;}
 
 
-.inputWarnText{font-size: 14px; margin-bottom: 20px;}
+.inputWarnText{font-size: 14px; margin-bottom: 20px; line-height: 1.8em;}
 
 
 .loginBtnWrap ul{display: flex; justify-content: space-around;}
