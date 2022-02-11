@@ -82,6 +82,8 @@ $(document).ready(function(){
 	$("#d_reply_regBtn").on("click", function(){
 		//alert("aaa");
 		
+
+		
 		// 사용자가 입력한 댓글 내용을 변수에 저장
 		var reply = $("textarea[name='reply']").val();
 		// 사용자가 입력한 댓글작성자를 변수에 저장
@@ -98,12 +100,17 @@ $(document).ready(function(){
 					
 					// 댓글 목록 보여주기
 					showList();
-					
-
-		
 		});
 
+
+
 	})// $("#d_reply_regBtn").on("click", function() 끝
+	
+	$("#d_reply_regBtn2").on("click", function(){
+		alert("로그인 후 댓글 작성이 가능합니다.");
+	})
+	
+	
 	//------------------------------
 	
 	// 댓글에 수정 버튼을 클릭하면
@@ -169,6 +176,11 @@ $(document).ready(function(){
 		})
 
 	})
+	
+	
+
+	
+	
 	
 	
 	
