@@ -50,11 +50,11 @@
 
                             </div>
                             <select name="search" id="">
-                                <option value="T">제목</option>
-                                <option value="C">내용</option>
-                                <option value="W">작성자</option>
-                                <option value="TC">제목+내용</option>
-                                <option value="TCW">제목+내용+작성자</option>
+                                <option value="T" <c:out value="${pageMaker.cri.search == 'T' ? 'selected' :''}"/> >제목</option>
+                                <option value="C" <c:out value="${pageMaker.cri.search == 'C' ? 'selected' :''}"/> >내용</option>
+                                <option value="W" <c:out value="${pageMaker.cri.search == 'W' ? 'selected' :''}"/> >작성자</option>
+                                <option value="TC" <c:out value="${pageMaker.cri.search == 'TC' ? 'selected' :''}"/> >제목+내용</option>
+                                <option value="TCW" <c:out value="${pageMaker.cri.search == 'TCW' ? 'selected' :''}"/> >제목+내용+작성자</option>
                             </select><!--.search-->
                             <input type="text" value="${pageMaker.cri.keyword}" name="keyword" class="s_sc">
                             <input type="submit" value="검색" class="s_btn">
