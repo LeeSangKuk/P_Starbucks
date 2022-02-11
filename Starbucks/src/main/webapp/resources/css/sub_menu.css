@@ -111,7 +111,7 @@
     /* background-color: orange; */
 }
 
-.m_box .b_line{
+.m_box .b_btn{
     margin-bottom: 20px;
 }
 
@@ -260,6 +260,10 @@
     background-size: 100% auto;
     /* background-color: darkorange; */
 
+}
+
+.drink>ul{
+	display: none;	
 }
 
 .drink ul li{
