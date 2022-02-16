@@ -23,6 +23,7 @@ public class MemberController {
 	@Autowired
 	MemberService mservice;
 	
+	
 	// 회원가입 화면 띄우기
 	@GetMapping("join")
 	public void join() {
