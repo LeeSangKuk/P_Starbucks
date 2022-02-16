@@ -23,15 +23,17 @@ public class MemberServiceImpl implements MemberService{
 
 	// 로그인하기 구현
 	@Override
-	public MemberDTO postLogin(MemberDTO mdto) {
+	public int postLogin(MemberDTO mdto) {
+		System.out.println("service:"+mdto);
 		return mmapper.postLogin(mdto);
 	}
 
-	// 중복된 아이디 표시 구현
+	// 로그인 하기 구현(회원정보)
 	@Override
-	public int checkId(MemberDTO mdto) {
-		int cnt = mmapper.checkId(mdto);
-		return cnt;
+	public MemberDTO getLogin(MemberDTO mdto) {
+		// TODO Auto-generated method stub
+		return mmapper.getLogin(mdto);
 	}
+
 
 }
