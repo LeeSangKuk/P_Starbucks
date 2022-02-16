@@ -46,6 +46,7 @@ public class MemberController {
 		MemberDTO login=mservice.postLogin(mdto);
 		// 세션객체(session)에  login변수에 login값을 저장(setAttribute)
 		// session : 로그인했을때 정보가 저장된채로 다른 페이지를 이동하더라도 로그인정보가 홈페이지에 계속 유지 ,하지만 우리가 만든 게시판은 새로고침할때마다 데이터가 리셋됐는데 게시판과 달리 데이터가 홈페이지에 계속 유지되도록 하는 기능
+
 		session.setAttribute("login", login);
 		
 		// session.invalidate(); 로그아웃
@@ -59,11 +60,4 @@ public class MemberController {
 		
 	}
 	
-	@GetMapping("logout")
-	public String postLogout(MemberDTO mdto,HttpSession session) {
-		session.invalidate();
-		System.out.println("logout");
-		
-		return "redirect:../main";
-	}
 }
