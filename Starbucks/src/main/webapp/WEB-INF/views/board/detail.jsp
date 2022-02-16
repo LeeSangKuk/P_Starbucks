@@ -63,11 +63,21 @@
 
 
                             <textarea name="reply" id="" cols="4" placeholder="댓글을 입력해주세요."></textarea>
-
+							<c:choose>
+								<c:when test="${login!=null}">
+		                            <div class="d_reply_submit">
+		                                <input type="submit" id="d_reply_regBtn" class="submit_btn" value="등록">
+		                            </div>
+								
+								</c:when>
+								
+								<c:otherwise>
+		                            <div class="d_reply_submit">
+		                                <input type="button" id="d_reply_regBtn2" class="submit_btn" value="등록">
+		                            </div>
+								</c:otherwise>
+							</c:choose>
 							
-                            <div class="d_reply_submit">
-                                <input type="submit" id="d_reply_regBtn" class="submit_btn" value="등록">
-                            </div>
                         </div><!--.re_write-->
                     </div><!--.d_reply-->
 

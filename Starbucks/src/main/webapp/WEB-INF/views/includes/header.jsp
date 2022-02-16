@@ -7,6 +7,7 @@
 		<script src="../resources/js/bxslider.js"></script>
 		<script src="../resources/js/header.js"></script>
 		<script src="../resources/js/search.js"></script>
+
     <title>Document</title>
 </head>
 <body>

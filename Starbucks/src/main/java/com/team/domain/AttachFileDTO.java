@@ -3,7 +3,7 @@ package com.team.domain;
 public class AttachFileDTO {
 	private String fileName;
 	private String uploadPath;
-	private String uuid;
+	private String uuid; // 새 이름 지정
 	private boolean image;
 	private int bno;
 	

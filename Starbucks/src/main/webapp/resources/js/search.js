@@ -16,7 +16,12 @@ $(document).ready(function(){
          $('.search_bg').hide();
          $('.header_search').hide();
      });
-
+     
+     // close_btn이 아닌 menu_bg를 클릭해도 닫히게
+     $('.search_bg').on('click', function(){
+         $('.search_bg').hide();
+         $('.header_search').hide();
+     });
     // $('.menu_wrap>ul>li>a').on('mouseover', function(){
     //     $('.menu_title>a').css('color','#007042');
     //     $('.menu_title>a').not(this).css('color','#333');

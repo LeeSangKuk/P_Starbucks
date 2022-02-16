@@ -27,25 +27,25 @@
                     </div><!--category-->
                     <div class="m_box">
                         <ul>
-                            <li class="b_line"><a href="#"><input type="radio" name="slect">전체</a></li>
-                            <li><a href="#"><input type="radio" name="slect">콜드 브루 커피</a></li>
-                            <li><a href="#"><input type="radio" name="slect">브루드 커피</a></li>
-                            <li><a href="#"><input type="radio" name="slect">에스프레소</a></li>
-                            <li><a href="#"><input type="radio" name="slect" id="check2" class="checkbox2" checked>프라푸치노</a></li>
+                            <li class="b_btn" id="b_btn0"><label><input type="radio" name=slect checked>전체</label></li>
+                            <li class="b_btn" id="b_btn1"><label><input type="radio" name=slect>콜드 브루 커피</label></li>
+                            <li class="b_btn" id="b_btn2"><label><input type="radio" name=slect>브루드 커피</label></li>
+                            <li class="b_btn" id="b_btn3"><label><input type="radio" name=slect>에스프레소</label></li>
+                            <li class="b_btn" id="b_btn4"><label><input type="radio" name=slect id="check2" class="checkbox2">프라푸치노</label></li>
                             <!-- 1. 전체에 체크되었을 때, 나머지 체크박스가 전부 해제 되길 원함.
                                  2. 체크가 되었을 때, 이름의 색깔이 변하게 하고 싶음.  -->
-                            <li><a href="#"><input type="radio" name="slect">블렌디드</a></li>
-                            <li><a href="#"><input type="radio" name="slect">스타벅스 피지오</a></li>
-                            <li><a href="#"><input type="radio" name="slect">티(티바나)</a></li>
-                            <li><a href="#"><input type="radio" name="slect">기타 제조 음료</a></li>
-                            <li><a href="#"><input type="radio" name="slect">스타벅스 주스(병음료)</a></li>
+                            <li class="b_btn" id="b_btn5"><label><input type="radio" name=slect>블렌디드</label></li>
+                            <li class="b_btn" id="b_btn6"><label><input type="radio" name=slect>스타벅스 피지오</label></li>
+                            <li class="b_btn" id="b_btn7"><label><input type="radio" name=slect>티(티바나)</label></li>
+                            <li class="b_btn" id="b_btn8"><label><input type="radio" name=slect>기타 제조 음료</label></li>
+                            <li class="b_btn" id="b_btn9"><label><input type="radio" name=slect>스타벅스 주스(병음료)</label></li>
                         </ul>
                     </div><!--m_box-->
                 </div><!--menu_list-->
             </div><!--section2-->
             <div class="section3">
                 <div class="menu_name">
-                    <h2>프라푸치노 (Frappuccino)</h2>
+                    <h2 class="menu_name_list">프라푸치노 (Frappuccino)</h2>
                     <p><span class="decaf">디카페</span>디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</p>
                     <p class="alert"><span class="pay">원</span><span class="point">Tall</span> 기준입니다.</p>
                 </div><!--ㅡmenu_name-->
@@ -55,7 +55,7 @@
                     <p class="bar_down"><a href="#">프라푸치노<span>아래</span></a></p>
                 </div><!--small_bar-->
                 <div class="drink">
-                    <ul><!------ 전체 메뉴 묶음 ------->
+                    <ul class="Frappuccino"><!------ 전체 메뉴 묶음 ------->
                         <li class="chapter1"><!-- 1번 영역 시작 -->
                             <div class="d01">
                                 <a href="#">
@@ -163,8 +163,33 @@
                                 </a>
                             </div>
                         </li><!-- 3번 영역 끝 -->
-                    </ul><!------ 전체 메뉴 묶음 ------->
+                    </ul><!------ 프라푸치노 메뉴 묶음 ------->
+                    <ul class="ColdBrewCoffee">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="BrewCoffee">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Espresso">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Blended">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Fizzio">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Teavana">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Others">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
+                    <ul class="Juice">
+                    	<li class="chapter1">상품없음</li>
+                    </ul>
                 </div><!--drink-->
-            </v><!--section3-->
+            </div><!--section3-->
         </div><!------------------------------#container-------------------------------->
-      <%@ include file="./includes/footer.jsp" %> 
+      <script type="text/javascript" src="../resources/js/menu.js"></script>
+      <%@ include file="./includes/footer.jsp" %>
