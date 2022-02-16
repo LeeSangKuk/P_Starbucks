@@ -84,7 +84,7 @@ fieldset{
     display: block;
     margin-bottom: 20px;
 }
-input.save_id[type=checkbox]:not(old) {
+/*input.save_id[type=checkbox]:not(old) {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -111,7 +111,7 @@ input.save_id[type=checkbox]:not(old) + label {
     background-size: 26px;
     cursor: pointer;
     z-index: 4;
-}
+}*/
 .btnMemLogin{
     margin-bottom: 20px;
 }

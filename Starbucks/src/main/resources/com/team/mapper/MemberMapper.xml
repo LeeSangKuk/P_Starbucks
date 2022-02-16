@@ -11,10 +11,17 @@
 		#{userBirthFlag},#{userPhone},#{userEmail})
 	</insert>
 
-	<select id="postLogin" resultType="com.team.domain.MemberDTO">
-		select *
+	<select id="postLogin" resultType="int">
+		select Count(userId)
 		from member
-		where userId=#{userId}
-		and userPw=#{userPw}
+		where userId=#{userId} and userPw=#{userPw}
 	</select>
+	
+	<select id="getLogin" resultType="com.team.domain.MemberDTO">
+		select userId,userPw
+		from member
+		where userId=#{userId} and userPw=#{userPw}
+	</select>
+	
+	
 </mapper>
