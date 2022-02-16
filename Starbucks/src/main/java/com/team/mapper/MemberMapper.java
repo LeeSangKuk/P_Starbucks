@@ -1,5 +1,7 @@
 package com.team.mapper;
 
+import org.springframework.ui.Model;
+
 import com.team.domain.MemberDTO;
 
 public interface MemberMapper {
@@ -8,5 +10,8 @@ public interface MemberMapper {
 	public void postJoin(MemberDTO mdto);
 	
 	// 로그인하기 설계
-	public MemberDTO postLogin(MemberDTO mdto);
+	public int postLogin(MemberDTO mdto);
+	
+	// 로그인하기 설계 (회원정보)
+	public MemberDTO getLogin(MemberDTO mdto);
 }

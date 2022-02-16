@@ -2,6 +2,7 @@ package com.team.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.team.domain.MemberDTO;
 import com.team.mapper.MemberMapper;
@@ -22,8 +23,17 @@ public class MemberServiceImpl implements MemberService{
 
 	// 로그인하기 구현
 	@Override
-	public MemberDTO postLogin(MemberDTO mdto) {
+	public int postLogin(MemberDTO mdto) {
+		System.out.println("service:"+mdto);
 		return mmapper.postLogin(mdto);
 	}
+
+	// 로그인 하기 구현(회원정보)
+	@Override
+	public MemberDTO getLogin(MemberDTO mdto) {
+		// TODO Auto-generated method stub
+		return mmapper.getLogin(mdto);
+	}
+
 
 }
