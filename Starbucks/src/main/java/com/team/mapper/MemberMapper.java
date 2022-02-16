@@ -10,8 +10,8 @@ public interface MemberMapper {
 	public void postJoin(MemberDTO mdto);
 	
 	// 로그인하기 설계
-	public MemberDTO postLogin(MemberDTO mdto);
+	public int postLogin(MemberDTO mdto);
 	
-	// 중복된 아이디 표시 설계
-	public int checkId(MemberDTO mdto);
+	// 로그인하기 설계 (회원정보)
+	public MemberDTO getLogin(MemberDTO mdto);
 }
