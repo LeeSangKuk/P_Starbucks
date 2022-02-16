@@ -7,6 +7,7 @@ import com.team.domain.BoardDTO;
 import com.team.domain.Criteria;
 
 public interface BoardService {
+	
 	// 1.글쓰기 설계
 	public void write(BoardDTO board);
 	
@@ -27,4 +28,5 @@ public interface BoardService {
 	
 	// 7. 게시판 상세페이지에 업로드 된 이미지를 화면에 보여주기 위한 데이터 list
 	public ArrayList<AttachFileDTO> fileList(int bno);
+	
 }

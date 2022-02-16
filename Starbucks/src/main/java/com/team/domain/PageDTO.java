@@ -6,9 +6,15 @@ public class PageDTO {
 	private boolean prev;
 	private boolean next;
 	
-	private int total;
+	private int total; // 총 게시물 수
 	
 	private Criteria cri;
+	/*
+		private String search;
+		private String keyword;
+		private int pageNum;
+		private int amount;
+	 */
 	
 	// 생성자 만들기
 	public PageDTO(Criteria cri, int total) {

@@ -25,6 +25,7 @@ import com.team.service.BoardService;
 public class BoardController {
 	@Autowired
 	private BoardService service;
+	// BoardService service = new BoardService;
 	
 	// write.jsp(글쓰기 화면) 띄우기
 	@GetMapping("write")
@@ -47,7 +48,14 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	// list.jsp(글 목록 화면) 띄우기
+	/* list.jsp(글 목록 화면) 띄우기 
+	 * 
+		1. cri - 페이징 처리 변수(파라미터)
+		2. model list - ${list}
+		3. int total - 총 게시글 수
+		4. pageMaker - 페이징처리를 위한 메서드
+	*/
+	
 	@GetMapping("list")
 	public void list(Criteria cri, Model model) {
 		
@@ -65,8 +73,8 @@ public class BoardController {
 	@GetMapping("detail")
 	public void detail(BoardDTO board, Model model) {
 		model.addAttribute("detail",service.detail(board));
-		
 	}
+	
 	//---------------------------------------------
 	// * 파일 업로드 관련 *
 	// 게시판 상세페이지에서 이미지를 클릭하기 위한 select된 결과를 javascript로...

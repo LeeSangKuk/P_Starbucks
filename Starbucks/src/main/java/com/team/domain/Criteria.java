@@ -1,10 +1,10 @@
 package com.team.domain;
 
 public class Criteria {
-	private String search;
-	private String keyword;
-	private int pageNum;
-	private int amount;
+	private String search; // 검색 타입
+	private String keyword; // 검색어
+	private int pageNum; // 페이지 번호
+	private int amount; // 한 페이지 게시물 수 
 	
 	// 생성자
 	Criteria(){

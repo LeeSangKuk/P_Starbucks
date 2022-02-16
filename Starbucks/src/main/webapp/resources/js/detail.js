@@ -96,7 +96,7 @@ $(document).ready(function(){
 					
 					// 입력한 값 초기화
 					$("textarea[name='reply']").val("");
-					$("input[name='replyer']").val("");
+					// $("input[name='replyer']").val("");
 					
 					// 댓글 목록 보여주기
 					showList();
@@ -178,10 +178,6 @@ $(document).ready(function(){
 	})
 	
 	
-
-	
-	
-	
 	
 	
 
@@ -250,6 +246,7 @@ var replyService=(function(){
 			}
 		})
 	}
+	 
 	// 댓글 삭제를 하기 위한 함수 선언
 	function remove(reply, callback){
 		$.ajax({
@@ -261,7 +258,8 @@ var replyService=(function(){
 				console.log(result);
 				
 				if(callback)
-					callback(result);
+					callback(result); // 고유명사 callback;
+				
 			},
 			error: function(){
 				

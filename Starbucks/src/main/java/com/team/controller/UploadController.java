@@ -100,6 +100,7 @@ public class UploadController {
 	private boolean checkImage(File file) {
 		try {
 			String contentType = Files.probeContentType(file.toPath());
+			// file의 경로[폴더]를 확인하고, 그 안에 있는 MIME 타입을 확인하기 위한 작업.
 			
 			// 파일의 타입이 image이면 true, 그렇지 않으면 false
 			return contentType.startsWith("image");
@@ -124,6 +125,14 @@ public class UploadController {
 		// -> 이 메서드 제일 하단에 return으로 결과 반환
 		ArrayList<AttachFileDTO> list = new ArrayList<>();
 		
+		/* 
+			private String fileName;
+			private String uploadPath;
+			private String uuid; // 새 이름 지정
+			private boolean image;
+			private int bno;
+		*/
+		
 		// 파일 업로드 경로 지정
 		String uploadFolder = "C:\\Users\\GreenArt\\git\\upload";
 		
@@ -146,6 +155,7 @@ public class UploadController {
 		//---------------------------------------
 		// 파일 정보를 불러오는 for문
 		for(MultipartFile multipartFile : uploadFile) {
+			//	  타입	            변수명		         배열명
 			// UploadController에 있는 uploadAjaxAction메서드에서 AttachFileDTO를 사용해서 값을 저장
 			// UploadController에 AttachFileDTO를 포함시켜서 사용
 			AttachFileDTO attachdto = new AttachFileDTO();
