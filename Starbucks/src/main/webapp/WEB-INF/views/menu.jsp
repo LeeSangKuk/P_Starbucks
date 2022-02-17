@@ -27,25 +27,25 @@
                     </div><!--category-->
                     <div class="m_box">
                         <ul>
-                            <li class="b_btn" id="b_btn0"><label><input type="radio" name=slect checked>전체</label></li>
-                            <li class="b_btn" id="b_btn1"><label><input type="radio" name=slect>콜드 브루 커피</label></li>
-                            <li class="b_btn" id="b_btn2"><label><input type="radio" name=slect>브루드 커피</label></li>
-                            <li class="b_btn" id="b_btn3"><label><input type="radio" name=slect>에스프레소</label></li>
-                            <li class="b_btn" id="b_btn4"><label><input type="radio" name=slect id="check2" class="checkbox2">프라푸치노</label></li>
+                            <li class="b_btn" id="b_btn0"><label><input type="radio" name=slect value="전체(ALL)" checked>전체</label></li>
+                            <li class="b_btn" id="b_btn1"><label><input type="radio" name=slect value="콜드 브루 커피(ColdBrewCoffee)">콜드 브루 커피</label></li>
+                            <li class="b_btn" id="b_btn2"><label><input type="radio" name=slect value="브루드 커피(BrewCoffee) ">브루드 커피</label></li>
+                            <li class="b_btn" id="b_btn3"><label><input type="radio" name=slect value="에스프레소(Espresso)">에스프레소</label></li>
+                            <li class="b_btn" id="b_btn4"><label><input type="radio" name=slect id="check2" class="checkbox2" value="프라푸치노(Frappuccino)">프라푸치노</label></li>
                             <!-- 1. 전체에 체크되었을 때, 나머지 체크박스가 전부 해제 되길 원함.
                                  2. 체크가 되었을 때, 이름의 색깔이 변하게 하고 싶음.  -->
-                            <li class="b_btn" id="b_btn5"><label><input type="radio" name=slect>블렌디드</label></li>
-                            <li class="b_btn" id="b_btn6"><label><input type="radio" name=slect>스타벅스 피지오</label></li>
-                            <li class="b_btn" id="b_btn7"><label><input type="radio" name=slect>티(티바나)</label></li>
-                            <li class="b_btn" id="b_btn8"><label><input type="radio" name=slect>기타 제조 음료</label></li>
-                            <li class="b_btn" id="b_btn9"><label><input type="radio" name=slect>스타벅스 주스(병음료)</label></li>
+                            <li class="b_btn" id="b_btn5"><label><input type="radio" name=slect value="블렌디드(Blended)">블렌디드</label></li>
+                            <li class="b_btn" id="b_btn6"><label><input type="radio" name=slect value="피지오(Fizzio)">스타벅스 피지오</label></li>
+                            <li class="b_btn" id="b_btn7"><label><input type="radio" name=slect value="티(Teavana)">티(티바나)</label></li>
+                            <li class="b_btn" id="b_btn8"><label><input type="radio" name=slect value="기타 제조 음료(Others)">기타 제조 음료</label></li>
+                            <li class="b_btn" id="b_btn9"><label><input type="radio" name=slect value="스타벅스 주스(Juice)">스타벅스 주스(병음료)</label></li>
                         </ul>
                     </div><!--m_box-->
                 </div><!--menu_list-->
             </div><!--section2-->
             <div class="section3">
                 <div class="menu_name">
-                    <h2 class="menu_name_list">프라푸치노 (Frappuccino)</h2>
+                    <h2 class="menu_name_list"></h2>
                     <p><span class="decaf">디카페</span>디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</p>
                     <p class="alert"><span class="pay">원</span><span class="point">Tall</span> 기준입니다.</p>
                 </div><!--ㅡmenu_name-->
