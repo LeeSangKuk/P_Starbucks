@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -72,30 +71,14 @@ public class MemberController {
 			System.out.println("session else:"+loginCheck);
 			return loginCheck; // js로 리턴
 		}
-		
+			
 	}
 	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@GetMapping("logout")
+	public String postLogout(MemberDTO mdto,HttpSession session) {
+		session.invalidate();
+		System.out.println("logout");
+		
+		return "redirect:../main";
+	}
 }

@@ -11,7 +11,7 @@
             <p class="infoText">회원정보를 입력해주세요.</p>
         </div>
 		<!-- action: (form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시-->
-        <form action="/starbucks/member/join" method="post" id="joinForm" name="joinForm">
+        <form action="/member/join" method="post" id="joinForm" name="joinForm">
 			<section class="memberSection1">
 				<div class="idBox">
                     <p><label for="userId"><strong>아이디</strong></label></p>	

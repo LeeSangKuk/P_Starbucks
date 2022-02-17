@@ -19,7 +19,7 @@ $(document).ready(function(){
             	
             	console.log("ajax: "+data);
 		        if(data == 1){
-		        	let url = "/starbucks/main";
+		        	let url = "/main";
 		        	location.replace(url); 
 		        } 
 		        else{

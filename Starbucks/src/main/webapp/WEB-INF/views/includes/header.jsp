@@ -45,6 +45,7 @@
 	                        	<c:choose>
 	                        		<c:when test="${login!=null}">
 	                        			<div><a href="/member/logout" id="logout" >로그아웃</a></div>
+	                        			<!-- <div><a href="/member/logout" id="logout" >${login.userId}님 환영합니다.</a></div> -->
 	                        		</c:when>
 	                        		<c:otherwise>
 	                        			<div><a href="/member/login">로그인</a></div>
