@@ -29,6 +29,20 @@ public class MemberController {
 		System.out.println("join.jsp");
 	}
 	
+	// by수진, 2022-02-17 pm 3:00
+	// 회원가입시 사용할 아이디에 대한 유효성검사를 할 때 ajax를 통하여 db에서 select 후 있으면 1 없으면 0
+	@ResponseBody
+	@PostMapping("checkId")
+	public int checkId(MemberDTO mdto) {
+		int cnt = mservice.checkId(mdto);
+		System.out.println("controller: "+cnt);
+		if(cnt == 0) 
+			return cnt;
+		else 
+			return cnt;
+
+	}
+	
 	// by수진, 
 	// mdto : 회원가입 화면을 통해 얻어진 데이터 insert
 	@PostMapping("join") 

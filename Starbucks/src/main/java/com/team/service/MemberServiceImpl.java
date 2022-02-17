@@ -20,6 +20,12 @@ public class MemberServiceImpl implements MemberService{
 		mmapper.postJoin(mdto);
 		System.out.println("서비스2");
 	}
+	
+	// 회원가입시 아이디 중복체크 구현
+	@Override
+	public int checkId(MemberDTO mdto) {
+		return mmapper.checkId(mdto);
+	}
 
 	// 로그인하기 구현
 	@Override
@@ -34,6 +40,8 @@ public class MemberServiceImpl implements MemberService{
 		// TODO Auto-generated method stub
 		return mmapper.getLogin(mdto);
 	}
+
+
 
 
 }

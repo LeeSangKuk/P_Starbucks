@@ -10,7 +10,13 @@
 		#{userBirthYear},#{userBirthMonth},#{userBirthDay},
 		#{userBirthFlag},#{userPhone},#{userEmail})
 	</insert>
-
+	
+	<select id="checkId" resultType="int">
+		select Count(userId)
+		from member
+		where userId=#{userId}
+	</select>
+	
 	<select id="postLogin" resultType="int">
 		select Count(userId)
 		from member
