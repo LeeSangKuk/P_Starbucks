@@ -2,7 +2,6 @@
  * 
  */
 
-
 $(document).ready(function(){
 	var as= $("#b_btn0").find('label>input').val();
 	$(".menu_name_list").html(as);
