@@ -82,8 +82,7 @@
 	            </div><!--.header_in-->
 
 	        	</header><!--#header-->
-	       	 </div><!-- .header_wrap -->
-             <div class="header_search">
+	         <div class="header_search">
                 <div class="header_search_in">
                     <div class="h_search_top">
                         <input type="text" placeholder="찾고 싶은 내용을 입력해주세요.">
@@ -92,6 +91,7 @@
                     </div>
                 </div>
              </div>
+	       	 </div><!-- .header_wrap -->
              
              
             

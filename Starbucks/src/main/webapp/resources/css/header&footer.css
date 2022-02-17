@@ -49,8 +49,13 @@ img{
 
 /* -------------------헤더---------------------- */
 
+
+.header_wrap{
+	margin-bottom: 140px;
+}
+
 #header{
-    position: fixed;
+	position: fixed;
     top: 0%;
     left: 50%;
     margin-left: -1280px;
