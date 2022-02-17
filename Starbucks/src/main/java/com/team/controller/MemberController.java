@@ -81,4 +81,11 @@ public class MemberController {
 		
 		return "redirect:../main";
 	}
+	
+	
+	
+	
+	
+	//2022-02-17 am 11:58 깃허브 테스트 by수진
+	
 }
