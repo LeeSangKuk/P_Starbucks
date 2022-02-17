@@ -17,15 +17,28 @@ var phoneToken = false
 var emailToken = false
 
 $(document).ready(function(){
+	
+	// by수진, 2022-02-17 pm 3:00
+	// 입력한 값이 공백이여도 cnt가 0으로 나와 사용가능한 아이디로 나옴 -> 조건식을 'cnt가 0이면서 정규식에 맞지않으면'으로 업데이트
 	// 아이디 유효성검사
 	 $("#userId").blur(function(){
+		 
+		 let userId = $('#userId').val();
+		 
 		$.ajax({
 		    url:"checkId", //Controller에서 인식할 주소
 		    type:"post", //POST 방식으로 전달
-		    data: {"userId":$("#userId").val()},
+		    data: {"userId":userId},
 		    dataType:"json",
 		    success:function(cnt){ //컨트롤러에서 넘어온 cnt값을 받는다 
-		        if(cnt == 0){ //cnt가 0이 아니면 -> 사용 가능한 아이디 
+		        if(cnt == 0 && !idReg.test($("#userId").val())){ // cnt가 0이면서 정규식에 맞지않으면
+		        	  $("#idError").text("아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.")
+		        	  $("#idError").css("color","red")
+					  idToken = false;
+					  console.log("id 실패")
+		        }
+		        else if(cnt == 0){
+		        	console.log(cnt);
 					  $("#idError").text("사용가능한 아이디입니다.")
 					  $("#idError").css("color","green")
 				      idToken = true;
@@ -37,12 +50,7 @@ $(document).ready(function(){
 					  idToken = false;
 					  console.log("id 실패")
 		        } 
-		        else if(!idReg.test($("#userId").val())){
-		        	  $("#idError").text("아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.")
-		        	  $("#idError").css("color","red")
-					  idToken = false;
-					  console.log("id 실패")
-		        }
+
 		        else{
 		        	
 		        }
@@ -72,7 +80,7 @@ $(document).ready(function(){
 	
 	//비밀번호재확인 유효성검사
 	$("#userPwCheck").blur(function(){
-	  if($("#pwCkError").value !== $("#userPw").value){
+	  if($("#pwCkError").value !== $("#userPw").value || $("#userName").value==""){
 		  $("#pwCkError").text("입력하신 비밀번호와 맞지 않습니다.")
 		  $("#pwCkError").css("color","red")
 		  pwCkToken = false;
@@ -88,7 +96,7 @@ $(document).ready(function(){
 	
 	//이름 유효성검사
 	$("#userName").blur(function(){
-		if(!nameReg.test($("#userName").value)){
+		if(!nameReg.test($("#userName").value) || $("#userName").value==""){
 			$("#nameError").text("한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)")
 			$("#nameError").css("color","red")
 			nameToken = false;
@@ -154,7 +162,7 @@ $(document).ready(function(){
 	//일
 	$("#userBirthYear").change(function(){
 		if($("#userBirthYear").val() == '' || $("#userBirthMonth").val() == '' || $("#userBirthDay").val() == '' || $("#userBirthFlag").val() == ''){
-			$("#birthError").text = '필수 정보입니다.'
+			$("#birthError").text("필수 정보입니다.")
 			$("#birthError").css("color","red")
 			birthToken = false;
 			console.log('day 실패')
@@ -169,7 +177,7 @@ $(document).ready(function(){
 	//양/음력
 	$("#userBirthFlag").change(function(){
 		if($("#userBirthYear").val() == '' || $("#userBirthMonth").val() == '' || $("#userBirthDay").val() == '' || $("#userBirthFlag").val() == ''){
-			$("#birthError").text = '필수 정보입니다.'
+			$("#birthError").text('필수 정보입니다.')
 			$("#birthError").css("color","red")
 			birthToken = false;
 			console.log('flag 실패')
@@ -225,44 +233,66 @@ $(document).ready(function(){
 	})
 
 
-	//최종 전체 유효성 검사 후 회원가입 완료 안내
-	function Welcome(){
-	   if(!idToken) {
-	       alert("아이디 형식을 확인하세요.");
-	       return false;
-	   }
-	   else if(!pwToken) {
-	 	  alert("비밀번호 형식을 확인하세요.");
-	 	  	return false;
-	   }
-	   else if(!pwCkToken) {
-	 	  alert("비밀번호가 일치한지 확인하세요.");
-	 	  	return false;
-	   }
-	   else if(!nameToken) {
-	   	alert("이름 형식을 확인하세요.");
-	   	return false;
-	   }
-	   else if(!genderToken) {
-	   	alert("성별을 선택했는지 확인하세요.");
-	   	return false;
-	   }
-	   else if(!birthToken) {
-	   	alert("생년월일을 올바르게 선택했는지 확인하세요.");
-	   	return false;
-	   }
-	   else if(!emailToken){
-		    alert("이메일 형식을 확인하세요.");
-		    return false;
+	// by수진, 2022-02-17 pm3:00
+	// token마다 true가 아니면 return false (return false로 인해 그 밑 조건식은 읽지않음) -> false일시 전체 error태그에 msg 표시로 업데이트
+	//회원가입 버튼을 누르면 최종 전체 유효성 검사
+	$("#submit").click(function(){
+		if (!idToken) {
+			$("#idError").text("필수 정보입니다.")
+			$("#idError").css("color","red")
+			//alert("아이디 형식을 확인하세요.");
+//			return false;
+		} if (!pwToken) {
+			$("#pwError").text("필수 정보입니다.")
+			$("#pwError").css("color","red")
+			//alert("비밀번호 형식을 확인하세요.");
+//			return false;
+		} if (!pwCkToken) {
+			$("#pwCkError").text("필수 정보입니다.")
+			$("#pwCkError").css("color","red")
+			//alert("비밀번호가 일치한지 확인하세요.");
+//			return false;
+		} if (!nameToken) {
+			$("#nameError").text("필수 정보입니다.")
+			$("#nameError").css("color","red")
+			//alert("이름 형식을 확인하세요.");
+//			return false;
+		} if (!genderToken) {
+			$("#genderError").text("필수 정보입니다.")
+			$("#genderError").css("color","red")
+			//alert("성별을 선택했는지 확인하세요.");
+//			return false;
+		} if (!birthToken) {
+			$("#birthError").text("필수 정보입니다.")
+			$("#birthError").css("color","red")
+			//alert("생년월일을 올바르게 선택했는지 확인하세요.");
+//			return false;
+		} if (!emailToken) {
+			$("#emailError").text("필수 정보입니다.")
+			$("#emailError").css("color","red")
+			//alert("이메일 형식을 확인하세요.");
+//			return false;
+		} if (!phoneToken) {
+			$("#phoneError").text("필수 정보입니다.")
+			$("#phoneError").css("color","red")
+			//alert("휴대폰 형식을 확인하세요.");
+//			return false;
+		} 
+		
+		// by수진, 2022-02-17 pm3:00 
+		// 위 전체 if문을 지나 에러메세지를 띄운 후 true와 false를 실행 기능 추가
+		// 토큰이 하나라도 false이면
+		if(idToken == false || pwToken == false || pwCkToken == false || nameToken == false || genderToken == false || birthToken == false || emailToken == false || phoneToken == false){
+			return false;
 		}
-	   else if(!phoneToken){
-		    alert("휴대폰 형식을 확인하세요.");
-		    return false;
-		}
-	   else{
-			alert("안녕하세요 "+$("#userId").val()+"님 가입을 환영합니다. :)");
+		else {// 토큰이 모두 true이면면
+			alert("안녕하세요 " + $("#userId").val()
+					+ "님 가입을 환영합니다. :)");
 			return true;
 		}
-	}
+		
+		
+	})
+	
 	 
 });
