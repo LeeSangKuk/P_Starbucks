@@ -120,6 +120,22 @@
 		    <version>2.8.5</version>
 		</dependency>
 		
+		<!-- by수진, 20220218 pm03:27 추가 -->
+		<!-- 메일 발송을 위한 의존성 추가 -->
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		
+		<!-- 메일 발송을 위한 서포트 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
 		
 				
 		<!-- AspectJ -->

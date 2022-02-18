@@ -5,16 +5,9 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-a{
-    display: inline-block;
-    vertical-align: top;
-    text-decoration: none;
-    color: #333;
-}
-
-input{
+input, button{
 	border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 5px;
     box-sizing: border-box;
     display: inline-block;
     max-width: 530px;
@@ -50,6 +43,19 @@ form section{ /*2022-02-03 section -> form section margin-bottom: 50px로 변경
 form div{
     margin-bottom: 10px;
 }
+
+button{
+	line-height: 1.8em;
+    color: white;
+    font-size: 16px;
+    background-color: #006633;
+    border: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover{background-color: #00a151;}
 /*브라우저 리셋 end*/
 
 
@@ -58,6 +64,7 @@ form div{
     color: #006633;
 }
 /* 공통 속성 end*/
+
 
 #container{
 	width: 100%;
@@ -70,15 +77,10 @@ form div{
     margin: 0 auto;
     padding: 10px;
 }
+#containerIn section{width: 100%}
 
-.containerIn section{
-	width: 100%
-}
-
-.info{
-    margin-bottom: 30px;
-}
-
+/* info */
+.info{margin-bottom: 30px;}
 .infoImg{
     background-image: url(../img/member/icon_find_sally.png);
     background-repeat: no-repeat;
@@ -88,22 +90,18 @@ form div{
 	height: 210px;
 	margin: 0 auto;
 }
+.infoText{font-size: 20px;text-align: center;}
+/* info end*/
 
-.infoText{
-    font-size: 20px;
-    text-align: center;
+
+
+
+/* email */
+#confirmNum{display: inline-block;width: 70%;}
+#bt_emailconfirm{
+	display: inline-block;
+	padding: 10px;
+	width: 29%;
 }
-
-.submit{
-    color: white;
-    font-size: 16px;
-    background-color: #006633;
-    cursor: pointer;
-}
-
-.submit:hover{
-    background-color: #00a151;
-}
-
-
+/* email end*/
 

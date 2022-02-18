@@ -158,11 +158,13 @@
 				<div class="emailBox">
 					<p><label><Strong>이메일<span class="typeGreen">(필수)</span></Strong></label></p>
 					<input type="email" id="userEmail" name="userEmail" value="" placeholder="E-mail을 입력하세요.">
+					<input type="text" id="confirmNum" name="confirmNum" value="" placeholder="인증번호를 입력하세요." disabled="disabled">
+					<button id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm" disabled="disabled">인증번호 발송</button>
 					<p id="emailError"  style="font-size: 14px;"></p>
 				</div>
 			</section>
 			<!--.section2-->
-            <input type="submit" id="submit" class="submit" value="완료하기">
+            <button id="submit" class="submit">회원가입 완료</button>
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->

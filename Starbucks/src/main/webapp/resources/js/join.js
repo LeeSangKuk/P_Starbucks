@@ -231,6 +231,27 @@ $(document).ready(function(){
 			console.log('email 성공')
 		}
 	})
+	
+	$("#bt_emailconfirm").click(function() {// 메일 입력 유효성 검사
+			var userEmail = $("#userEmail").val(); //사용자의 이메일 입력값. 
+			
+			if (emailToken == false) {
+				alert("입력하신 이메일을 다시 확인해주세요.");
+			} else {
+//				mail = mail+"@"+$(".domain").val(); //셀렉트 박스에 @뒤 값들을 더함.
+				$.ajax({
+					url : '/CheckMail',
+					type : 'post',
+					data : {
+						"userEmail":userEmail
+						},
+					dataType :'json',
+	
+				});
+				alert("인증번호가 전송되었습니다.") 
+				isCertification=true; //추후 인증 여부를 알기위한 값
+			}
+		});
 
 
 	// by수진, 2022-02-17 pm3:00
