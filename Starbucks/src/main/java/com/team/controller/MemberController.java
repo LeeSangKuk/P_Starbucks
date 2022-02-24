@@ -16,12 +16,14 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -55,9 +57,7 @@ public class MemberController {
 			return cnt;
 
 	}
-	
-	// by수진,
-	// 이메일 인증번호 요청 메서드
+
 //	@ResponseBody
 //	@PostMapping("confirmEmail")
 //		public String SendMail(String mail) {
@@ -75,7 +75,7 @@ public class MemberController {
 //			key+=numIndex;
 //			message.setSubject("인증번호 입력을 위한 메일 전송");
 //			message.setText("인증 번호 : "+key);
-//			javaMailSender.send(message);
+//			message.
 //	        return key;
 //		}
 //	
