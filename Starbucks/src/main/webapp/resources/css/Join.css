@@ -98,7 +98,7 @@ button:hover{background-color: #00a151;}
 
 /* email */
 #confirmNum{display: inline-block;width: 70%;}
-#bt_emailconfirm{
+.bt_emailconfirm{
 	display: inline-block;
 	padding: 10px;
 	width: 29%;
