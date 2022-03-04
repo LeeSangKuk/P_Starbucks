@@ -26,6 +26,30 @@ form div{
     margin-bottom: 10px;
 }
 
+input, button{
+	border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom:3px;
+    font-size:15px;
+    cursor: pointer;
+}
+button{
+	line-height: 1.8em;
+    color: white;
+    font-size: 16px;
+    background-color: #006633;
+    border: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover{background-color: #00a151;}
 h1{
     font-size: 25px;
     text-align: center;
@@ -147,3 +171,11 @@ input.saveId[type=checkbox]:not(old) + label {
     top: 50%;
 }
 .loginBtnWrap ul li.last:after {border-right: 0;}
+
+#confirmNum{display: inline-block;width: 70%;}
+.bt_emailconfirm{
+	display: inline-block;
+	padding: 10px;
+	width: 29%;
+}
+/* email end*/

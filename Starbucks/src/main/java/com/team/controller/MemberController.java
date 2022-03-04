@@ -22,6 +22,7 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -154,7 +155,35 @@ public class MemberController {
 //	}
 
 
-
+	// by수진, 2022-03-04 am09:14
+	// findId.jsp 메서드 추가
+	@GetMapping("findId")
+	public void findId() {
+		System.out.println("findId.jsp");
+	}
+	
+	// by수진, 2022-03-04 am10:48
+	// findMember.js ajax를 통하여 회원 이름과 이메일을 가져오는 메서드 추가
+	@ResponseBody
+	@PostMapping("postFindId")
+	public int postFindId(MemberDTO mdto, HttpSession session) {
+		int cnt = mservice.postFindId(mdto);
+		MemberDTO getId = mservice.getFindId(mdto);
+		if(cnt == 1) {
+			System.out.println("cnt == 1 : "+cnt);
+			session.setAttribute("getId", getId);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
+			return cnt;
+		} else {
+			System.out.println("cnt == else : "+cnt);
+			return cnt;
+		}
+	
+	}
+	
+	@GetMapping("findIdCheck")
+	public void findIdCheck() {
+		System.out.println("findIdCheck.jsp");
+	}
 
 	// by수진, 
 	// mdto : 회원가입 화면을 통해 얻어진 데이터 insert

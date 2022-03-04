@@ -40,6 +40,18 @@ public class MemberServiceImpl implements MemberService{
 		// TODO Auto-generated method stub
 		return mmapper.getLogin(mdto);
 	}
+	
+	// 아이디 찾기 구현
+	@Override
+	public int postFindId(MemberDTO mdto) {
+		return mmapper.postFindId(mdto);
+	}
+
+	@Override
+	public MemberDTO getFindId(MemberDTO mdto) {
+		// TODO Auto-generated method stub
+		return mmapper.getFindId(mdto);
+	}
 
 
 

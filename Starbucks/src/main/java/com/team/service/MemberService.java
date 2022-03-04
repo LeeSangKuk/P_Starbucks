@@ -18,4 +18,9 @@ public interface MemberService {
 	// 로그인 하기 설계(회원정보)
 	public MemberDTO getLogin(MemberDTO mdto);
 
+	// 아이디찾기 설계
+	public int postFindId(MemberDTO mdto);
+	
+	// 아이디찾기 설계(회원정보)
+	public MemberDTO getFindId(MemberDTO mdto);
 }
