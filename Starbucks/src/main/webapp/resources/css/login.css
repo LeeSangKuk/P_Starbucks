@@ -1,81 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 15px;
-    color: #333;
-}
-
-a{
-    display: inline-block;
-    vertical-align: top;
-    text-decoration: none;
-    color: #333;
-    cursor: pointer;
-}
-
-button{
-	cursor: pointer;
-}
-
-ul{
-    list-style: none;
-}
-
-form div{
-    margin-bottom: 10px;
-}
-
-input, button{
-	border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    display: inline-block;
-    max-width: 530px;
-    padding: 10px;
-    width: 100%;
-    margin-bottom:3px;
-    font-size:15px;
-    cursor: pointer;
-}
-button{
-	line-height: 1.8em;
-    color: white;
-    font-size: 16px;
-    background-color: #006633;
-    border: 0px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-}
-button:hover{background-color: #00a151;}
-h1{
-    font-size: 25px;
-    text-align: center;
-}
-
-.hid {
-    position: absolute;
-    left: -9999px;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    text-indent: -9999px;
-    overflow: hidden;
-}
-
-.typeGreen{
-    color: #006633;
-}
-
-#container{
-	width: 100%;
-	background-color: blue;
-    line-height: 1.8em;
-}
-
-#loginWrapInner{
+.memberWrapInner{
     width: 500px;
     margin: 0 auto;
 }
@@ -86,19 +9,21 @@ fieldset{
     margin-top: 100px;
 }
 .loginInput{
-	border: 1px solid #ddd;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: inline-block;
-    max-width: 530px;
-    padding: 10px;
-    width: 100%;
     margin-bottom:10px;
 }
-.loginFormTxt{
+.memberInfoTxt{
     background: #fff;
     border-bottom: 1px solid #ddd;
     font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding: 30px 20px 30px;
+    margin-bottom: 20px;
+}
+.getIdBox{
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 30px;
     line-height: 24px;
     text-align: center;
     padding: 30px 20px 30px;
@@ -136,31 +61,16 @@ input.saveId[type=checkbox]:not(old) + label {
     cursor: pointer;
     z-index: 4;
 }
-.btnMemLogin{
+.btn_login_wrap{
     margin-bottom: 20px;
 }
-.btnLogin{
-	line-height: 1.8em;
-    color: white;
-    font-size: 16px;
-    background-color: #006633;
-    width: 100%;
-    border: 0px;
-    border-radius: 5px;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-}
-.btnLogin:hover{background-color: #00a151;}
+.warntxt_member{font-size: 14px; margin-bottom: 20px; line-height: 1.8em;}
 
 
-.inputWarnText{font-size: 14px; margin-bottom: 20px; line-height: 1.8em;}
-
-
-.loginBtnWrap ul{display: flex; justify-content: space-around;}
-.loginBtnWrap ul li{position: relative;}
-.loginBtnWrap ul li a:hover{text-decoration: underline;}
-.loginBtnWrap ul li:after {
+.btn_member_wrap ul{display: flex; justify-content: space-around;}
+.btn_member_wrap ul li{position: relative;}
+.btn_member_wrap ul li a:hover{text-decoration: underline;}
+.btn_member_wrap ul li:after {
     border-right: 1px solid #ddd;
     color: #666;
     content: "";
@@ -170,12 +80,15 @@ input.saveId[type=checkbox]:not(old) + label {
     right: -30px;
     top: 50%;
 }
-.loginBtnWrap ul li.last:after {border-right: 0;}
+.btn_member_wrap ul li.last:after {border-right: 0;}
 
-#confirmNum{display: inline-block;width: 70%;}
+
+.confirmNum{display: inline-block;width: 70%;}
 .bt_emailconfirm{
 	display: inline-block;
 	padding: 10px;
 	width: 29%;
 }
-/* email end*/
+.next{
+	margin-bottom:10px
+}

@@ -6,45 +6,31 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%@ include file="../includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/member.css">
 <link rel="stylesheet" href="../resources/css/login.css">
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
  <div id="Container">
-        <div id="loginWrap">
-            <div id="loginWrapInner">
-                <form id="loginForm" action="../main" method="post">
+        <div class="memberWrap">
+            <div class="memberWrapInner">
+                <form id="loginForm" class="memberBox" action="../main" method="post">
                     <fieldset>
                         <legend class="hid">아이디찾기 폼</legend>
-                        <h1 class="loginTitle">아이디 찾기</h1>
-                        <section class="loginSection">
-
-                             <p class="loginFormTxt">
+                        <h1>아이디 찾기</h1>
+                        <section>
+                             <p class="memberInfoTxt">
                                 <span class="typeGreen">고객님의 정보와 일치하는 아이디 목록입니다.<br></span>
                              </p>
-                            
-                            <div class="loginFormBox">
-								<div>
-									<ul class="list_id">
-										<li>
-											<strong>
-												<input type="radio" name="" id="" value=""> 
-												<label for="" class="">85807328</label>
-											</strong>
-											<span>가입 : 2005.06.13</span>
-											<input type="hidden" name="" value="85807328">
-										</li>
-									</ul>
-								</div>
-                                <div class="btn_area">
-									<a href="#" onclick="login();clickcr(this,'uid.login','','',event);" class="btn_login2"><span class="blind">로그인하기</span></a>
-									<a href="#" onclick="popup_change_passwd();clickcr(this,'uid.pwinquiry','','',event);" class="btn_findpw"><span class="blind">비밀번호 찾기</span></a>
-								</div>
-                                <p class="inputWarnText typeGreen">
-                                    * 본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.<br>
-                                </p>
-                            </div>
-                            <div class="loginBtnWrap">
+							<div class="getIdBox">
+								<c:choose>
+	                        		<c:when test="${getId!=null}">
+	                        			<p>회원님의 아이디는 <br><span class="typeGreen"> ${getId.userId} </span>입니다</p>
+	                        			<p>가입날짜 :<span class="typeGreen"> ${getId.date} </span></p>
+	                        		</c:when>                  	
+	                        	</c:choose>
+							</div>
+                            <div class="btn_member_wrap">
                                 <ul>
                                     <li><a href="./join">회원가입</a></li>
                                     <li><a href="#">아이디 찾기</a></li>

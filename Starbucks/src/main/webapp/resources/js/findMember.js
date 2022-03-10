@@ -1,4 +1,5 @@
 var emailKeyToken = false
+var findId;
 
 $(document).ready(function(){
 	
@@ -34,6 +35,8 @@ $(document).ready(function(){
 									$("#emailError").text("인증번호가 일치합니다.").css("color", "green");
 									$(".next").attr("disabled", false);
 									emailKeyToken = true;  //인증 성공여부 check
+									findId = key;
+									
 								} else {
 									$("#emailError").text("인증번호가 불일치합니다.").css("color", "red");
 									emailKeyToken = false; //인증 실패
@@ -59,10 +62,12 @@ $(document).ready(function(){
 			alert("잘못된 접근입니다.")
 		} else{
 			let url = "findIdCheck";
-			location.replace(url); 
+			location.replace(url);
 		}
 
 	})
+	
+	
 })
 
 	

@@ -36,7 +36,7 @@
 	</select>
 	
 	<select id="getFindId" resultType="com.team.domain.MemberDTO">
-		select userId
+		select userId,date
 		from member
 		where userName=#{userName} and userEmail=#{userEmail}
 	</select>
