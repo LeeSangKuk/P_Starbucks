@@ -23,4 +23,10 @@ public interface MemberMapper {
 	
 	// 아이디 찾기 설계 (회원정보)
 	public MemberDTO getFindId(MemberDTO mdto);
+	
+	// 비밀번호 찾기 설계
+	public int postFindPw(MemberDTO mdto);
+	
+	// 비밀번호 찾기 설계
+	public MemberDTO getFindPw(MemberDTO mdto);
 }

@@ -46,11 +46,25 @@ public class MemberServiceImpl implements MemberService{
 	public int postFindId(MemberDTO mdto) {
 		return mmapper.postFindId(mdto);
 	}
-
+	
+	// 아이디 찾기 (회원정보) 구현
 	@Override
 	public MemberDTO getFindId(MemberDTO mdto) {
 		// TODO Auto-generated method stub
 		return mmapper.getFindId(mdto);
+	}
+
+	// 비밀번호 찾기 구현
+	@Override
+	public int postFindPw(MemberDTO mdto) {
+		return mmapper.postFindPw(mdto);
+	}
+
+	// 비밀번호 찾기 (회원정보) 구현
+	@Override
+	public MemberDTO getFindPw(MemberDTO mdto) {
+		// TODO Auto-generated method stub
+		return mmapper.getFindPw(mdto);
 	}
 
 

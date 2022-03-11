@@ -12,18 +12,23 @@
 <body>
 <%@ include file="../includes/header.jsp" %>
  <div id="Container">
-        <div id="loginWrap">
+        <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" action="../main" method="post">
+                <form id="loginForm" class="memberBox" action="../main" method="post">
                     <fieldset>
-                        <legend class="hid">아이디찾기 폼</legend>
-                        <h1>아이디 찾기</h1>
+                        <legend class="hid">비밀번호찾기 폼</legend>
+                        <h1>비밀번호 찾기</h1>
                         <section>
                              <p class="memberInfoTxt">
-                                <span class="typeGreen">아이디가 기억나지않으세요?<br>이메일 본인인증을 통해 아이디를 확인하실 수 있습니다.<br></span>
+                                <span class="typeGreen">이메일 본인인증으로 비밀번호를 확인하실 수 있습니다.</span>
                              </p>
-                            
-                            <div>
+							<div class="getIdBox">
+								<c:choose>
+	                        		<c:when test="${getPw!=null}">
+	                        			<p>가입된 아이디의 이메일 정보는<br><span class="typeGreen"> ${getPw.userEmail} </span>입니다</p>
+	                        		</c:when>                  	
+	                        	</c:choose>
+	                        	<br>
                                 <label for="userEmail" class="hid">이름</label>
                                 <input id="userName" name="userName" class="loginInput" type="text"  placeholder="가입하신 이름을 입력해 주세요.">
                                 <br>
@@ -37,12 +42,8 @@
 									<button type="button" id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm">인증번호 발송</button>
                                 	<p id="emailError" style="font-size: 14px;"></p>
                                 </div>
-                                
-                              	<button type="button" disabled='disabled' class="next" id="next">다음</button>
-                                <p class="warntxt_member typeGreen">
-                                    * 본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.<br>
-                                </p>
-                            </div>
+	                        <button type="button" disabled='disabled' class="next" id="next">다음</button>
+							</div>
                             <div class="btn_member_wrap">
                                 <ul>
                                     <li><a href="./join">회원가입</a></li>

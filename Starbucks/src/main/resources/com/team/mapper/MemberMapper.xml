@@ -40,4 +40,17 @@
 		from member
 		where userName=#{userName} and userEmail=#{userEmail}
 	</select>
+	
+	<select id="postFindPw" resultType="int">
+		select Count(userId)
+		from member 
+		where userId=#{userId}
+	</select>
+	
+	<select id="getFindPw" resultType="com.team.domain.MemberDTO">
+		select userEmail
+		from member
+		where userId=#{userId}
+	</select>
+	
 </mapper>

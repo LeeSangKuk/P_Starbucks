@@ -11,6 +11,8 @@ public class MemberDTO {
 	String userBirthFlag;
 	String userPhone;
 	String userEmail;
+	String date;
+	
 	public String getUserId() {
 		return userId;
 	}
@@ -72,12 +74,19 @@ public class MemberDTO {
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	
 	@Override
 	public String toString() {
 		return "MemberDTO [userId=" + userId + ", userPw=" + userPw + ", userName=" + userName + ", userGender="
 				+ userGender + ", userBirthYear=" + userBirthYear + ", userBirthMonth=" + userBirthMonth
 				+ ", userBirthDay=" + userBirthDay + ", userBirthFlag=" + userBirthFlag + ", userPhone=" + userPhone
-				+ ", userEmail=" + userEmail + "]";
+				+ ", userEmail=" + userEmail + ", date=" + date + "]";
 	}
 
 }

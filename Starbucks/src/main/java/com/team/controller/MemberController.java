@@ -156,10 +156,10 @@ public class MemberController {
 	@PostMapping("postFindId")
 	public int postFindId(MemberDTO mdto, HttpSession session) {
 		int cnt = mservice.postFindId(mdto);
-		MemberDTO getId = mservice.getFindId(mdto);
+		MemberDTO getPw = mservice.getFindId(mdto);
 		if(cnt == 1) {
 			System.out.println("cnt == 1 : "+cnt);
-			session.setAttribute("getId", getId);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
+			session.setAttribute("getId", getPw);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
 			return cnt;
 		} else {
 			System.out.println("cnt == else : "+cnt);
@@ -171,6 +171,38 @@ public class MemberController {
 	@GetMapping("findIdCheck")
 	public void findIdCheck() {
 		System.out.println("findIdCheck.jsp");
+	}
+	
+	// by수진, 2022-03-11 pm02:18
+	// findPw.jsp 메서드 추가
+	@GetMapping("findPw")
+	public void findPw() {
+		System.out.println("findPw.jsp");
+	}
+	
+	// by수진, 2022-03-11 pm03:28
+	// findPw.jsp 메서드 추가
+	@GetMapping("findPw2")
+	public void findPw2() {
+		System.out.println("findPw2.jsp");
+	}
+	
+	// by수진, 2022-03-11 pm02:40
+	// findPw.js ajax를 통하여 회원의 아이디를 확인하고 이메일을 가져오는 메서드 추가
+	@ResponseBody
+	@PostMapping("postFindPw")
+	public int postFindPw(MemberDTO mdto, HttpSession session) {
+		int cnt = mservice.postFindPw(mdto);
+		MemberDTO getPw = mservice.getFindPw(mdto);
+		if(cnt == 1) {
+			System.out.println("cnt == 1 : "+cnt);
+			session.setAttribute("getPw", getPw);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
+			return cnt;
+		} else {
+			System.out.println("cnt == else : "+cnt);
+			return cnt;
+		}
+	
 	}
 
 	// by수진, 

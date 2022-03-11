@@ -23,4 +23,10 @@ public interface MemberService {
 	
 	// 아이디찾기 설계(회원정보)
 	public MemberDTO getFindId(MemberDTO mdto);
+	
+	// 비밀번호찾기 설계
+	public int postFindPw(MemberDTO mdto);
+	
+	// 비밀번호찾기 설계(회원정보)
+	public MemberDTO getFindPw(MemberDTO mdto);
 }

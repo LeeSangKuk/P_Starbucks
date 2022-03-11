@@ -76,6 +76,10 @@ h1{
     color: #006633;
 }
 
+.typeGreen a{
+    color: #006633;
+}
+
 .hid {
     position: absolute;
     left: -9999px;
