@@ -29,7 +29,7 @@
 								<p id="loginError"  style="font-size: 14px;"></p>
 
                                 
-                              	<button type="button" disabled='disabled' class="next" id="next">다음</button>
+                              	<button type="button" disabled='disabled' class="next" id="findPw_next">다음</button>
                                 <p class="warntxt_member typeGreen">
                                    <a href="./findId"> * 아이디가 기억나지 않는다면?</a><br>
                                 </p>

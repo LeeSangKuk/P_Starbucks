@@ -16,7 +16,7 @@ $(document).ready(function(){
             success: function(cnt){ //컨트롤러에서 넘어온 data
 				console.log("cnt : "+cnt)
 				if (cnt == 1) {   //인증 키 값을 비교를 위해 텍스트인풋과 벨류를 비교
-					$("#next").attr("disabled", false); //disabled 해제
+					$("#findPw_next").attr("disabled", false); //disabled 해제
 					$("#loginError").text("")
 					findPwToken = true;
 					console.log("cnt == 1 : "+cnt)
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		})// ajax 끝
 	});
 
-	$("#next").click(function(){
+	$("#findPw_next").click(function(){
 		if(findPwToken == false){
 			alert("잘못된 접근입니다.")
 		} else{

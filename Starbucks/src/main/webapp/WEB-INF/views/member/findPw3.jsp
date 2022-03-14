@@ -14,35 +14,31 @@
  <div id="Container">
         <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" class="memberBox" action="../main" method="post">
+                <form id="loginForm" class="memberBox" action="member/postFindPw" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호찾기 폼</legend>
-                        <h1>비밀번호 찾기</h1>
+                        <h1>비밀번호 재설정</h1>
                         <section>
                              <p class="memberInfoTxt">
-                                <span class="typeGreen">이메일 본인인증으로 비밀번호를 확인하실 수 있습니다.</span>
+                                <span class="typeGreen">비밀번호를 변경해 주세요.
+								<br>다른 아이디나 사이트에서 사용한 적 없는 안전한 비밀번호로 변경해 주세요.</span>
                              </p>
 							<div class="getIdBox">
 								<c:choose>
-	                        		<c:when test="${getPw_email!=null}">
-	                        			<p>가입된 아이디의 이메일 정보는<br><span class="typeGreen"> ${getPw_email} </span>입니다</p>
+	                        		<c:when test="${getPw_id!=null}">
+	                        			<p>아이디 : <span class="typeGreen"> ${getPw_id} </span></p>
 	                        		</c:when>                  	
 	                        	</c:choose>
 	                        	<br>
-                                <label for="userName" class="hid">이름</label>
-                                <input id="userName" name="userName" class="loginInput" type="text"  placeholder="가입하신 이름을 입력해 주세요.">
+                                <label for="userPw" class="hid">새 비밀번호</label>
+                                <input id="userPw" name="userPw" class="loginInput" type="password"  placeholder="새 비밀번호">
+                                <p id="pwError"  style="font-size: 14px;"></p>
                                 <br>
-                                <label for="userEmail" class="hid">이메일</label>
-                                <input id="userEmail" name="userEmail" class="loginInput" type="email" placeholder="가입하신 이메일을 입력해 주세요.">
-								<p id="loginError"  style="font-size: 14px;"></p>
-							
-                                
-                                <div class="btn_login_wrap">
-									<input type="text" id="confirmNum" class="confirmNum" name="confirmNum" value="" placeholder="인증번호를 입력하세요." disabled>
-									<button type="button" id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm">인증번호 발송</button>
-                                	<p id="emailError" style="font-size: 14px;"></p>
-                                </div>
-	                        <button type="button" disabled='disabled' class="next" id="findPw2_next">다음</button>
+                                <label for="userPwCheck" class="hid">새 비밀번호 확인</label>
+                                <input id="userPwCheck" name="userPwCheck" class="loginInput" type="password" placeholder="새 비밀번호 확인">
+								<p id="pwCkError"  style="font-size: 14px;"></p>
+
+	                        <button type="button" disabled='disabled' class="next" id="findPw3_next">다음</button>
 							</div>
                             <div class="btn_member_wrap">
                                 <ul>
@@ -59,7 +55,8 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/findPw.js"></script>
+
+<script src="../resources/js/resetPw.js"></script>
 <script src="../resources/js/findMember.js"></script>
 </body>
 </html>

@@ -37,7 +37,6 @@ public class MemberServiceImpl implements MemberService{
 	// 로그인 하기 구현(회원정보)
 	@Override
 	public MemberDTO getLogin(MemberDTO mdto) {
-		// TODO Auto-generated method stub
 		return mmapper.getLogin(mdto);
 	}
 	
@@ -50,7 +49,6 @@ public class MemberServiceImpl implements MemberService{
 	// 아이디 찾기 (회원정보) 구현
 	@Override
 	public MemberDTO getFindId(MemberDTO mdto) {
-		// TODO Auto-generated method stub
 		return mmapper.getFindId(mdto);
 	}
 
@@ -60,11 +58,22 @@ public class MemberServiceImpl implements MemberService{
 		return mmapper.postFindPw(mdto);
 	}
 
-	// 비밀번호 찾기 (회원정보) 구현
+	// 비밀번호 찾기 (회원정보_이메일) 구현
 	@Override
-	public MemberDTO getFindPw(MemberDTO mdto) {
-		// TODO Auto-generated method stub
-		return mmapper.getFindPw(mdto);
+	public String getFindPw_email(MemberDTO mdto) {
+		return mmapper.getFindPw_email(mdto);
+	}
+
+	// 비밀번호 찾기 (회원정보_아이디) 구현
+	@Override
+	public String getFindPw_id(MemberDTO mdto) {
+		return mmapper.getFindPw_id(mdto);
+	}
+
+	@Override
+	public void resetPw(MemberDTO mdto) {
+		System.out.println("service Impl : resetPw");
+		mmapper.resetPw(mdto);
 	}
 
 

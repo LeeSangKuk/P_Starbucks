@@ -27,6 +27,12 @@ public interface MemberMapper {
 	// 비밀번호 찾기 설계
 	public int postFindPw(MemberDTO mdto);
 	
-	// 비밀번호 찾기 설계
-	public MemberDTO getFindPw(MemberDTO mdto);
+	// 비밀번호 찾기 설계(회원정보_이메일)
+	public String getFindPw_email(MemberDTO mdto);
+	
+	// 비밀번호 찾기 설계(회원정보_아이디)
+	public String getFindPw_id(MemberDTO mdto);
+	
+	// 비밀번호 재설정 설계
+	public void resetPw(MemberDTO mdto);
 }

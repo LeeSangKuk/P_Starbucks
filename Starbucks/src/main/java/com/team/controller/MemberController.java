@@ -181,10 +181,17 @@ public class MemberController {
 	}
 	
 	// by수진, 2022-03-11 pm03:28
-	// findPw.jsp 메서드 추가
+	// findPw2.jsp 메서드 추가
 	@GetMapping("findPw2")
 	public void findPw2() {
 		System.out.println("findPw2.jsp");
+	}
+	
+	// by수진, 2022-03-14 am10:10
+	// findPw3.jsp 메서드 추가
+	@GetMapping("findPw3")
+	public void findPw3() {
+		System.out.println("findPw3.jsp");
 	}
 	
 	// by수진, 2022-03-11 pm02:40
@@ -192,11 +199,19 @@ public class MemberController {
 	@ResponseBody
 	@PostMapping("postFindPw")
 	public int postFindPw(MemberDTO mdto, HttpSession session) {
+		System.out.println("찾아라얏");
 		int cnt = mservice.postFindPw(mdto);
-		MemberDTO getPw = mservice.getFindPw(mdto);
+		String getPw_email = mservice.getFindPw_email(mdto);
+		String getPw_id = mservice.getFindPw_id(mdto);
+		
 		if(cnt == 1) {
 			System.out.println("cnt == 1 : "+cnt);
-			session.setAttribute("getPw", getPw);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
+			
+			session.setAttribute("getPw_email", getPw_email);// 세션객체(sesiion)  getPw_email변수에 getPw_email값을 저장(setAttribute)
+			session.setAttribute("getPw_id", getPw_id);// 세션객체(sesiion)  getPw_id변수에 getPw_id값을 저장(setAttribute)
+			
+			System.out.println("getPw_id : "+getPw_id);
+			
 			return cnt;
 		} else {
 			System.out.println("cnt == else : "+cnt);
@@ -204,6 +219,16 @@ public class MemberController {
 		}
 	
 	}
+	
+	// by수진, 2022-03-14 pm04:17
+	// findMember.js ajax를 통하여 재설정한 비밀번호를 확인하고 DB에서 비밀번호 업데이트를 하는 메서드 추가
+	@ResponseBody
+	@PostMapping("resetPw")
+	public void resetPw(MemberDTO mdto) {
+		mservice.resetPw(mdto);
+		System.out.println("controller : resetPw");
+	}
+	
 
 	// by수진, 
 	// mdto : 회원가입 화면을 통해 얻어진 데이터 insert

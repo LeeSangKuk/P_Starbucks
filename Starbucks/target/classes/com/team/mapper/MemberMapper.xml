@@ -47,10 +47,22 @@
 		where userId=#{userId}
 	</select>
 	
-	<select id="getFindPw" resultType="com.team.domain.MemberDTO">
-		select userEmail
-		from member
-		where userId=#{userId}
+	<select id="getFindPw_email" resultType="string">
+		select replace(userEmail,substr(userEmail,2,instr(userEmail,'@')-2),'*****') 
+		from member 
+		where userId=#{userId};
 	</select>
+	
+	<select id="getFindPw_id" resultType="string">
+		select userId 
+		from member 
+		where userId=#{userId};
+	</select>
+	
+	<update id="resetPw">
+		update member 
+		set userPw = #{userPw}
+		where userId = #{userId};
+	</update>
 	
 </mapper>
