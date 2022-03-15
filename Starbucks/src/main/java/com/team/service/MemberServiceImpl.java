@@ -57,6 +57,11 @@ public class MemberServiceImpl implements MemberService{
 	public int postFindPw(MemberDTO mdto) {
 		return mmapper.postFindPw(mdto);
 	}
+	
+	@Override
+	public MemberDTO postFindPw_data(MemberDTO mdto) {
+		return mmapper.postFindPw_data(mdto);
+	}
 
 	// 비밀번호 찾기 (회원정보_이메일) 구현
 	@Override
@@ -75,6 +80,8 @@ public class MemberServiceImpl implements MemberService{
 		System.out.println("service Impl : resetPw");
 		mmapper.resetPw(mdto);
 	}
+
+
 
 
 

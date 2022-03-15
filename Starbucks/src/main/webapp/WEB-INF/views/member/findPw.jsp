@@ -14,13 +14,13 @@
  <div id="Container">
         <div id="loginWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" action="../main" method="post">
+                <form id="" action="../member/findPw2" method="get">
                     <fieldset>
                         <legend class="hid">비밀번호 찾기 폼</legend>
                         <h1>비밀번호 찾기</h1>
                         <section>
                              <p class="memberInfoTxt">
-                                <span class="typeGreen">비밀번호가 기억나지않으세요?<br>비밀번호를 찾고자 하는 아이디를 입력해 주세요.<br></span>
+                                <span class="typeGreen">비밀번호가 기억나지않으세요?<br> 비밀번호를 찾고자 하는 아이디를 입력해 주세요.<br></span>
                              </p>
                             
                             <div>
@@ -29,7 +29,7 @@
 								<p id="loginError"  style="font-size: 14px;"></p>
 
                                 
-                              	<button type="button" disabled='disabled' class="next" id="findPw_next">다음</button>
+                              	<button class="next" id="findPw_next">다음</button>
                                 <p class="warntxt_member typeGreen">
                                    <a href="./findId"> * 아이디가 기억나지 않는다면?</a><br>
                                 </p>

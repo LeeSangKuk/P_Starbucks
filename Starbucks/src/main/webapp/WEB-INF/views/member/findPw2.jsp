@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,10 +12,10 @@
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
- <div id="Container">
+ <div id="container">
         <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" class="memberBox" action="../main" method="post">
+                <form id="" class="memberBox" action="../member/findPw3" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호찾기 폼</legend>
                         <h1>비밀번호 찾기</h1>
@@ -22,12 +23,8 @@
                              <p class="memberInfoTxt">
                                 <span class="typeGreen">이메일 본인인증으로 비밀번호를 확인하실 수 있습니다.</span>
                              </p>
-							<div class="getIdBox">
-								<c:choose>
-	                        		<c:when test="${getPw_email!=null}">
-	                        			<p>가입된 아이디의 이메일 정보는<br><span class="typeGreen"> ${getPw_email} </span>입니다</p>
-	                        		</c:when>                  	
-	                        	</c:choose>
+							<div class="">
+                       			<p>가입된 아이디의 이메일 정보는<br><span class="typeGreen">${mask_email}</span>입니다</p>
 	                        	<br>
                                 <label for="userName" class="hid">이름</label>
                                 <input id="userName" name="userName" class="loginInput" type="text"  placeholder="가입하신 이름을 입력해 주세요.">
@@ -42,7 +39,7 @@
 									<button type="button" id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm">인증번호 발송</button>
                                 	<p id="emailError" style="font-size: 14px;"></p>
                                 </div>
-	                        <button type="button" disabled='disabled' class="next" id="findPw2_next">다음</button>
+	                        <button class="next" id="findPw2_next">다음</button>
 							</div>
                             <div class="btn_member_wrap">
                                 <ul>

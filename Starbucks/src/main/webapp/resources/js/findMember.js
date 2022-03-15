@@ -17,9 +17,10 @@ $(document).ready(function(){
             dataType: "json",
             success: function(cnt){ //컨트롤러에서 넘어온 data
 				console.log("cnt : "+cnt)
-				if (cnt == 1) {   //인증 키 값을 비교를 위해 텍스트인풋과 벨류를 비교
+				
+				if (cnt == 1) {   //입력한 이름과 이메일이 회원정보에 존재하면
 					$("#confirmNum").attr("disabled", false); //disabled 해제
-					console.log("cnt == 1 : "+cnt)
+					console.log("cnt = : "+cnt)
 					$.ajax({
 						url : '/sendMail',
 						type : 'post',

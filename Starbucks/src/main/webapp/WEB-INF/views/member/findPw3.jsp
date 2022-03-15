@@ -14,7 +14,7 @@
  <div id="Container">
         <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" class="memberBox" action="member/postFindPw" method="post">
+                <form id="" class="memberBox" action="member/postFindPw" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호찾기 폼</legend>
                         <h1>비밀번호 재설정</h1>
@@ -23,6 +23,7 @@
                                 <span class="typeGreen">비밀번호를 변경해 주세요.
 								<br>다른 아이디나 사이트에서 사용한 적 없는 안전한 비밀번호로 변경해 주세요.</span>
                              </p>
+                             
 							<div class="getIdBox">
 								<c:choose>
 	                        		<c:when test="${getPw_id!=null}">

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -154,12 +154,14 @@ public class MemberController {
 	// findMember.js ajax를 통하여 회원 이름과 이메일을 가져오는 메서드 추가
 	@ResponseBody
 	@PostMapping("postFindId")
-	public int postFindId(MemberDTO mdto, HttpSession session) {
+	public int postFindId(MemberDTO mdto, HttpSession session, Model model) {
 		int cnt = mservice.postFindId(mdto);
 		MemberDTO getPw = mservice.getFindId(mdto);
+		String mask_email = mservice.getFindPw_email(mdto);
 		if(cnt == 1) {
 			System.out.println("cnt == 1 : "+cnt);
 			session.setAttribute("getId", getPw);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
+			model.addAttribute("mask_email", mask_email);
 			return cnt;
 		} else {
 			System.out.println("cnt == else : "+cnt);
@@ -187,6 +189,13 @@ public class MemberController {
 		System.out.println("findPw2.jsp");
 	}
 	
+	// by수진, 2022-03-15 pm05:10
+	// findPw2.jsp에서 받아온 데이터 메서드 추가
+//	@PostMapping("postFindPw2")
+//	public void postFindPw2(MemberDTO mdto, Model model) {
+//		model.addAttribute("mask_email", userEmail);
+//	}
+	
 	// by수진, 2022-03-14 am10:10
 	// findPw3.jsp 메서드 추가
 	@GetMapping("findPw3")
@@ -194,30 +203,17 @@ public class MemberController {
 		System.out.println("findPw3.jsp");
 	}
 	
+	MemberDTO postFindPw_data;
+	
 	// by수진, 2022-03-11 pm02:40
 	// findPw.js ajax를 통하여 회원의 아이디를 확인하고 이메일을 가져오는 메서드 추가
 	@ResponseBody
 	@PostMapping("postFindPw")
-	public int postFindPw(MemberDTO mdto, HttpSession session) {
-		System.out.println("찾아라얏");
-		int cnt = mservice.postFindPw(mdto);
-		String getPw_email = mservice.getFindPw_email(mdto);
-		String getPw_id = mservice.getFindPw_id(mdto);
-		
-		if(cnt == 1) {
-			System.out.println("cnt == 1 : "+cnt);
-			
-			session.setAttribute("getPw_email", getPw_email);// 세션객체(sesiion)  getPw_email변수에 getPw_email값을 저장(setAttribute)
-			session.setAttribute("getPw_id", getPw_id);// 세션객체(sesiion)  getPw_id변수에 getPw_id값을 저장(setAttribute)
-			
-			System.out.println("getPw_id : "+getPw_id);
-			
-			return cnt;
-		} else {
-			System.out.println("cnt == else : "+cnt);
-			return cnt;
-		}
-	
+	public int postFindPw(MemberDTO mdto) {
+		int cnt = mservice.postFindPw(mdto); // 입력한 아이디가 존재하면 1 존재하지않으면 0 
+		postFindPw_data = mservice.postFindPw_data(mdto); // 입력한 아이디에 대한 모든 정보가 저장됨
+
+		return cnt;
 	}
 	
 	// by수진, 2022-03-14 pm04:17

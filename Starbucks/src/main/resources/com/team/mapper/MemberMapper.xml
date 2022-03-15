@@ -47,6 +47,12 @@
 		where userId=#{userId}
 	</select>
 	
+	<select id="postFindPw_data" resultType="com.team.domain.MemberDTO">
+		select *
+		from member 
+		where userId=#{userId}
+	</select>
+	
 	<select id="getFindPw_email" resultType="string">
 		select replace(userEmail,substr(userEmail,2,instr(userEmail,'@')-2),'*****') 
 		from member 

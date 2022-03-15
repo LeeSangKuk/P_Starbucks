@@ -26,6 +26,9 @@ public interface MemberService {
 	
 	// 비밀번호찾기 설계
 	public int postFindPw(MemberDTO mdto);
+
+	// 비밀번호찾기 설계(회원정보)
+	public MemberDTO postFindPw_data(MemberDTO mdto);
 	
 	// 비밀번호찾기 설계(회원정보_이메일)
 	public String getFindPw_email(MemberDTO mdto);
