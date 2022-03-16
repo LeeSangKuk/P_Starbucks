@@ -72,6 +72,11 @@ h1{
 	font-size: 18px;
     line-height: 1.8em;
 }
+#container_in{
+    width: 500px;
+    margin: 0 auto;
+}
+
 .typeGreen{
     color: #006633;
 }
@@ -88,4 +93,8 @@ h1{
     height: 0;
     text-indent: -9999px;
     overflow: hidden;
+}
+
+.error{
+	margin-bottom:10px;
 }

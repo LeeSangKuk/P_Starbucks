@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#userId").blur(function() {
 		var userId = $("#userId").val(); //사용자의 아이디 입력값
 		$.ajax({
-            url: 'postFindPw',
+            url: 'findPw_userId',
             data: {
                 "userId": userId
             },
@@ -15,7 +15,7 @@ $(document).ready(function(){
 					$("#findPw_next").attr("disabled", false); //disabled 해제
 				}
 				else{
-					$("#loginError").text("입력하신 회원정보가 존재하지 않습니다.").css("color", "red");
+					$("#idError").text("입력하신 회원정보가 존재하지 않습니다.").css("color", "red");
 				}
 			}// success 끝
 		})// ajax 끝

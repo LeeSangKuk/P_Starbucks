@@ -3,12 +3,12 @@ var emailKeyToken = false
 $(document).ready(function(){
 	
 	// 인증번호 발송 버튼 클릭시
-	$("#bt_emailconfirm").click(function() {
+	$("#btn_emailconfirm").click(function() {
 		var userName = $("#userName").val(); //사용자의 이름 입력값
 		var userEmail = $("#userEmail").val(); //사용자의 이메일 입력값
 
 		$.ajax({
-            url: 'postFindId',
+            url: 'personal_confirm',
             data: {
                 "userName": userName,
                 "userEmail": userEmail
@@ -46,7 +46,6 @@ $(document).ready(function(){
 							})
 							
 						}// success 끝
-					
 					})// ajax 끝
 					alert("인증번호 발송완료!");
 				} else {
