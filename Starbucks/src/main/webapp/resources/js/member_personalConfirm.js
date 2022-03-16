@@ -20,9 +20,9 @@ $(document).ready(function(){
 				
 				if (cnt == 1) {   //입력한 이름과 이메일이 회원정보에 존재하면
 					$("#confirmNum").attr("disabled", false); //disabled 해제
-					console.log("cnt = : "+cnt)
+			
 					$.ajax({
-						url : '/sendMail',
+						url : '/sendMail', // 메일전송 컨트롤러
 						type : 'post',
 						data : JSON.stringify(userEmail),
 						datatype : 'json', // 서버에서 데이터를 받아올 때 타입
@@ -34,8 +34,10 @@ $(document).ready(function(){
 							$("#confirmNum").blur(function() {
 								if ($("#confirmNum").val() == key) {   //인증 키 값을 비교를 위해 텍스트인풋과 벨류를 비교
 									$("#emailError").text("인증번호가 일치합니다.").css("color", "green");
-									$(".next").attr("disabled", false);
 									emailKeyToken = true;  //인증 성공여부 check
+									
+									$("#findId_next").attr("disabled", false); //disabled 해제
+									$("#findPw2_next").attr("disabled", false); //disabled 해제
 									
 								} else {
 									$("#emailError").text("인증번호가 불일치합니다.").css("color", "red");
@@ -57,44 +59,6 @@ $(document).ready(function(){
 		})// ajax 끝
 	});
 
-	
-	
-	
-	
-	// findId.jsp의 다음 버튼 클릭시
-	$("#next").click(function(){
-		if(emailKeyToken == false){
-			alert("잘못된 접근입니다.")
-		} else{
-			let url = "findIdCheck";
-			location.replace(url);
-		}
-
-	})
-	
-	// findPw.jsp의 다음버튼을 클릭시
-	$("#findPw_next").click(function(){
-		if(findPwToken == false){
-			alert("잘못된 접근입니다.")
-		} else{
-			let url = "findPw2";
-			location.replace(url);
-		}
-
-	})
-	
-	// findPw2.jsp의 다음버튼을 클릭시
-	$("#findPw2_next").click(function(){
-		if(emailKeyToken == false){
-			alert("잘못된 접근입니다.")
-		} else{
-			let url = "findPw3";
-			location.replace(url);
-		}
-
-	})
-	
-	
 })
 
 	

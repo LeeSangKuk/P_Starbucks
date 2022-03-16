@@ -15,7 +15,7 @@
  <div id="container">
         <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="" class="memberBox" action="../member/findPw3" method="post">
+                <form id="" class="memberBox" action="../member/findPwCheck" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호찾기 폼</legend>
                         <h1>비밀번호 찾기</h1>
@@ -39,7 +39,7 @@
 									<button type="button" id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm">인증번호 발송</button>
                                 	<p id="emailError" style="font-size: 14px;"></p>
                                 </div>
-	                        <button class="next" id="findPw2_next">다음</button>
+	                        <button disabled='disabled' class="next" id="findPw2_next">다음</button>
 							</div>
                             <div class="btn_member_wrap">
                                 <ul>
@@ -56,7 +56,7 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/findPw.js"></script>
-<script src="../resources/js/findMember.js"></script>
+<script src="../resources/js/member_findPw.js"></script>
+<script src="../resources/js/member_personalConfirm.js"></script>
 </body>
 </html>

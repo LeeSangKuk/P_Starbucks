@@ -11,10 +11,10 @@
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
- <div id="Container">
+ <div id="container">
         <div id="loginWrap">
             <div class="memberWrapInner">
-                <form id="loginForm" action="../main" method="post">
+                <form action="../member/findPw2" method="post">
                     <fieldset>
                         <legend class="hid">아이디찾기 폼</legend>
                         <h1>아이디 찾기</h1>
@@ -28,9 +28,7 @@
                                 <input id="userName" name="userName" class="loginInput" type="text"  placeholder="가입하신 이름을 입력해 주세요.">
                                 <br>
                                 <label for="userPw" class="hid">이메일</label>
-                                <input id="userEmail" name="userEmail" class="loginInput" type="email" placeholder="가입하신 이메일을 입력해 주세요.">
-								<p id="loginError"  style="font-size: 14px;"></p>
-							
+                                <input id="userEmail" name="userEmail" class="loginInput" type="email" placeholder="가입하신 이메일을 입력해 주세요.">					
                                 
                                 <div class="btn_login_wrap">
 									<input type="text" id="confirmNum" class="confirmNum" name="confirmNum" value="" placeholder="인증번호를 입력하세요." disabled>
@@ -38,7 +36,7 @@
                                 	<p id="emailError" style="font-size: 14px;"></p>
                                 </div>
                                 
-                              	<button type="button" disabled='disabled' class="next" id="next">다음</button>
+                              	<button disabled='disabled' class="next" id="findId_next">다음</button>
                                 <p class="warntxt_member typeGreen">
                                     * 본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.<br>
                                 </p>
@@ -58,6 +56,6 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/findMember.js"></script>
+<script src="../resources/js/member_personalConfirm.js"></script>
 </body>
 </html>

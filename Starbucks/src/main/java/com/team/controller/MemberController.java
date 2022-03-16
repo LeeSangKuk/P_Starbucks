@@ -39,109 +39,8 @@ public class MemberController {
 	@PostMapping("checkId")
 	public int checkId(MemberDTO mdto) {
 		int cnt = mservice.checkId(mdto);
-		System.out.println("controller: "+cnt);
-		if(cnt == 0) 
-			return cnt;
-		else 
-			return cnt;
-
+		return cnt;
 	}
-
-//	@ResponseBody
-//	@PostMapping("confirmEmail")
-//		public String SendMail(String mail) {
-//			Random random=new Random();  //난수 생성을 위한 랜덤 클래스
-//			String key="";  //인증번호 
-//
-//			SimpleMailMessage message = new SimpleMailMessage();
-//			message.setTo(mail); //스크립트에서 보낸 메일을 받을 사용자 이메일 주소 
-//			//입력 키를 위한 코드
-//			for(int i =0; i<3;i++) {
-//				int index=random.nextInt(25)+65; //A~Z까지 랜덤 알파벳 생성
-//				key+=(char)index;
-//			}
-//			int numIndex=random.nextInt(9999)+1000; //4자리 랜덤 정수를 생성
-//			key+=numIndex;
-//			message.setSubject("인증번호 입력을 위한 메일 전송");
-//			message.setText("인증 번호 : "+key);
-//			message.
-//	        return key;
-//		}
-//	
-//	public static void gmailSend() {
-//		
-//		//1. 발신자의 메일계정과 비밀번호 설정
-//		final String user = "hansuzin98@gmail.com"; //발신자의 이메일 아이디를 입력 
-//		final String password = "password"; //발신자 이메일의 패스워드를 입력
-//		
-//		
-//		/*
-//		 * 
-//		 * properties : 파일 읽기 클래스
-//		 * mail.smtp.host : 이메일 발송 처리담당 SMTP서버
-//		 * 		gmail을 SMTP서버로 사용할 경우 smtp.gmail.com으로 설정, naver를 SMTP서버로 사용할 경우 smtp.naver.com
-//		 * mail.smtp.port : SMTP서버와 통신하는 포트
-//		 * 		gmail일 경우 465 , naver의 경우 587 
-//		 * 		주의 ! 구글과 네이버의 경우 Properties설정 값이 다르다!
-//		 * */
-//		
-//		
-//		//2. Property에 SMTP 서버 정보 설정
-//		Properties prop = new Properties(); 
-//		prop.put("mail.smtp.host", "smtp.gmail.com"); 
-//		prop.put("mail.smtp.port", 465); 
-//		prop.put("mail.smtp.auth", "true"); 
-//		prop.put("mail.smtp.ssl.enable", "true"); 
-//		prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-//		
-//		
-//		/*
-//		 * getDefaultInstance() [Session클래스의 메서드]: 파라미터로 전달받은 Properties에 저장되어 있는 속성값을 사용하여 세션을 생성
-//		 * */
-//		
-//		//3. SMTP 서버정보와 사용자 정보를 기반으로 Session 클래스의 인스턴스 생성
-//		//Properties에 저장돼있는 설정 값을 getDefaultInstance() 메소드로 설정값을 저장하여 세션 생성
-//		
-//        Session session = Session.getDefaultInstance(prop, new javax.mail.Authenticator() {
-//            protected PasswordAuthentication getPasswordAuthentication() {
-//                return new PasswordAuthentication(user, password);
-//            }
-//        });
-//        
-//        
-//        //4. Message 클래스의 객체를 사용하여 수신자와 내용, 제목의 메세지 작성
-//        //5. Transport 클래스를 사용하여 작성한 메세지 전달
-//        try {
-//            MimeMessage message = new MimeMessage(session);
-//            message.setFrom(new InternetAddress(user));
-//
-//            //수신자메일주소
-//            message.addRecipient(Message.RecipientType.TO, new InternetAddress("ktko@ktko.com")); 
-//
-//            // Subject
-//            message.setSubject("제목을 입력하세요"); //메일 제목을 입력
-//
-//            // Text
-//            message.setText("내용을 입력하세요");    //메일 내용을 입력
-//
-//            // send the message
-//            Transport.send(message); ////전송
-//            System.out.println("message sent successfully...");
-//        } catch (AddressException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        } catch (MessagingException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//
-//
-//
-//        
-//        
-//		
-//	}
-
 
 	// by수진, 2022-03-04 am09:14
 	// findId.jsp 메서드 추가
@@ -151,28 +50,23 @@ public class MemberController {
 	}
 	
 	// by수진, 2022-03-04 am10:48
-	// findMember.js ajax를 통하여 회원 이름과 이메일을 가져오는 메서드 추가
+	// findMember.js ajax를 통하여 회원 이름과 이메일의 존재유무 확인
 	@ResponseBody
 	@PostMapping("postFindId")
-	public int postFindId(MemberDTO mdto, HttpSession session, Model model) {
+	public int personal_confirm(MemberDTO mdto, Model model) {
 		int cnt = mservice.postFindId(mdto);
-		MemberDTO getPw = mservice.getFindId(mdto);
-		String mask_email = mservice.getFindPw_email(mdto);
-		if(cnt == 1) {
-			System.out.println("cnt == 1 : "+cnt);
-			session.setAttribute("getId", getPw);// 세션객체(sesiion)  login변수에 getLogin값을 저장(setAttribute)
-			model.addAttribute("mask_email", mask_email);
-			return cnt;
-		} else {
-			System.out.println("cnt == else : "+cnt);
-			return cnt;
-		}
-	
+		return cnt;
 	}
 	
-	@GetMapping("findIdCheck")
-	public void findIdCheck() {
-		System.out.println("findIdCheck.jsp");
+	// by수진, 2022-03-16 pm02:21
+	// find.Id.jsp form에서 제출 성공시 findIdCheck.jsp에 아이디를 안내하는 메서드
+	@PostMapping("findIdCheck")
+	public String inform_id(MemberDTO mdto, Model model) {
+		MemberDTO userId = mservice.getFindId(mdto);
+		model.addAttribute("MemberDTO", userId);
+		System.out.println(userId);
+		
+		return "member/findIdCheck";
 	}
 	
 	// by수진, 2022-03-11 pm02:18
@@ -182,6 +76,16 @@ public class MemberController {
 		System.out.println("findPw.jsp");
 	}
 	
+	// by수진, 2022-03-11 pm02:40
+	// findPw.js ajax를 통하여 회원의 아이디를 확인하고 이메일을 가져오는 메서드 추가
+	@ResponseBody
+	@PostMapping("postFindPw")
+	public int postFindPw(MemberDTO mdto) {
+		int cnt = mservice.postFindPw(mdto); // 입력한 아이디가 존재하면 1 존재하지않으면 0 	
+		return cnt;
+	}
+	
+	
 	// by수진, 2022-03-11 pm03:28
 	// findPw2.jsp 메서드 추가
 	@GetMapping("findPw2")
@@ -189,40 +93,41 @@ public class MemberController {
 		System.out.println("findPw2.jsp");
 	}
 	
-	// by수진, 2022-03-15 pm05:10
-	// findPw2.jsp에서 받아온 데이터 메서드 추가
-//	@PostMapping("postFindPw2")
-//	public void postFindPw2(MemberDTO mdto, Model model) {
-//		model.addAttribute("mask_email", userEmail);
-//	}
+	// by수진, 2022-03-16 pm02:30
+	// findPw.jsp에서 받아온 아이디를 db에서 검색하여 해당되는 이메일 마스킹처리하여 안내하는 메서드 추가
+	@PostMapping("findPw2")
+	public String postFindPw2(MemberDTO mdto, Model model) {
+		String mask_email = mservice.getFindPw_email(mdto);
+		model.addAttribute("mask_email", mask_email);
+		
+		return "member/findPw2";
+	}
 	
 	// by수진, 2022-03-14 am10:10
 	// findPw3.jsp 메서드 추가
 	@GetMapping("findPw3")
 	public void findPw3() {
 		System.out.println("findPw3.jsp");
+	}	
+	
+	// by수진, 2022-03-16 pm02:21
+	// findId.jsp form에서 제출 성공시 findIdCheck.jsp에 아이디를 안내하는 메서드
+	@PostMapping("findPwCheck")
+	public String inform_pw(MemberDTO mdto, Model model) {
+		MemberDTO userId = mservice.getFindId(mdto);
+		model.addAttribute("MemberDTO", userId);
+		System.out.println(userId);
+		
+		return "member/findPw3";
 	}
-	
-	MemberDTO postFindPw_data;
-	
-	// by수진, 2022-03-11 pm02:40
-	// findPw.js ajax를 통하여 회원의 아이디를 확인하고 이메일을 가져오는 메서드 추가
-	@ResponseBody
-	@PostMapping("postFindPw")
-	public int postFindPw(MemberDTO mdto) {
-		int cnt = mservice.postFindPw(mdto); // 입력한 아이디가 존재하면 1 존재하지않으면 0 
-		postFindPw_data = mservice.postFindPw_data(mdto); // 입력한 아이디에 대한 모든 정보가 저장됨
 
-		return cnt;
-	}
-	
 	// by수진, 2022-03-14 pm04:17
 	// findMember.js ajax를 통하여 재설정한 비밀번호를 확인하고 DB에서 비밀번호 업데이트를 하는 메서드 추가
 	@ResponseBody
 	@PostMapping("resetPw")
-	public void resetPw(MemberDTO mdto) {
-		mservice.resetPw(mdto);
-		System.out.println("controller : resetPw");
+	public int resetPw(MemberDTO mdto) {
+		System.out.println("춍춍 가지고가쟈"+mdto);
+		return mservice.resetPw(mdto);
 	}
 	
 

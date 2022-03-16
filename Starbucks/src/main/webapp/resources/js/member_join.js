@@ -81,7 +81,7 @@ $(document).ready(function(){
 	
 	//비밀번호재확인 유효성검사
 	$("#userPwCheck").blur(function(){
-	  if($("#pwCkError").value !== $("#userPw").value || $("#userName").value==""){
+	  if($("#pwCkError").value !== $("#userPw").value || $("#userPwCheck").value==""){
 		  $("#pwCkError").text("입력하신 비밀번호와 맞지 않습니다.")
 		  $("#pwCkError").css("color","red")
 		  pwCkToken = false;

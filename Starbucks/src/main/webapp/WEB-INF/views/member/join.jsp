@@ -169,5 +169,5 @@
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
-	<script src="../resources/js/join.js"></script>
+	<script src="../resources/js/member_join.js"></script>
 <%@ include file="../includes/footer.jsp" %>

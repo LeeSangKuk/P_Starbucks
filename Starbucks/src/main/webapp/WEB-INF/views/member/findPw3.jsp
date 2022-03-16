@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,10 +12,10 @@
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
- <div id="Container">
+ <div id="container">
         <div class="memberWrap">
             <div class="memberWrapInner">
-                <form id="" class="memberBox" action="member/postFindPw" method="post">
+                <form id="" class="memberBox" action="" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호찾기 폼</legend>
                         <h1>비밀번호 재설정</h1>
@@ -25,11 +26,7 @@
                              </p>
                              
 							<div class="getIdBox">
-								<c:choose>
-	                        		<c:when test="${getPw_id!=null}">
-	                        			<p>아이디 : <span class="typeGreen"> ${getPw_id} </span></p>
-	                        		</c:when>                  	
-	                        	</c:choose>
+	                        	<p>아이디 : <span class="typeGreen" id="userId" value="${MemberDTO.userId}">${MemberDTO.userId}</span></p>
 	                        	<br>
                                 <label for="userPw" class="hid">새 비밀번호</label>
                                 <input id="userPw" name="userPw" class="loginInput" type="password"  placeholder="새 비밀번호">
@@ -57,7 +54,7 @@
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
 
-<script src="../resources/js/resetPw.js"></script>
-<script src="../resources/js/findMember.js"></script>
+<script src="../resources/js/member_resetPw.js"></script>
+<script src="../resources/js/member_personalConfirm.js"></script>
 </body>
 </html>

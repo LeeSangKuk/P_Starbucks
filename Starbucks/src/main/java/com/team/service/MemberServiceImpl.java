@@ -76,9 +76,9 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public void resetPw(MemberDTO mdto) {
+	public int resetPw(MemberDTO mdto) {
 		System.out.println("service Impl : resetPw");
-		mmapper.resetPw(mdto);
+		return mmapper.resetPw(mdto);
 	}
 
 

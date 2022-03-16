@@ -11,10 +11,10 @@
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
- <div id="Container">
+ <div id="container">
         <div id="loginWrap">
             <div class="memberWrapInner">
-                <form id="" action="../member/findPw2" method="get">
+                <form id="" action="../member/findPw2" method="post">
                     <fieldset>
                         <legend class="hid">비밀번호 찾기 폼</legend>
                         <h1>비밀번호 찾기</h1>
@@ -29,7 +29,7 @@
 								<p id="loginError"  style="font-size: 14px;"></p>
 
                                 
-                              	<button class="next" id="findPw_next">다음</button>
+                              	<button disabled='disabled' id="findPw_next" class="next">다음</button>
                                 <p class="warntxt_member typeGreen">
                                    <a href="./findId"> * 아이디가 기억나지 않는다면?</a><br>
                                 </p>
@@ -49,6 +49,6 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/findPw.js"></script>
+<script src="../resources/js/member_findPw.js"></script>
 </body>
 </html>

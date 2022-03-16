@@ -11,7 +11,7 @@
 </head>
 <body>
 <%@ include file="../includes/header.jsp" %>
- <div id="Container">
+ <div id="conainer">
         <div id="loginWrap" class="memberWrap">
             <div id="loginWrapInner" class="memberWrapInner">
                 <form id="loginForm" class="memberBox" action="../main" method="post">
@@ -60,6 +60,6 @@
         <!-- 내용 end -->
     </div><!--#Container-->
 <%@ include file="../includes/footer.jsp" %>
-<script src="../resources/js/login.js"></script>
+<script src="../resources/js/member_login.js"></script>
 </body>
 </html>

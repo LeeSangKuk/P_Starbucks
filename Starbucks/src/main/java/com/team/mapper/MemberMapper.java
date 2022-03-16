@@ -1,7 +1,5 @@
 package com.team.mapper;
 
-import org.springframework.ui.Model;
-
 import com.team.domain.MemberDTO;
 
 public interface MemberMapper {
@@ -37,5 +35,5 @@ public interface MemberMapper {
 	public String getFindPw_id(MemberDTO mdto);
 	
 	// 비밀번호 재설정 설계
-	public void resetPw(MemberDTO mdto);
+	public int resetPw(MemberDTO mdto);
 }
