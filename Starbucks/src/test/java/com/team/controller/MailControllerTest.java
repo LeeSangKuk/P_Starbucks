@@ -1,6 +1,6 @@
 package com.team.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 
@@ -22,6 +22,7 @@ class MailControllerTest {
 	    JavaMailSenderImpl mailSender;
 	    
 	    // MimeMessage 객체를 직접 생성하여 메일을 발송하는 방법
+	 
 	    @Test
 	    public void mailSendTest() throws Exception{
 	        
@@ -49,5 +50,6 @@ class MailControllerTest {
 	        }
 	        
 	    }
+	    
 	    
 }
