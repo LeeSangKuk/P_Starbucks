@@ -173,5 +173,5 @@ public class MemberController {
 		return mservice.resetPw(mdto);
 	}
 
-	
+	// 2022-03-21 커밋 test용
 }
