@@ -28,6 +28,25 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+	 	<property name="host" value="aspmx.l.google.com"/> 
+	</bean>
+	
+		<!-- gmail설정 -->
+	<bean id="mailSender2" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+	     <property name="host" value="smtp.gmail.com" />
+	     <property name="port" value="587" />
+		 <property name="username" value="hansuzin98gmail.com"/> <!-- 자신의 이메일 아이디 -->
+		 <property name="password" value="hsj@@98*0515"/> <!-- 자신의 비밀번호 -->
+	 <!-- 보안연결 TLS과 관련된 설정 -->
+	     <property name="javaMailProperties">
+	    <props>
+	       <prop key="mail.smtp.auth">true</prop>
+	       <prop key="mail.smtp.starttls.enable">true</prop>
+	    </props>
+	     </property>
+	</bean>
+		
 	<mybatis-spring:scan base-package="com.team.mapper"/>
 	<context:component-scan base-package="com.team.service"/>
 	<mybatis-spring:scan base-package="com.team.domain"/>

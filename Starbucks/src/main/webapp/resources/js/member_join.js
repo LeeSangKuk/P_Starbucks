@@ -15,6 +15,7 @@ var genderToken = false
 var birthToken = false
 var phoneToken = false
 var emailToken = false
+var emailKeyToken = false
 
 $(document).ready(function(){
 	
@@ -80,7 +81,7 @@ $(document).ready(function(){
 	
 	//비밀번호재확인 유효성검사
 	$("#userPwCheck").blur(function(){
-	  if($("#pwCkError").value !== $("#userPw").value || $("#userName").value==""){
+	  if($("#pwCkError").value !== $("#userPw").value || $("#userPwCheck").value==""){
 		  $("#pwCkError").text("입력하신 비밀번호와 맞지 않습니다.")
 		  $("#pwCkError").css("color","red")
 		  pwCkToken = false;
@@ -231,6 +232,48 @@ $(document).ready(function(){
 			console.log('email 성공')
 		}
 	})
+	
+	//by수진, 2022-02-25 pm5:18
+	//이메일 인증번호 발송버튼을 클릭했을 때
+	//이메일 인증번호 유효성 검사
+	$("#bt_emailconfirm").click(function() {
+			var userEmail = $("#userEmail").val(); //사용자의 이메일 입력값
+			
+			console.log($("#confirmNum").attr("disabled"));	//disabled 유무 확인
+			
+			if (emailToken == false) {
+				alert("입력하신 이메일을 다시 확인해주세요.");
+			} else { // true이면
+				$("#confirmNum").attr("disabled", false); //disabled 해제
+				
+				$.ajax({
+					url : '/sendMail',
+					type : 'post',
+					data : JSON.stringify(userEmail),
+					datatype : 'json',
+					contentType : "application/json",
+					success : function(key){
+						
+						console.log(key)
+						$("#confirmNum").blur(function() {
+							if ($("#confirmNum").val() == key) {   //인증 키 값을 비교를 위해 텍스트인풋과 벨류를 비교
+								$("#emailError").text("인증번호가 일치합니다.").css("color", "green");
+								emailKeyToken = true;  //인증 성공여부 check
+							} else {
+								$("#emailError").text("인증번호가 불일치합니다.").css("color", "red");
+								emailKeyToken = false; //인증 실패
+							}
+							
+						})
+					}// success 끝
+				})// ajax 끝
+				alert("인증번호가 전송되었습니다.") 
+			}// else 끝
+	});
+	
+
+	
+
 
 
 	// by수진, 2022-02-17 pm3:00
@@ -282,7 +325,7 @@ $(document).ready(function(){
 		// by수진, 2022-02-17 pm3:00 
 		// 위 전체 if문을 지나 에러메세지를 띄운 후 true와 false를 실행 기능 추가
 		// 토큰이 하나라도 false이면
-		if(idToken == false || pwToken == false || pwCkToken == false || nameToken == false || genderToken == false || birthToken == false || emailToken == false || phoneToken == false){
+		if(idToken == false || pwToken == false || pwCkToken == false || nameToken == false || genderToken == false || birthToken == false || emailToken == false || phoneToken == false || emailKeyToken == false){
 			return false;
 		}
 		else {// 토큰이 모두 true이면면

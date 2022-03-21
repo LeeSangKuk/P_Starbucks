@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../includes/mainSource.jsp" %>
+<link rel="stylesheet" href="../resources/css/member.css">
 <link rel="stylesheet" href="../resources/css/Join.css">
 <%@ include file="../includes/header.jsp" %>
 	<div id="container">
@@ -157,14 +158,16 @@
 
 				<div class="emailBox">
 					<p><label><Strong>이메일<span class="typeGreen">(필수)</span></Strong></label></p>
-					<input type="email" id="userEmail" name="userEmail" value="" placeholder="E-mail을 입력하세요.">
+					<input type="email" id="userEmail" class="userEmail" name="userEmail" value="" placeholder="E-mail을 입력하세요.">
+					<input type="text" id="confirmNum" class="confirmNum" name="confirmNum" value="" placeholder="인증번호를 입력하세요." disabled>
+					<button type="button" id="bt_emailconfirm" class="bt_emailconfirm" name="bt_emailconfirm">인증번호 발송</button>
 					<p id="emailError"  style="font-size: 14px;"></p>
 				</div>
 			</section>
 			<!--.section2-->
-            <input type="submit" id="submit" class="submit" value="완료하기">
+            <button type="submit" id="submit" class="submit">회원가입 완료</button>
         </form>
       </div><!--#containerIn-->
     </div><!--#container-->
-	<script src="../resources/js/join.js"></script>
+	<script src="../resources/js/member_join.js"></script>
 <%@ include file="../includes/footer.jsp" %>
