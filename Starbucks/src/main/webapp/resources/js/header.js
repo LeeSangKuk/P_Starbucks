@@ -12,6 +12,7 @@ $(document).ready(function(){
             right:0
         });
         
+        $('.bx-controls-direction').hide();
         $('body').css("overflow", "hidden"); // 전체 메뉴가 나오면 스크롤 안되게
 
     });
